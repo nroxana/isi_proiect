@@ -5,6 +5,8 @@ isiproject
 
 Pentru instalare: http://www.apachefriends.org/en/xampp-windows.html
 
+(link de download: http://www.apachefriends.org/download.php?xampp-win32-1.8.2-2-VC9-installer.exe)
+
 * Instalezi asta
 * intri http://localhost/xampp/ -> Security -> si urmați linkul http://localhost/security/xamppsecurity.php și pui 
 parola la root și directory protection.
