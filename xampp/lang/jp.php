@@ -1,481 +1,1198 @@
-<?php
-	// ---------------------------------------------------------------------
-	// GLOBAL
-	// ---------------------------------------------------------------------
-
-	$TEXT['global-xampp'] = "XAMPP Windows”Å";
-	$TEXT['global-showcode'] = "ƒ\[ƒXƒR[ƒh‚Ì•\¦";
-
-	// ---------------------------------------------------------------------
-	// NAVIGATION
-	// ---------------------------------------------------------------------
-
-	$TEXT['navi-xampp'] = "XAMPP";
-	$TEXT['navi-welcome'] = "‚æ‚¤‚±‚»";
-	$TEXT['navi-status'] = "ƒXƒe[ƒ^ƒX";
-	$TEXT['navi-security'] = "ƒZƒLƒ…ƒŠƒeƒB";
-	$TEXT['navi-doc'] = "ƒ}ƒjƒ…ƒAƒ‹";
-	$TEXT['navi-components'] = "ƒRƒ“ƒ|[ƒlƒ“ƒg";
-	$TEXT['navi-about'] = "XAMPP‚É‚Â‚¢‚Ä";
-
-	$TEXT['navi-demos'] = "ƒfƒ‚";
-	$TEXT['navi-cdcol'] = "‚b‚c ƒRƒŒƒNƒVƒ‡ƒ“";
-	$TEXT['navi-bio'] = "ƒoƒCƒIƒŠƒYƒ€";
-	$TEXT['navi-guest'] = "ƒQƒXƒgƒuƒbƒN";
-	$TEXT['navi-perlenv'] = "MiniPerl";
-	$TEXT['navi-iart'] = "ƒCƒ“ƒXƒ^ƒ“ƒgƒA[ƒg";
-	$TEXT['navi-iart2'] = "ƒtƒ‰ƒbƒVƒ…ƒA[ƒg";
-	$TEXT['navi-phonebook'] = "“d˜b’ ";
-	$TEXT['navi-perlasp'] = "Perl:ASP";
-	$TEXT['navi-pear'] = "Excel_Writer";
-	$TEXT['navi-adodb'] = "ADOdb";
-	$TEXT['navi-perl'] = "Perl";
-	$TEXT['navi-python'] = "Python";
-	$TEXT['navi-jsp'] = "Java";
-	$TEXT['navi-phpswitch'] = "PHP Switch";
-
-	$TEXT['navi-tools'] = "ƒc[ƒ‹";
-	$TEXT['navi-phpmyadmin'] = "phpMyAdmin";
-	$TEXT['navi-webalizer'] = "Webalizer";
-	$TEXT['navi-mercury'] = "Mercury Mail";
-	$TEXT['navi-filezilla'] = "FileZilla FTP";
-	$TEXT['navi-jpgraph'] = "JpGraph";
-
-	$TEXT['navi-specialguest'] = "Current Guest";
-	$TEXT['navi-guest1'] = "FCKeditor";
-
-	$TEXT['navi-languages'] = "Še‘Œê";
-
-	// ---------------------------------------------------------------------
-	// STATUS
-	// ---------------------------------------------------------------------
-
-	$TEXT['status-head'] = "XAMPP ƒXƒe[ƒ^ƒX";
-	$TEXT['status-text1'] = "‚±‚Ìƒy[ƒW‚Å‚Í‰Ò“­’†‚Ì‚à‚ÌA‚»‚¤‚Å‚È‚¢‚à‚Ì‚Ìî•ñ‚ğˆê——‚ÅŒ©‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B";
-	$TEXT['status-text2'] = "İ’è‚Ì•ÏX‚Ìd•û‚É‚æ‚Á‚Ä‚ÍAŒë‚Á‚½ƒlƒKƒeƒBƒu‚ÈƒXƒe[ƒ^ƒXEƒŒƒ|[ƒg‚ªo‚éê‡‚ª‚ ‚è‚Ü‚·B SSL’ÊM (https://localhost)‚Å‚ÍAƒŒƒ|[ƒg‚ª‘S‚Ä‹N“®‚µ‚È‚¢ê‡‚ª‚ ‚è‚Ü‚·B";
-
-	$TEXT['status-mysql'] = "MySQL ƒf[ƒ^ƒx[ƒX";
-	$TEXT['status-ssl'] = "HTTPS (SSL)";
-	$TEXT['status-php'] = "PHP";
-	$TEXT['status-perl'] = "Perl‚Æmod_perl";
-	$TEXT['status-cgi'] = "Common Gateway Interface (CGI)";
-	$TEXT['status-ssi'] = "Server Side Includes (SSI)";
-	$TEXT['status-python'] = "Python‚Æmod_python";
-	$TEXT['status-mmcache'] = "PHP extension »Turck MMCache«";
-	$TEXT['status-mmcache-url'] = "http://www.apachefriends.org/faq-wampp-en.html#mmcache";
-	$TEXT['status-smtp'] = "SMTP Service";
-	$TEXT['status-ftp'] = "FTP Service";
-	$TEXT['status-tomcat'] = "Tomcat Service";
-	$TEXT['status-named'] = "Domain Name Service (DNS)";
-	$TEXT['status-oci8'] = "PHP extension »OCI8/Oracle«";
-	$TEXT['status-oci8-url'] = "http://www.apachefriends.org/faq-lampp-en.html#oci8";
-
-	$TEXT['status-lookfaq'] = "FAQ‚ğQÆ";
-	$TEXT['status-ok'] = "ŠJn";
-	$TEXT['status-nok'] = "’â~";
-
-	$TEXT['status-tab1'] = "ƒRƒ“ƒ|[ƒlƒ“ƒg";
-	$TEXT['status-tab2'] = "ƒXƒe[ƒ^ƒX";
-	$TEXT['status-tab3'] = "ƒqƒ“ƒg";
-
-	// ---------------------------------------------------------------------
-	// SECURITY
-	// ---------------------------------------------------------------------
-
-	$TEXT['security-head'] = "XAMPP ƒZƒLƒ…ƒŠƒeƒB";
-	$TEXT['security-text1'] = "‚±‚±‚Å‚ÍAXAMPPƒCƒ“ƒXƒg[ƒ‹‚É‚¨‚¯‚éƒZƒLƒ…ƒŠƒeƒBEƒXƒe[ƒ^ƒX‚É‚Â‚¢‚ÄAŠÈ’P‚È‚²à–¾‚ğ‚µ‚Ä‚¢‚Ü‚·B(ƒe[ƒuƒ‹‚ÌŒã‚à‘±‚¯‚Ä‚¨“Ç‚İ‚­‚¾‚³‚¢B)";
-	$TEXT['security-text2'] = "—Î‚ÌƒnƒCƒ‰ƒCƒg‚Ì•\¦‚ÍuˆÀ‘Sv‚Å‚·BÔ‚ÌƒnƒCƒ‰ƒCƒg‚Ì•\¦‚ÍAŒˆ’è“I‚Éu—v’ˆÓvA‰©F‚ÌƒnƒCƒ‰ƒCƒg‚ÍuŠm”F•s”\v(—á‚¦‚ÎAŠm”F‚µ‚½‚¢ƒ\ƒtƒgƒEƒFƒA‚ª‰Ò“®‚µ‚Ä‚¢‚È‚¢‚È‚Ç)‚Å‚·B<p>‚»‚Ì‚æ‚¤‚È–â‘è‚ğ‚·‚×‚ÄC³‚·‚é‚É‚ÍA’Pƒ‚ÉŸ‚Ìƒc[ƒ‹‚ğg‚Á‚Ä‚­‚¾‚³‚¢B</b><p>=> <a href=\"/security/xamppsecurity.php\"><b>http://localhost/security/xamppsecurity.php</b></a> <= &nbsp;&nbsp;[localhost‚©‚ç‚Ì‚İƒAƒNƒZƒX‚Å‚«‚Ü‚·B]<br>&nbsp;<br>&nbsp;<br>
-	‚»‚Ì‚Ù‚©‚Ìd—v‚Èƒƒ‚:<ul>
-	<li>‘S‚Ä‚ÌƒeƒXƒgƒy[ƒW‚Ílocalhost(127.0.0.1)‚Ì‚½‚ß‚¾‚¯‚Éì¬‚³‚ê‚Ä‚¢‚Ü‚·B</li>
-	<li><i><b>FileZilla FTP‚ÆMercury Mail‚ÍA©•ª©g‚ÅƒZƒLƒ…ƒŠƒeƒB‚Ì–â‘è“_‚ğ‰ğŒˆ‚µ‚Ä‚­‚¾‚³‚¢B</b></i></li>
-	<li>‚à‚µA‚ ‚È‚½‚ÌƒRƒ“ƒsƒ…[ƒ^‚ªƒIƒ“ƒ‰ƒCƒ“‚Å‚È‚¢ê‡A‚Ü‚½‚Íƒtƒ@ƒCƒAƒEƒH[ƒ‹‚ÅƒuƒƒbƒN‚³‚ê‚Ä‚¢‚éê‡A‚ ‚È‚½‚ÌƒT[ƒo‚ÍŠO•”‚©‚çUŒ‚‚³‚ê‚é‚±‚Æ‚Í‚ ‚è‚Ü‚¹‚ñB</li>
-	<li>‚à‚µAƒT[ƒo‚ª‹N“®‚µ‚Ä‚¢‚È‚¢ê‡A‚»‚ê‚ç‚ÌƒT[ƒo‚ÍˆÀ‘S‚Å‚·B</li></ul>";
-	$TEXT['security-text3'] = "<b>‚æ‚­ŒŸ“¢‚µ‚Ä‚­‚¾‚³‚¢:
-	XAMPP‚ÌƒZƒLƒ…ƒŠƒeƒB‚ğİ’è‚·‚é‚ÆA‚¢‚­‚Â‚©‚ÌƒTƒ“ƒvƒ‹‚ªÀs‚Å‚«‚È‚­‚È‚è‚Ü‚·B‚à‚µA‚ ‚È‚½‚ªPHP‚ğ\"safe mode\"‚Åg‚Á‚Ä‚¢‚½ê‡AƒZƒLƒ…ƒŠƒeƒBİ’è‚Ì‚¢‚­‚Â‚©‚Ì‹@”\‚ª“®ì‚µ‚Ü‚¹‚ñBƒZƒLƒ…ƒŠƒeƒB‚ğİ’è‚·‚é‚ÆA‹@”\‚ª§ŒÀ‚³‚ê‚éê‡‚ª‚ ‚è‚Ü‚·B</b>";
-	$TEXT['security-text4'] = "XAMPPƒfƒtƒHƒ‹ƒg‚Ìƒ|[ƒg:";
-
-	$TEXT['security-ok'] = "ˆÀ‘S";
-	$TEXT['security-nok'] = "—v’ˆÓ";
-	$TEXT['security-noidea'] = "•s–¾";
-
-	$TEXT['security-tab1'] = "‘ÎÛ";
-	$TEXT['security-tab2'] = "ƒXƒe[ƒ^ƒX";
 
-	$TEXT['security-checkapache-nok'] = "‚±‚ê‚ç‚ÌXAMPPƒy[ƒW‚Íˆê”Ê“I‚Éƒlƒbƒgƒ[ƒNŒo—R‚ÅƒAƒNƒZƒX‰Â”\‚Å‚·B";
-	$TEXT['security-checkapache-ok'] = "‚±‚ê‚ç‚ÌXAMPPƒy[ƒW‚Íƒlƒbƒgƒ[ƒNŒo—R‚Å‚Ìˆê”Ê“I‚ÈƒAƒNƒZƒX‚ª‰Â”\‚Å‚È‚­‚È‚è‚Ü‚µ‚½B";
-	$TEXT['security-checkapache-text'] = "Œ»İ‚²——‚É‚È‚Á‚Ä‚¢‚é‚·‚×‚Ä‚ÌXAMPPƒfƒ‚ƒy[ƒW‚ÍAƒlƒbƒgƒ[ƒNã‚Åˆê”Ê“I‚ÉƒAƒNƒZƒX‰Â”\‚Å‚·B‚ ‚È‚½‚ÌIPƒAƒhƒŒƒX‚ğ’m‚Á‚Ä‚¢‚él‚Í’N‚Å‚à‚±‚ê‚ç‚Ìƒy[ƒW‚ğŒ©‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B";
 
-	$TEXT['security-checkmysqlport-nok'] = "MySQL ‚Íƒlƒbƒgƒ[ƒNŒo—R‚ÅƒAƒNƒZƒX‰Â”\‚Å‚·";
-	$TEXT['security-checkmysqlport-ok'] = "MySQL ‚Íƒlƒbƒgƒ[ƒNã‚ÅƒAƒNƒZƒX‚Å‚«‚È‚­‚È‚è‚Ü‚µ‚½";
-	$TEXT['security-checkmysqlport-text'] = "ƒZƒLƒ…ƒŠƒeƒBEƒŠ[ƒN‚Ì‰Â”\«‚ª‚ ‚è‚Ü‚·i­‚È‚­‚Æ‚à—˜_ã‚ÌƒZƒLƒ…ƒŠƒeƒBEƒŠ[ƒN‚Å‚·jBƒZƒLƒ…ƒŠƒeƒB‚É‚Â‚¢‚Ä•sˆÀ‚ª‚ ‚è‚Ü‚µ‚½‚çAMySQL‚Ìƒlƒbƒgƒ[ƒNEƒCƒ“ƒ^[ƒtƒF[ƒX‚ğ–³Œø‚É‚·‚é‚±‚Æ‚ğ‚¨Š©‚ß‚µ‚Ü‚·B";
-
-	$TEXT['security-checkpmamysqluser-nok'] = "phpMyAdmin ƒ†[ƒUpma ‚ÉƒpƒXƒ[ƒh‚ª‚ ‚è‚Ü‚¹‚ñ";
-	$TEXT['security-checkpmamysqluser-ok'] = "phpMyAdmin ƒ†[ƒUpma ‚ÍƒpƒXƒ[ƒh–³‚µ‚Ìó‘Ô‚ª‰ğÁ‚³‚ê‚Ü‚µ‚½";
-	$TEXT['security-checkpmamysqluser-text'] = "phpMyAdmin‚ÍA‚ ‚È‚½‚Ì’Ç‰ÁMySQL database‚Ì‘I‘ğ‚ğ•Û‘¶‚µ‚Ü‚·B‚±‚Ìƒf[ƒ^‚ÉƒAƒNƒZƒX‚·‚é‚Ì‚ÉAphpMyAdmin‚Å‚Í“Á•Ê‚Èƒ†[ƒUpma‚ğg—p‚µ‚Ü‚·B‚±‚Ìƒ†[ƒU‚ÍAƒfƒtƒHƒ‹ƒg‚ÌƒCƒ“ƒXƒg[ƒ‹‚Å‚ÍƒpƒXƒ[ƒh‚ª—^‚¦‚ç‚ê‚Ä‚¢‚È‚¢‚Ì‚ÅAƒZƒLƒ…ƒŠƒeƒB‚Ìƒgƒ‰ƒuƒ‹‚ğ”ğ‚¯‚é‚½‚ß‚É‚Í‚±‚Ìƒ†[ƒU‚ÉƒpƒXƒ[ƒh‚ğ—^‚¦‚é•K—v‚ª‚ ‚è‚Ü‚·B";
 
-	$TEXT['security-checkmysql-nok'] = "MySQLƒ†[ƒUƒ‹[ƒg‚ÉƒpƒXƒ[ƒh‚ª‚ ‚è‚Ü‚¹‚ñ";
-	$TEXT['security-checkmysql-ok'] = "MySQLƒ†[ƒUƒ‹[ƒg‚ÍƒpƒXƒ[ƒh‚ª–³‚µ‚Ìó‘Ô‚ª‰ğÁ‚³‚ê‚Ü‚µ‚½";
-	$TEXT['security-checkmysql-out'] = "MySQLƒT[ƒo‚Í‹N“®‚µ‚Ä‚¢‚È‚¢‚©Aƒtƒ@ƒCƒAƒEƒH[ƒ‹‚ÅƒuƒƒbƒN‚³‚ê‚Ä‚¢‚Ü‚·!";
-	$TEXT['security-checkmysql-text'] = "Windows Boxã‚Ìƒ[ƒJƒ‹ƒ†[ƒU‚Å‚ ‚ê‚Î’N‚Å‚à‚ ‚È‚½‚ÌMySQLƒf[ƒ^ƒx[ƒX‚ÉŠÇ—ÒŒ ŒÀ‚ÅƒAƒNƒZƒX‚Å‚«‚Ü‚·BƒpƒXƒ[ƒh‚ğİ’è‚µ‚Ä‚­‚¾‚³‚¢B";
-
-	$TEXT['security-pop-nok'] = "Mercury ƒ[ƒ‹ƒT[ƒo(POP3)‚ÌƒeƒXƒgƒ†[ƒU(newuser)‚ÍŒÃ‚¢ƒpƒXƒ[ƒh‚Ì‚Ü‚Ü‚Å‚·(wampp)";
-	$TEXT['security-pop-ok'] = "POP3ƒT[ƒo(Mercury Mail)‚ÌƒeƒXƒgƒ†[ƒU \"newuser\" ‚Í‘¶İ‚µ‚È‚¢‚©AV‚µ‚¢ƒpƒXƒ[ƒh‚ªİ’è‚³‚ê‚Ü‚µ‚½B";
-	$TEXT['security-pop-out'] = "Mercuryƒ[ƒ‹ƒT[ƒo‚Ì‚æ‚¤‚ÈPOP3ƒT[ƒo‚ª‹N“®‚µ‚Ä‚¢‚È‚¢‚©Aƒtƒ@ƒCƒAƒEƒH[ƒ‹‚ÅƒuƒƒbƒN‚³‚ê‚Ä‚¢‚Ü‚·B";
-	$TEXT['security-pop-notload'] = "<i>‚±‚ÌˆÀ‘SƒeƒXƒg‚É•K—v‚ÈIMAP‹@”\‚ª“Ç‚İ‚Ü‚ê‚Ä‚¢‚Ü‚¹‚ñ(php.ini)B</i><br>";
-	$TEXT['security-pop-text'] = "Mercury ƒ[ƒ‹ƒT[ƒo‚ÌƒpƒXƒ[ƒh‚âƒ†[ƒU‚È‚Çİ’è‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B";
-
-	$TEXT['security-checkftppassword-nok'] = "“½–¼‚Ìƒ†[ƒU‚ÌFTPƒpƒXƒ[ƒh‚ªuwamppv‚Ì‚Ü‚Ü‚Å‚·";
-	$TEXT['security-checkftppassword-ok'] = "FTPƒpƒXƒ[ƒh‚ª•ÏX‚É‚È‚è‚Ü‚µ‚½B";
-	$TEXT['security-checkftppassword-out'] = "FTPƒT[ƒo‚Í‹N“®‚µ‚Ä‚¢‚È‚¢‚©Aƒtƒ@ƒCƒAƒEƒH[ƒ‹‚ÅƒuƒƒbƒN‚³‚ê‚Ä‚¢‚Ü‚·!";
-	$TEXT['security-checkftppassword-text'] = "‚à‚µFileZilla FTPƒT[ƒo‚ª‹N“®‚µ‚Ä‚¢‚ê‚ÎAƒfƒtƒHƒ‹ƒgƒ†[ƒU \"newuser\"AƒpƒXƒ[ƒh \"wampp\"‚ÅXAMPP‚ÌƒEƒFƒuƒT[ƒo‚Ìƒtƒ@ƒCƒ‹‚ÌƒAƒbƒvƒ[ƒh‚â•ÏX‚ª‚Å‚«‚Ü‚·B‚à‚µFileZilla FTPƒT[ƒo‚ğ—LŒø‚É‚·‚éê‡A\"newuser\" ‚ÌƒpƒXƒ[ƒh‚ğİ’è‚µ‚Ä‚­‚¾‚³‚¢B";
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# githubog: http://ogp.me/ns/fb/githubog#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+        <title>isi_proiect/xampp/lang/jp.php at master Â· nroxana/isi_proiect</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <link rel="logo" type="image/svg" href="https://github-media-downloads.s3.amazonaws.com/github-logo.svg" />
+    <meta property="og:image" content="https://github.global.ssl.fastly.net/images/modules/logos_page/Octocat.png">
+    <meta name="hostname" content="github-fe128-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 1.9.3p194-tcs-github-tcmalloc (0e75de19f8) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+    
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="55BAB717:6790:92A23D7:527D32A6" name="octolytics-dimension-request_id" /><meta content="3790895" name="octolytics-actor-id" /><meta content="rar3sh" name="octolytics-actor-login" /><meta content="fa0f9d2fbde38e6c3625dabd8d1da48641aa3c67e2ee0e749b37994c52010098" name="octolytics-actor-hash" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="a0mtvuvcpPzo4N1mrhvgn92Z2vybUtRmDtDbW9xMs+k=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-a8a3849004502491c476c2c9fb91967ce28667f8.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-861981c03b50bcbc64ba20390c7f2c0b61e1c9d5.css" media="all" rel="stylesheet" type="text/css" />
+    
+
+    
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-bca527bb59d94c16d6bf2a759779d7953fa41e76.js" type="text/javascript"></script>
+      <script src="https://github.global.ssl.fastly.net/assets/github-5b80d04c85d769b66d1817d8cf8e5182eb0ed46c.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="fd5ab9d01ddadeca2522d439d385f35a">
+
+        <link data-pjax-transient rel='permalink' href='/nroxana/isi_proiect/blob/998e251b8fea3c52db9314306fc87650146d69cf/xampp/lang/jp.php'>
+  <meta property="og:title" content="isi_proiect"/>
+  <meta property="og:type" content="githubog:gitrepository"/>
+  <meta property="og:url" content="https://github.com/nroxana/isi_proiect"/>
+  <meta property="og:image" content="https://github.global.ssl.fastly.net/images/gravatars/gravatar-user-420.png"/>
+  <meta property="og:site_name" content="GitHub"/>
+  <meta property="og:description" content="isi_proiect - isiproject"/>
+
+  <meta name="description" content="isi_proiect - isiproject" />
+
+  <meta content="3192584" name="octolytics-dimension-user_id" /><meta content="nroxana" name="octolytics-dimension-user_login" /><meta content="13727186" name="octolytics-dimension-repository_id" /><meta content="nroxana/isi_proiect" name="octolytics-dimension-repository_nwo" /><meta content="false" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="13727186" name="octolytics-dimension-repository_network_root_id" /><meta content="nroxana/isi_proiect" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/nroxana/isi_proiect/commits/master.atom?login=rar3sh&token=20dafaf81ad6cb2af41ef5c18064ab48" rel="alternate" title="Recent Commits to isi_proiect:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  env-production windows vis-private  page-blob">
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+    
+    <a href="/notifications" class="notification-indicator tooltipped downwards" data-gotokey="n" title="You have no unread notifications">
+        <span class="mail-status all-read"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey=" s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    data-username="rar3sh"
+      data-repo="nroxana/isi_proiect"
+      data-branch="master"
+      data-sha="9b476e17be0c0d611b613b879ddbc6fbaf1409ce"
+  >
+
+    <input type="hidden" name="nwo" value="nroxana/isi_proiect" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
 
-	$TEXT['security-phpmyadmin-nok'] = "PhpMyAdmin‚Íƒlƒbƒgƒ[ƒNã‚©‚ç©—R‚ÉƒAƒNƒZƒX‚Å‚«‚Ä‚µ‚Ü‚¢‚Ü‚·B";
-	$TEXT['security-phpmyadmin-ok'] = "PhpMyAdmin‚ÌƒƒOƒCƒ“ƒpƒXƒ[ƒh‚ª—LŒø‚É‚È‚è‚Ü‚µ‚½B";
-	$TEXT['security-phpmyadmin-out'] = "PhpMyAdmin:'config.inc.php'ƒtƒ@ƒCƒ‹‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñB";
-	$TEXT['security-phpmyadmin-text'] = "PhpMyAdmin‚ÍƒpƒXƒ[ƒh‚È‚µ‚Åƒlƒbƒgƒ[ƒN‚©‚çƒAƒNƒZƒX‚Å‚«‚Ü‚·B. \"config.inc.php\"ƒtƒ@ƒCƒ‹‚Ì'httpd'‚©'cookie'‚ªİ’è‚Ì•‚¯‚É‚È‚è‚Ü‚·B";
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
 
-	$TEXT['security-checkphp-nok'] = "PHP‚Í\"safe mode\"‚Å‹N“®‚µ‚Ä‚¢‚Ü‚¹‚ñB";
-	$TEXT['security-checkphp-ok'] = "PHP‚Í\"safe mode\"‚Å‹N“®‚µ‚Ä‚¢‚Ü‚·B";
-	$TEXT['security-checkphp-out'] = "PHP‚Ìİ’è‚Å§Œä‚Å‚«‚Ü‚¹‚ñ!";
-	$TEXT['security-checkphp-text'] = "‚à‚µAŒöŠJƒT[ƒo‚ÅPHP‚Ì“®ì‚ğ‹–‰Â‚·‚é‚Ì‚Å‚ ‚ê‚ÎA\"safe mode\"‚Ìİ’è‚ğ‹–ì‚É“ü‚ê‚Ä‚­‚¾‚³‚¢B ‚µ‚©‚µAƒXƒ^ƒ“ƒhƒAƒƒ“‚ÅŠJ”­‚·‚éê‡A\"safe mode\"‚Å‚Í‚¢‚­‚Â‚©‚Ìd—v‚È‹@”\‚ª“®ì‚µ‚È‚¢ˆ×A\"safe mode\"‚Í‚¨‚·‚·‚ß‚µ‚Ü‚¹‚ñB<a href=\"http://www.php.net/features.safe-mode\" target=\"_new\"><font size=1>Ú×î•ñ</font></a>";
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
 
+        </div>
+      </div>
+    </div>
 
-	// ---------------------------------------------------------------------
-	// SECURITY SETUP
-	// ---------------------------------------------------------------------
+  <span class="octicon help tooltipped downwards" title="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
 
-	$TEXT['mysql-security-head'] = "MySQL‚ÌƒZƒLƒ…ƒŠƒeƒBƒRƒ“ƒ\[ƒ‹ & XAMPP‚ÌƒfƒBƒŒƒNƒgƒŠ§Œä";
-	$TEXT['mysql-rootsetup-head'] = "MYSQL €–Ú: \"ROOT\" ƒpƒXƒ[ƒh";
-	$TEXT['mysql-rootsetup-text1'] = "";
-	$TEXT['mysql-rootsetup-notrunning'] = "MySQLƒT[ƒo‚ª‹N“®‚µ‚Ä‚¢‚È‚¢‚©Aƒtƒ@ƒCƒAƒEƒH[ƒ‹‚ÅƒuƒƒbƒN‚³‚ê‚Ä‚¢‚Ü‚·! ‚Ü‚¸A‚±‚Ì–â‘è‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B";
-	$TEXT['mysql-rootsetup-passwdnotok'] = "V‚µ‚¢ƒpƒXƒ[ƒh‚Í“¯‚¶‚à‚Ì‚ğ“ü—Í‚µ‚Ü‚·B—¼•û‚ÌƒpƒXƒ[ƒh‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B";
-	$TEXT['mysql-rootsetup-passwdnull'] = "‹ó‚ÌƒpƒXƒ[ƒh‚Íİ’è‚Å‚«‚Ü‚¹‚ñB";
-	$TEXT['mysql-rootsetup-passwdsuccess'] = "¬Œ÷: ƒX[ƒp[ƒ†[ƒU 'root' ‚ÌƒpƒXƒ[ƒh‚ªİ’èA‚Ü‚½‚ÍXV‚³‚ê‚Ü‚µ‚½!
-	—v’ˆÓ: \"root\"‚ÌV‚µ‚¢ƒpƒXƒ[ƒh‚Ì‰Šú‰»‚ÍMySQL‚ÌÄ‹N“®‚ª•K—v‚Å‚·BƒpƒXƒ[ƒh‚Ìƒf[ƒ^‚ÍˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ÉŠi”[‚³‚ê‚Ü‚µ‚½:";
-	$TEXT['mysql-rootsetup-passwdnosuccess'] = "ƒGƒ‰[: root‚ÌƒpƒXƒ[ƒh‚ÍŠÔˆá‚Á‚Ä‚¢‚Ü‚·BMySQL‚ÍŒ»İ‚ÌrootƒpƒXƒ[ƒh‚Å‚ÍAƒƒOƒCƒ“‚ğ‹‘”Û‚µ‚Ü‚·B";
-	$TEXT['mysql-rootsetup-passwdold'] = "Œ»İ‚ÌƒpƒXƒ[ƒh:";
-	$TEXT['mysql-rootsetup-passwd'] = "V‚µ‚¢ƒpƒXƒ[ƒh:";
-	$TEXT['mysql-rootsetup-passwdrepeat'] = "V‚µ‚¢ƒpƒXƒ[ƒh(Šm”F):";
-	$TEXT['mysql-rootsetup-passwdchange'] = "ƒpƒXƒ[ƒh‚ğ•ÏX‚µ‚Ü‚µ‚½B";
-	$TEXT['mysql-rootsetup-phpmyadmin'] = "PhpMyAdmin‚ğŒŸo‚µ‚Ü‚µ‚½B:";
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="https://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+
+  <ul id="user-links">
+    <li>
+      <a href="/rar3sh" class="name">
+        <img height="20" src="https://0.gravatar.com/avatar/f2945865979158dd9fb506eb134de172?d=https%3A%2F%2Fidenticons.github.com%2F1269ae51b540f2d0d106cd5a042cc692.png&amp;r=x&amp;s=140" width="20" /> rar3sh
+      </a>
+    </li>
+
+      <li>
+        <a href="/new" id="new_repo" class="tooltipped downwards" title="Create a new repo" aria-label="Create a new repo">
+          <span class="octicon octicon-repo-create"></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="/settings/profile" id="account_settings"
+          class="tooltipped downwards"
+          aria-label="Account settings "
+          title="Account settings ">
+          <span class="octicon octicon-tools"></span>
+        </a>
+      </li>
+      <li>
+        <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" title="Sign out" aria-label="Sign out">
+          <span class="octicon octicon-log-out"></span>
+        </a>
+      </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+
+    <li class="section-title">
+      <span title="nroxana/isi_proiect">This repository</span>
+    </li>
+      <li>
+        <a href="/nroxana/isi_proiect/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+      
+
+
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="a0mtvuvcpPzo4N1mrhvgn92Z2vybUtRmDtDbW9xMs+k=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="13727186" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="/nroxana/isi_proiect/watchers">
+        3
+      </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye-unwatch"></span>
+          Unwatch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for discussions in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-watch"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all discussions in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for discussions in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+  
+
+  <div class="js-toggler-container js-social-container starring-container ">
+    <a href="/nroxana/isi_proiect/unstar"
+      class="minibutton with-count js-toggler-target star-button starred upwards"
+      title="Unstar this repository" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
+    </a>
+
+    <a href="/nroxana/isi_proiect/star"
+      class="minibutton with-count js-toggler-target star-button unstarred upwards"
+      title="Star this repository" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star"></span><span class="text">Star</span>
+    </a>
+
+      <a class="social-count js-social-count" href="/nroxana/isi_proiect/stargazers">
+        0
+      </a>
+  </div>
+
+  </li>
+
+
+        <li>
+          <a href="/nroxana/isi_proiect/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="facebox nofollow">
+            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
+          </a>
+          <a href="/nroxana/isi_proiect/network" class="social-count">0</a>
+        </li>
+
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title private">
+          <span class="repo-label"><span>private</span></span>
+          <span class="mega-octicon octicon-lock"></span>
+          <span class="author">
+            <a href="/nroxana" class="url fn" itemprop="url" rel="author"><span itemprop="title">nroxana</span></a>
+          </span>
+          <span class="repohead-name-divider">/</span>
+          <strong><a href="/nroxana/isi_proiect" class="js-current-repository js-repo-home-link">isi_proiect</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+
+      <div class="repository-with-sidebar repo-container ">
+
+        <div class="repository-sidebar">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped leftwards" title="Code">
+        <a href="/nroxana/isi_proiect" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /nroxana/isi_proiect">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" title="Issues">
+          <a href="/nroxana/isi_proiect/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /nroxana/isi_proiect/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" title="Pull Requests"><a href="/nroxana/isi_proiect/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /nroxana/isi_proiect/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>0</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped leftwards" title="Wiki">
+          <a href="/nroxana/isi_proiect/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /nroxana/isi_proiect/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped leftwards" title="Pulse">
+        <a href="/nroxana/isi_proiect/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /nroxana/isi_proiect/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Graphs">
+        <a href="/nroxana/isi_proiect/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /nroxana/isi_proiect/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" title="Network">
+        <a href="/nroxana/isi_proiect/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /nroxana/isi_proiect/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+            <div class="only-with-full-nav">
+              
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=push">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/nroxana/isi_proiect.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/nroxana/isi_proiect.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=push">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="git@github.com:nroxana/isi_proiect.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:nroxana/isi_proiect.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=push">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/nroxana/isi_proiect" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/nroxana/isi_proiect" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" title="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+  <a href="github-windows://openRepo/https://github.com/nroxana/isi_proiect" class="minibutton sidebar-button">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+              <a href="/nroxana/isi_proiect/archive/master.zip"
+                 class="minibutton sidebar-button"
+                 title="Download this repository as a zip file"
+                 rel="nofollow">
+                <span class="octicon octicon-cloud-download"></span>
+                Download ZIP
+              </a>
+            </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+
+<!-- blob contrib key: blob_contributors:v21:678d5aa673c91f2a1f8635f219a1f166 -->
+
+<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+<a href="/nroxana/isi_proiect/find/master" data-pjax data-hotkey="t" class="js-show-file-finder" style="display:none">Show File Finder</a>
+
+<div class="file-navigation">
+  
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Find or create a branchâ€¦" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Find or create a branchâ€¦">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/nroxana/isi_proiect/blob/master/xampp/lang/jp.php"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <form accept-charset="UTF-8" action="/nroxana/isi_proiect/branches" class="js-create-branch select-menu-item select-menu-new-item-form js-navigation-item js-new-item-form" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="a0mtvuvcpPzo4N1mrhvgn92Z2vybUtRmDtDbW9xMs+k=" /></div>
+            <span class="octicon octicon-git-branch-create select-menu-item-icon"></span>
+            <div class="select-menu-item-text">
+              <h4>Create branch: <span class="js-new-item-name"></span></h4>
+              <span class="description">from â€˜masterâ€™</span>
+            </div>
+            <input type="hidden" name="name" id="name" class="js-new-item-value">
+            <input type="hidden" name="branch" id="branch" value="master" />
+            <input type="hidden" name="path" id="branch" value="xampp/lang/jp.php" />
+          </form> <!-- /.select-menu-item -->
+
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/nroxana/isi_proiect" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">isi_proiect</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/nroxana/isi_proiect/tree/master/xampp" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">xampp</span></a></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/nroxana/isi_proiect/tree/master/xampp/lang" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">lang</span></a></span><span class="separator"> / </span><strong class="final-path">jp.php</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="xampp/lang/jp.php" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+
+  <div class="commit file-history-tease">
+    <img class="main-avatar" height="24" src="https://1.gravatar.com/avatar/90ee43ff2dbdd371e8443fdf279e814b?d=https%3A%2F%2Fidenticons.github.com%2Fc6bdcbf337d4c62b0b76bec0ca850fbf.png&amp;r=x&amp;s=140" width="24" />
+    <span class="author"><a href="/nroxana" rel="author">nroxana</a></span>
+    <time class="js-relative-date" datetime="2013-10-20T14:23:38-07:00" title="2013-10-20 14:23:38">October 20, 2013</time>
+    <div class="commit-title">
+        <a href="/nroxana/isi_proiect/commit/15f4e697638bab34d43ecc4a94ce0fb7618f55a9" class="message" data-pjax="true" title="added project
+
+added basic project">added project</a>
+    </div>
+
+    <div class="participation">
+      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>1</strong> contributor</a></p>
+      
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+          <li class="facebox-user-list-item">
+            <img height="24" src="https://1.gravatar.com/avatar/90ee43ff2dbdd371e8443fdf279e814b?d=https%3A%2F%2Fidenticons.github.com%2Fc6bdcbf337d4c62b0b76bec0ca850fbf.png&amp;r=x&amp;s=140" width="24" />
+            <a href="/nroxana">nroxana</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+<div id="files" class="bubble">
+  <div class="file">
+    <div class="meta">
+      <div class="info">
+        <span class="icon"><b class="octicon octicon-file-text"></b></span>
+        <span class="mode" title="File Mode">file</span>
+          <span>482 lines (383 sloc)</span>
+        <span>29.708 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+            <a class="minibutton tooltipped leftwards"
+               href="github-windows://openRepo/https://github.com/nroxana/isi_proiect?branch=master&amp;filepath=xampp%2Flang%2Fjp.php" title="Open this file in GitHub for Windows">
+                <span class="octicon octicon-device-desktop"></span> Open
+            </a>
+                <a class="minibutton"
+                   href="/nroxana/isi_proiect/edit/master/xampp/lang/jp.php"
+                   data-method="post" rel="nofollow" data-hotkey="e">Edit</a>
+          <a href="/nroxana/isi_proiect/raw/master/xampp/lang/jp.php" class="button minibutton " id="raw-url">Raw</a>
+            <a href="/nroxana/isi_proiect/blame/master/xampp/lang/jp.php" class="button minibutton ">Blame</a>
+          <a href="/nroxana/isi_proiect/commits/master/xampp/lang/jp.php" class="button minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+          <a class="minibutton danger empty-icon tooltipped downwards"
+             href="/nroxana/isi_proiect/delete/master/xampp/lang/jp.php"
+             title=""
+             data-method="post" data-test-id="delete-blob-file" rel="nofollow">
+          Delete
+        </a>
+      </div><!-- /.actions -->
+
+    </div>
+        <div class="blob-wrapper data type-php js-blob-data">
+        <table class="file-code file-diff">
+          <tr class="file-code-line">
+            <td class="blob-line-nums">
+              <span id="L1" rel="#L1">1</span>
+<span id="L2" rel="#L2">2</span>
+<span id="L3" rel="#L3">3</span>
+<span id="L4" rel="#L4">4</span>
+<span id="L5" rel="#L5">5</span>
+<span id="L6" rel="#L6">6</span>
+<span id="L7" rel="#L7">7</span>
+<span id="L8" rel="#L8">8</span>
+<span id="L9" rel="#L9">9</span>
+<span id="L10" rel="#L10">10</span>
+<span id="L11" rel="#L11">11</span>
+<span id="L12" rel="#L12">12</span>
+<span id="L13" rel="#L13">13</span>
+<span id="L14" rel="#L14">14</span>
+<span id="L15" rel="#L15">15</span>
+<span id="L16" rel="#L16">16</span>
+<span id="L17" rel="#L17">17</span>
+<span id="L18" rel="#L18">18</span>
+<span id="L19" rel="#L19">19</span>
+<span id="L20" rel="#L20">20</span>
+<span id="L21" rel="#L21">21</span>
+<span id="L22" rel="#L22">22</span>
+<span id="L23" rel="#L23">23</span>
+<span id="L24" rel="#L24">24</span>
+<span id="L25" rel="#L25">25</span>
+<span id="L26" rel="#L26">26</span>
+<span id="L27" rel="#L27">27</span>
+<span id="L28" rel="#L28">28</span>
+<span id="L29" rel="#L29">29</span>
+<span id="L30" rel="#L30">30</span>
+<span id="L31" rel="#L31">31</span>
+<span id="L32" rel="#L32">32</span>
+<span id="L33" rel="#L33">33</span>
+<span id="L34" rel="#L34">34</span>
+<span id="L35" rel="#L35">35</span>
+<span id="L36" rel="#L36">36</span>
+<span id="L37" rel="#L37">37</span>
+<span id="L38" rel="#L38">38</span>
+<span id="L39" rel="#L39">39</span>
+<span id="L40" rel="#L40">40</span>
+<span id="L41" rel="#L41">41</span>
+<span id="L42" rel="#L42">42</span>
+<span id="L43" rel="#L43">43</span>
+<span id="L44" rel="#L44">44</span>
+<span id="L45" rel="#L45">45</span>
+<span id="L46" rel="#L46">46</span>
+<span id="L47" rel="#L47">47</span>
+<span id="L48" rel="#L48">48</span>
+<span id="L49" rel="#L49">49</span>
+<span id="L50" rel="#L50">50</span>
+<span id="L51" rel="#L51">51</span>
+<span id="L52" rel="#L52">52</span>
+<span id="L53" rel="#L53">53</span>
+<span id="L54" rel="#L54">54</span>
+<span id="L55" rel="#L55">55</span>
+<span id="L56" rel="#L56">56</span>
+<span id="L57" rel="#L57">57</span>
+<span id="L58" rel="#L58">58</span>
+<span id="L59" rel="#L59">59</span>
+<span id="L60" rel="#L60">60</span>
+<span id="L61" rel="#L61">61</span>
+<span id="L62" rel="#L62">62</span>
+<span id="L63" rel="#L63">63</span>
+<span id="L64" rel="#L64">64</span>
+<span id="L65" rel="#L65">65</span>
+<span id="L66" rel="#L66">66</span>
+<span id="L67" rel="#L67">67</span>
+<span id="L68" rel="#L68">68</span>
+<span id="L69" rel="#L69">69</span>
+<span id="L70" rel="#L70">70</span>
+<span id="L71" rel="#L71">71</span>
+<span id="L72" rel="#L72">72</span>
+<span id="L73" rel="#L73">73</span>
+<span id="L74" rel="#L74">74</span>
+<span id="L75" rel="#L75">75</span>
+<span id="L76" rel="#L76">76</span>
+<span id="L77" rel="#L77">77</span>
+<span id="L78" rel="#L78">78</span>
+<span id="L79" rel="#L79">79</span>
+<span id="L80" rel="#L80">80</span>
+<span id="L81" rel="#L81">81</span>
+<span id="L82" rel="#L82">82</span>
+<span id="L83" rel="#L83">83</span>
+<span id="L84" rel="#L84">84</span>
+<span id="L85" rel="#L85">85</span>
+<span id="L86" rel="#L86">86</span>
+<span id="L87" rel="#L87">87</span>
+<span id="L88" rel="#L88">88</span>
+<span id="L89" rel="#L89">89</span>
+<span id="L90" rel="#L90">90</span>
+<span id="L91" rel="#L91">91</span>
+<span id="L92" rel="#L92">92</span>
+<span id="L93" rel="#L93">93</span>
+<span id="L94" rel="#L94">94</span>
+<span id="L95" rel="#L95">95</span>
+<span id="L96" rel="#L96">96</span>
+<span id="L97" rel="#L97">97</span>
+<span id="L98" rel="#L98">98</span>
+<span id="L99" rel="#L99">99</span>
+<span id="L100" rel="#L100">100</span>
+<span id="L101" rel="#L101">101</span>
+<span id="L102" rel="#L102">102</span>
+<span id="L103" rel="#L103">103</span>
+<span id="L104" rel="#L104">104</span>
+<span id="L105" rel="#L105">105</span>
+<span id="L106" rel="#L106">106</span>
+<span id="L107" rel="#L107">107</span>
+<span id="L108" rel="#L108">108</span>
+<span id="L109" rel="#L109">109</span>
+<span id="L110" rel="#L110">110</span>
+<span id="L111" rel="#L111">111</span>
+<span id="L112" rel="#L112">112</span>
+<span id="L113" rel="#L113">113</span>
+<span id="L114" rel="#L114">114</span>
+<span id="L115" rel="#L115">115</span>
+<span id="L116" rel="#L116">116</span>
+<span id="L117" rel="#L117">117</span>
+<span id="L118" rel="#L118">118</span>
+<span id="L119" rel="#L119">119</span>
+<span id="L120" rel="#L120">120</span>
+<span id="L121" rel="#L121">121</span>
+<span id="L122" rel="#L122">122</span>
+<span id="L123" rel="#L123">123</span>
+<span id="L124" rel="#L124">124</span>
+<span id="L125" rel="#L125">125</span>
+<span id="L126" rel="#L126">126</span>
+<span id="L127" rel="#L127">127</span>
+<span id="L128" rel="#L128">128</span>
+<span id="L129" rel="#L129">129</span>
+<span id="L130" rel="#L130">130</span>
+<span id="L131" rel="#L131">131</span>
+<span id="L132" rel="#L132">132</span>
+<span id="L133" rel="#L133">133</span>
+<span id="L134" rel="#L134">134</span>
+<span id="L135" rel="#L135">135</span>
+<span id="L136" rel="#L136">136</span>
+<span id="L137" rel="#L137">137</span>
+<span id="L138" rel="#L138">138</span>
+<span id="L139" rel="#L139">139</span>
+<span id="L140" rel="#L140">140</span>
+<span id="L141" rel="#L141">141</span>
+<span id="L142" rel="#L142">142</span>
+<span id="L143" rel="#L143">143</span>
+<span id="L144" rel="#L144">144</span>
+<span id="L145" rel="#L145">145</span>
+<span id="L146" rel="#L146">146</span>
+<span id="L147" rel="#L147">147</span>
+<span id="L148" rel="#L148">148</span>
+<span id="L149" rel="#L149">149</span>
+<span id="L150" rel="#L150">150</span>
+<span id="L151" rel="#L151">151</span>
+<span id="L152" rel="#L152">152</span>
+<span id="L153" rel="#L153">153</span>
+<span id="L154" rel="#L154">154</span>
+<span id="L155" rel="#L155">155</span>
+<span id="L156" rel="#L156">156</span>
+<span id="L157" rel="#L157">157</span>
+<span id="L158" rel="#L158">158</span>
+<span id="L159" rel="#L159">159</span>
+<span id="L160" rel="#L160">160</span>
+<span id="L161" rel="#L161">161</span>
+<span id="L162" rel="#L162">162</span>
+<span id="L163" rel="#L163">163</span>
+<span id="L164" rel="#L164">164</span>
+<span id="L165" rel="#L165">165</span>
+<span id="L166" rel="#L166">166</span>
+<span id="L167" rel="#L167">167</span>
+<span id="L168" rel="#L168">168</span>
+<span id="L169" rel="#L169">169</span>
+<span id="L170" rel="#L170">170</span>
+<span id="L171" rel="#L171">171</span>
+<span id="L172" rel="#L172">172</span>
+<span id="L173" rel="#L173">173</span>
+<span id="L174" rel="#L174">174</span>
+<span id="L175" rel="#L175">175</span>
+<span id="L176" rel="#L176">176</span>
+<span id="L177" rel="#L177">177</span>
+<span id="L178" rel="#L178">178</span>
+<span id="L179" rel="#L179">179</span>
+<span id="L180" rel="#L180">180</span>
+<span id="L181" rel="#L181">181</span>
+<span id="L182" rel="#L182">182</span>
+<span id="L183" rel="#L183">183</span>
+<span id="L184" rel="#L184">184</span>
+<span id="L185" rel="#L185">185</span>
+<span id="L186" rel="#L186">186</span>
+<span id="L187" rel="#L187">187</span>
+<span id="L188" rel="#L188">188</span>
+<span id="L189" rel="#L189">189</span>
+<span id="L190" rel="#L190">190</span>
+<span id="L191" rel="#L191">191</span>
+<span id="L192" rel="#L192">192</span>
+<span id="L193" rel="#L193">193</span>
+<span id="L194" rel="#L194">194</span>
+<span id="L195" rel="#L195">195</span>
+<span id="L196" rel="#L196">196</span>
+<span id="L197" rel="#L197">197</span>
+<span id="L198" rel="#L198">198</span>
+<span id="L199" rel="#L199">199</span>
+<span id="L200" rel="#L200">200</span>
+<span id="L201" rel="#L201">201</span>
+<span id="L202" rel="#L202">202</span>
+<span id="L203" rel="#L203">203</span>
+<span id="L204" rel="#L204">204</span>
+<span id="L205" rel="#L205">205</span>
+<span id="L206" rel="#L206">206</span>
+<span id="L207" rel="#L207">207</span>
+<span id="L208" rel="#L208">208</span>
+<span id="L209" rel="#L209">209</span>
+<span id="L210" rel="#L210">210</span>
+<span id="L211" rel="#L211">211</span>
+<span id="L212" rel="#L212">212</span>
+<span id="L213" rel="#L213">213</span>
+<span id="L214" rel="#L214">214</span>
+<span id="L215" rel="#L215">215</span>
+<span id="L216" rel="#L216">216</span>
+<span id="L217" rel="#L217">217</span>
+<span id="L218" rel="#L218">218</span>
+<span id="L219" rel="#L219">219</span>
+<span id="L220" rel="#L220">220</span>
+<span id="L221" rel="#L221">221</span>
+<span id="L222" rel="#L222">222</span>
+<span id="L223" rel="#L223">223</span>
+<span id="L224" rel="#L224">224</span>
+<span id="L225" rel="#L225">225</span>
+<span id="L226" rel="#L226">226</span>
+<span id="L227" rel="#L227">227</span>
+<span id="L228" rel="#L228">228</span>
+<span id="L229" rel="#L229">229</span>
+<span id="L230" rel="#L230">230</span>
+<span id="L231" rel="#L231">231</span>
+<span id="L232" rel="#L232">232</span>
+<span id="L233" rel="#L233">233</span>
+<span id="L234" rel="#L234">234</span>
+<span id="L235" rel="#L235">235</span>
+<span id="L236" rel="#L236">236</span>
+<span id="L237" rel="#L237">237</span>
+<span id="L238" rel="#L238">238</span>
+<span id="L239" rel="#L239">239</span>
+<span id="L240" rel="#L240">240</span>
+<span id="L241" rel="#L241">241</span>
+<span id="L242" rel="#L242">242</span>
+<span id="L243" rel="#L243">243</span>
+<span id="L244" rel="#L244">244</span>
+<span id="L245" rel="#L245">245</span>
+<span id="L246" rel="#L246">246</span>
+<span id="L247" rel="#L247">247</span>
+<span id="L248" rel="#L248">248</span>
+<span id="L249" rel="#L249">249</span>
+<span id="L250" rel="#L250">250</span>
+<span id="L251" rel="#L251">251</span>
+<span id="L252" rel="#L252">252</span>
+<span id="L253" rel="#L253">253</span>
+<span id="L254" rel="#L254">254</span>
+<span id="L255" rel="#L255">255</span>
+<span id="L256" rel="#L256">256</span>
+<span id="L257" rel="#L257">257</span>
+<span id="L258" rel="#L258">258</span>
+<span id="L259" rel="#L259">259</span>
+<span id="L260" rel="#L260">260</span>
+<span id="L261" rel="#L261">261</span>
+<span id="L262" rel="#L262">262</span>
+<span id="L263" rel="#L263">263</span>
+<span id="L264" rel="#L264">264</span>
+<span id="L265" rel="#L265">265</span>
+<span id="L266" rel="#L266">266</span>
+<span id="L267" rel="#L267">267</span>
+<span id="L268" rel="#L268">268</span>
+<span id="L269" rel="#L269">269</span>
+<span id="L270" rel="#L270">270</span>
+<span id="L271" rel="#L271">271</span>
+<span id="L272" rel="#L272">272</span>
+<span id="L273" rel="#L273">273</span>
+<span id="L274" rel="#L274">274</span>
+<span id="L275" rel="#L275">275</span>
+<span id="L276" rel="#L276">276</span>
+<span id="L277" rel="#L277">277</span>
+<span id="L278" rel="#L278">278</span>
+<span id="L279" rel="#L279">279</span>
+<span id="L280" rel="#L280">280</span>
+<span id="L281" rel="#L281">281</span>
+<span id="L282" rel="#L282">282</span>
+<span id="L283" rel="#L283">283</span>
+<span id="L284" rel="#L284">284</span>
+<span id="L285" rel="#L285">285</span>
+<span id="L286" rel="#L286">286</span>
+<span id="L287" rel="#L287">287</span>
+<span id="L288" rel="#L288">288</span>
+<span id="L289" rel="#L289">289</span>
+<span id="L290" rel="#L290">290</span>
+<span id="L291" rel="#L291">291</span>
+<span id="L292" rel="#L292">292</span>
+<span id="L293" rel="#L293">293</span>
+<span id="L294" rel="#L294">294</span>
+<span id="L295" rel="#L295">295</span>
+<span id="L296" rel="#L296">296</span>
+<span id="L297" rel="#L297">297</span>
+<span id="L298" rel="#L298">298</span>
+<span id="L299" rel="#L299">299</span>
+<span id="L300" rel="#L300">300</span>
+<span id="L301" rel="#L301">301</span>
+<span id="L302" rel="#L302">302</span>
+<span id="L303" rel="#L303">303</span>
+<span id="L304" rel="#L304">304</span>
+<span id="L305" rel="#L305">305</span>
+<span id="L306" rel="#L306">306</span>
+<span id="L307" rel="#L307">307</span>
+<span id="L308" rel="#L308">308</span>
+<span id="L309" rel="#L309">309</span>
+<span id="L310" rel="#L310">310</span>
+<span id="L311" rel="#L311">311</span>
+<span id="L312" rel="#L312">312</span>
+<span id="L313" rel="#L313">313</span>
+<span id="L314" rel="#L314">314</span>
+<span id="L315" rel="#L315">315</span>
+<span id="L316" rel="#L316">316</span>
+<span id="L317" rel="#L317">317</span>
+<span id="L318" rel="#L318">318</span>
+<span id="L319" rel="#L319">319</span>
+<span id="L320" rel="#L320">320</span>
+<span id="L321" rel="#L321">321</span>
+<span id="L322" rel="#L322">322</span>
+<span id="L323" rel="#L323">323</span>
+<span id="L324" rel="#L324">324</span>
+<span id="L325" rel="#L325">325</span>
+<span id="L326" rel="#L326">326</span>
+<span id="L327" rel="#L327">327</span>
+<span id="L328" rel="#L328">328</span>
+<span id="L329" rel="#L329">329</span>
+<span id="L330" rel="#L330">330</span>
+<span id="L331" rel="#L331">331</span>
+<span id="L332" rel="#L332">332</span>
+<span id="L333" rel="#L333">333</span>
+<span id="L334" rel="#L334">334</span>
+<span id="L335" rel="#L335">335</span>
+<span id="L336" rel="#L336">336</span>
+<span id="L337" rel="#L337">337</span>
+<span id="L338" rel="#L338">338</span>
+<span id="L339" rel="#L339">339</span>
+<span id="L340" rel="#L340">340</span>
+<span id="L341" rel="#L341">341</span>
+<span id="L342" rel="#L342">342</span>
+<span id="L343" rel="#L343">343</span>
+<span id="L344" rel="#L344">344</span>
+<span id="L345" rel="#L345">345</span>
+<span id="L346" rel="#L346">346</span>
+<span id="L347" rel="#L347">347</span>
+<span id="L348" rel="#L348">348</span>
+<span id="L349" rel="#L349">349</span>
+<span id="L350" rel="#L350">350</span>
+<span id="L351" rel="#L351">351</span>
+<span id="L352" rel="#L352">352</span>
+<span id="L353" rel="#L353">353</span>
+<span id="L354" rel="#L354">354</span>
+<span id="L355" rel="#L355">355</span>
+<span id="L356" rel="#L356">356</span>
+<span id="L357" rel="#L357">357</span>
+<span id="L358" rel="#L358">358</span>
+<span id="L359" rel="#L359">359</span>
+<span id="L360" rel="#L360">360</span>
+<span id="L361" rel="#L361">361</span>
+<span id="L362" rel="#L362">362</span>
+<span id="L363" rel="#L363">363</span>
+<span id="L364" rel="#L364">364</span>
+<span id="L365" rel="#L365">365</span>
+<span id="L366" rel="#L366">366</span>
+<span id="L367" rel="#L367">367</span>
+<span id="L368" rel="#L368">368</span>
+<span id="L369" rel="#L369">369</span>
+<span id="L370" rel="#L370">370</span>
+<span id="L371" rel="#L371">371</span>
+<span id="L372" rel="#L372">372</span>
+<span id="L373" rel="#L373">373</span>
+<span id="L374" rel="#L374">374</span>
+<span id="L375" rel="#L375">375</span>
+<span id="L376" rel="#L376">376</span>
+<span id="L377" rel="#L377">377</span>
+<span id="L378" rel="#L378">378</span>
+<span id="L379" rel="#L379">379</span>
+<span id="L380" rel="#L380">380</span>
+<span id="L381" rel="#L381">381</span>
+<span id="L382" rel="#L382">382</span>
+<span id="L383" rel="#L383">383</span>
+<span id="L384" rel="#L384">384</span>
+<span id="L385" rel="#L385">385</span>
+<span id="L386" rel="#L386">386</span>
+<span id="L387" rel="#L387">387</span>
+<span id="L388" rel="#L388">388</span>
+<span id="L389" rel="#L389">389</span>
+<span id="L390" rel="#L390">390</span>
+<span id="L391" rel="#L391">391</span>
+<span id="L392" rel="#L392">392</span>
+<span id="L393" rel="#L393">393</span>
+<span id="L394" rel="#L394">394</span>
+<span id="L395" rel="#L395">395</span>
+<span id="L396" rel="#L396">396</span>
+<span id="L397" rel="#L397">397</span>
+<span id="L398" rel="#L398">398</span>
+<span id="L399" rel="#L399">399</span>
+<span id="L400" rel="#L400">400</span>
+<span id="L401" rel="#L401">401</span>
+<span id="L402" rel="#L402">402</span>
+<span id="L403" rel="#L403">403</span>
+<span id="L404" rel="#L404">404</span>
+<span id="L405" rel="#L405">405</span>
+<span id="L406" rel="#L406">406</span>
+<span id="L407" rel="#L407">407</span>
+<span id="L408" rel="#L408">408</span>
+<span id="L409" rel="#L409">409</span>
+<span id="L410" rel="#L410">410</span>
+<span id="L411" rel="#L411">411</span>
+<span id="L412" rel="#L412">412</span>
+<span id="L413" rel="#L413">413</span>
+<span id="L414" rel="#L414">414</span>
+<span id="L415" rel="#L415">415</span>
+<span id="L416" rel="#L416">416</span>
+<span id="L417" rel="#L417">417</span>
+<span id="L418" rel="#L418">418</span>
+<span id="L419" rel="#L419">419</span>
+<span id="L420" rel="#L420">420</span>
+<span id="L421" rel="#L421">421</span>
+<span id="L422" rel="#L422">422</span>
+<span id="L423" rel="#L423">423</span>
+<span id="L424" rel="#L424">424</span>
+<span id="L425" rel="#L425">425</span>
+<span id="L426" rel="#L426">426</span>
+<span id="L427" rel="#L427">427</span>
+<span id="L428" rel="#L428">428</span>
+<span id="L429" rel="#L429">429</span>
+<span id="L430" rel="#L430">430</span>
+<span id="L431" rel="#L431">431</span>
+<span id="L432" rel="#L432">432</span>
+<span id="L433" rel="#L433">433</span>
+<span id="L434" rel="#L434">434</span>
+<span id="L435" rel="#L435">435</span>
+<span id="L436" rel="#L436">436</span>
+<span id="L437" rel="#L437">437</span>
+<span id="L438" rel="#L438">438</span>
+<span id="L439" rel="#L439">439</span>
+<span id="L440" rel="#L440">440</span>
+<span id="L441" rel="#L441">441</span>
+<span id="L442" rel="#L442">442</span>
+<span id="L443" rel="#L443">443</span>
+<span id="L444" rel="#L444">444</span>
+<span id="L445" rel="#L445">445</span>
+<span id="L446" rel="#L446">446</span>
+<span id="L447" rel="#L447">447</span>
+<span id="L448" rel="#L448">448</span>
+<span id="L449" rel="#L449">449</span>
+<span id="L450" rel="#L450">450</span>
+<span id="L451" rel="#L451">451</span>
+<span id="L452" rel="#L452">452</span>
+<span id="L453" rel="#L453">453</span>
+<span id="L454" rel="#L454">454</span>
+<span id="L455" rel="#L455">455</span>
+<span id="L456" rel="#L456">456</span>
+<span id="L457" rel="#L457">457</span>
+<span id="L458" rel="#L458">458</span>
+<span id="L459" rel="#L459">459</span>
+<span id="L460" rel="#L460">460</span>
+<span id="L461" rel="#L461">461</span>
+<span id="L462" rel="#L462">462</span>
+<span id="L463" rel="#L463">463</span>
+<span id="L464" rel="#L464">464</span>
+<span id="L465" rel="#L465">465</span>
+<span id="L466" rel="#L466">466</span>
+<span id="L467" rel="#L467">467</span>
+<span id="L468" rel="#L468">468</span>
+<span id="L469" rel="#L469">469</span>
+<span id="L470" rel="#L470">470</span>
+<span id="L471" rel="#L471">471</span>
+<span id="L472" rel="#L472">472</span>
+<span id="L473" rel="#L473">473</span>
+<span id="L474" rel="#L474">474</span>
+<span id="L475" rel="#L475">475</span>
+<span id="L476" rel="#L476">476</span>
+<span id="L477" rel="#L477">477</span>
+<span id="L478" rel="#L478">478</span>
+<span id="L479" rel="#L479">479</span>
+<span id="L480" rel="#L480">480</span>
+<span id="L481" rel="#L481">481</span>
+
+            </td>
+            <td class="blob-line-code">
+                    <div class="highlight"><pre><div class='line' id='LC1'><span class="o">&lt;?</span><span class="nx">php</span></div><div class='line' id='LC2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// GLOBAL</span></div><div class='line' id='LC4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC5'><br/></div><div class='line' id='LC6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;global-xampp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPP Windowsç‰ˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;global-showcode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã®è¡¨ç¤º&quot;</span><span class="p">;</span></div><div class='line' id='LC8'><br/></div><div class='line' id='LC9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC10'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// NAVIGATION</span></div><div class='line' id='LC11'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC12'><br/></div><div class='line' id='LC13'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-xampp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPP&quot;</span><span class="p">;</span></div><div class='line' id='LC14'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-welcome&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚ˆã†ã“ã&quot;</span><span class="p">;</span></div><div class='line' id='LC15'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-status&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC16'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-security&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£&quot;</span><span class="p">;</span></div><div class='line' id='LC17'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-doc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒãƒ‹ãƒ¥ã‚¢ãƒ«&quot;</span><span class="p">;</span></div><div class='line' id='LC18'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-components&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC19'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-about&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPã«ã¤ã„ã¦&quot;</span><span class="p">;</span></div><div class='line' id='LC20'><br/></div><div class='line' id='LC21'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-demos&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¢&quot;</span><span class="p">;</span></div><div class='line' id='LC22'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-cdcol&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ï¼£ï¼¤ ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³&quot;</span><span class="p">;</span></div><div class='line' id='LC23'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-bio&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒã‚¤ã‚ªãƒªã‚ºãƒ &quot;</span><span class="p">;</span></div><div class='line' id='LC24'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-guest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚²ã‚¹ãƒˆãƒ–ãƒƒã‚¯&quot;</span><span class="p">;</span></div><div class='line' id='LC25'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-perlenv&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MiniPerl&quot;</span><span class="p">;</span></div><div class='line' id='LC26'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-iart&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆã‚¢ãƒ¼ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC27'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-iart2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ•ãƒ©ãƒƒã‚·ãƒ¥ã‚¢ãƒ¼ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC28'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-phonebook&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;é›»è©±å¸³&quot;</span><span class="p">;</span></div><div class='line' id='LC29'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-perlasp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Perl:ASP&quot;</span><span class="p">;</span></div><div class='line' id='LC30'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-pear&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Excel_Writer&quot;</span><span class="p">;</span></div><div class='line' id='LC31'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-adodb&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADOdb&quot;</span><span class="p">;</span></div><div class='line' id='LC32'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-perl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Perl&quot;</span><span class="p">;</span></div><div class='line' id='LC33'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-python&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span><span class="p">;</span></div><div class='line' id='LC34'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-jsp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Java&quot;</span><span class="p">;</span></div><div class='line' id='LC35'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-phpswitch&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP Switch&quot;</span><span class="p">;</span></div><div class='line' id='LC36'><br/></div><div class='line' id='LC37'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-tools&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ„ãƒ¼ãƒ«&quot;</span><span class="p">;</span></div><div class='line' id='LC38'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-phpmyadmin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;phpMyAdmin&quot;</span><span class="p">;</span></div><div class='line' id='LC39'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-webalizer&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Webalizer&quot;</span><span class="p">;</span></div><div class='line' id='LC40'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-mercury&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercury Mail&quot;</span><span class="p">;</span></div><div class='line' id='LC41'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-filezilla&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FileZilla FTP&quot;</span><span class="p">;</span></div><div class='line' id='LC42'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-jpgraph&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;JpGraph&quot;</span><span class="p">;</span></div><div class='line' id='LC43'><br/></div><div class='line' id='LC44'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-specialguest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Current Guest&quot;</span><span class="p">;</span></div><div class='line' id='LC45'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-guest1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FCKeditor&quot;</span><span class="p">;</span></div><div class='line' id='LC46'><br/></div><div class='line' id='LC47'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-languages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å„å›½èª&quot;</span><span class="p">;</span></div><div class='line' id='LC48'><br/></div><div class='line' id='LC49'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC50'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// STATUS</span></div><div class='line' id='LC51'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC52'><br/></div><div class='line' id='LC53'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPP ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC54'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã®ãƒšãƒ¼ã‚¸ã§ã¯ç¨¼åƒä¸­ã®ã‚‚ã®ã€ãã†ã§ãªã„ã‚‚ã®ã®æƒ…å ±ã‚’ä¸€è¦§ã§è¦‹ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC55'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è¨­å®šã®å¤‰æ›´ã®ä»•æ–¹ã«ã‚ˆã£ã¦ã¯ã€èª¤ã£ãŸãƒã‚¬ãƒ†ã‚£ãƒ–ãªã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ãƒ»ãƒ¬ãƒãƒ¼ãƒˆãŒå‡ºã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚ SSLé€šä¿¡ (https://localhost)ã§ã¯ã€ãƒ¬ãƒãƒ¼ãƒˆãŒå…¨ã¦èµ·å‹•ã—ãªã„å ´åˆãŒã‚ã‚Šã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC56'><br/></div><div class='line' id='LC57'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-mysql&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQL ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC58'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-ssl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;HTTPS (SSL)&quot;</span><span class="p">;</span></div><div class='line' id='LC59'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-php&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP&quot;</span><span class="p">;</span></div><div class='line' id='LC60'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-perl&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Perlã¨mod_perl&quot;</span><span class="p">;</span></div><div class='line' id='LC61'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-cgi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Common Gateway Interface (CGI)&quot;</span><span class="p">;</span></div><div class='line' id='LC62'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-ssi&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Server Side Includes (SSI)&quot;</span><span class="p">;</span></div><div class='line' id='LC63'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-python&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Pythonã¨mod_python&quot;</span><span class="p">;</span></div><div class='line' id='LC64'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-mmcache&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP extension ï½»Turck MMCacheï½«&quot;</span><span class="p">;</span></div><div class='line' id='LC65'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-mmcache-url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.apachefriends.org/faq-wampp-en.html#mmcache&quot;</span><span class="p">;</span></div><div class='line' id='LC66'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-smtp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;SMTP Service&quot;</span><span class="p">;</span></div><div class='line' id='LC67'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-ftp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FTP Service&quot;</span><span class="p">;</span></div><div class='line' id='LC68'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-tomcat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Tomcat Service&quot;</span><span class="p">;</span></div><div class='line' id='LC69'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-named&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Domain Name Service (DNS)&quot;</span><span class="p">;</span></div><div class='line' id='LC70'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-oci8&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP extension ï½»OCI8/Oracleï½«&quot;</span><span class="p">;</span></div><div class='line' id='LC71'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-oci8-url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;http://www.apachefriends.org/faq-lampp-en.html#oci8&quot;</span><span class="p">;</span></div><div class='line' id='LC72'><br/></div><div class='line' id='LC73'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-lookfaq&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FAQã‚’å‚ç…§&quot;</span><span class="p">;</span></div><div class='line' id='LC74'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;é–‹å§‹&quot;</span><span class="p">;</span></div><div class='line' id='LC75'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;åœæ­¢&quot;</span><span class="p">;</span></div><div class='line' id='LC76'><br/></div><div class='line' id='LC77'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-tab1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC78'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-tab2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC79'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;status-tab3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ’ãƒ³ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC80'><br/></div><div class='line' id='LC81'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC82'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// SECURITY</span></div><div class='line' id='LC83'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC84'><br/></div><div class='line' id='LC85'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPP ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£&quot;</span><span class="p">;</span></div><div class='line' id='LC86'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã“ã§ã¯ã€XAMPPã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã«ãŠã‘ã‚‹ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ãƒ»ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹ã«ã¤ã„ã¦ã€ç°¡å˜ãªã”èª¬æ˜ã‚’ã—ã¦ã„ã¾ã™ã€‚(ãƒ†ãƒ¼ãƒ–ãƒ«ã®å¾Œã‚‚ç¶šã‘ã¦ãŠèª­ã¿ãã ã•ã„ã€‚)&quot;</span><span class="p">;</span></div><div class='line' id='LC87'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç·‘ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆã®è¡¨ç¤ºã¯ã€Œå®‰å…¨ã€ã§ã™ã€‚èµ¤ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆã®è¡¨ç¤ºã¯ã€æ±ºå®šçš„ã«ã€Œè¦æ³¨æ„ã€ã€é»„è‰²ã®ãƒã‚¤ãƒ©ã‚¤ãƒˆã¯ã€Œç¢ºèªä¸èƒ½ã€(ä¾‹ãˆã°ã€ç¢ºèªã—ãŸã„ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãŒç¨¼å‹•ã—ã¦ã„ãªã„ãªã©)ã§ã™ã€‚&lt;p&gt;ãã®ã‚ˆã†ãªå•é¡Œã‚’ã™ã¹ã¦ä¿®æ­£ã™ã‚‹ã«ã¯ã€å˜ç´”ã«æ¬¡ã®ãƒ„ãƒ¼ãƒ«ã‚’ä½¿ã£ã¦ãã ã•ã„ã€‚&lt;/b&gt;&lt;p&gt;=&gt; &lt;a href=</span><span class="se">\&quot;</span><span class="s2">/security/xamppsecurity.php</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;b&gt;http://localhost/security/xamppsecurity.php&lt;/b&gt;&lt;/a&gt; &lt;= &amp;nbsp;&amp;nbsp;[localhostã‹ã‚‰ã®ã¿ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã™ã€‚]&lt;br&gt;&amp;nbsp;&lt;br&gt;&amp;nbsp;&lt;br&gt;</span></div><div class='line' id='LC88'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ãã®ã»ã‹ã®é‡è¦ãªãƒ¡ãƒ¢:&lt;ul&gt;</span></div><div class='line' id='LC89'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;å…¨ã¦ã®ãƒ†ã‚¹ãƒˆãƒšãƒ¼ã‚¸ã¯localhost(127.0.0.1)ã®ãŸã‚ã ã‘ã«ä½œæˆã•ã‚Œã¦ã„ã¾ã™ã€‚&lt;/li&gt;</span></div><div class='line' id='LC90'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;i&gt;&lt;b&gt;FileZilla FTPã¨Mercury Mailã¯ã€è‡ªåˆ†è‡ªèº«ã§ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã®å•é¡Œç‚¹ã‚’è§£æ±ºã—ã¦ãã ã•ã„ã€‚&lt;/b&gt;&lt;/i&gt;&lt;/li&gt;</span></div><div class='line' id='LC91'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;ã‚‚ã—ã€ã‚ãªãŸã®ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ãŒã‚ªãƒ³ãƒ©ã‚¤ãƒ³ã§ãªã„å ´åˆã€ã¾ãŸã¯ãƒ•ã‚¡ã‚¤ã‚¢ã‚¦ã‚©ãƒ¼ãƒ«ã§ãƒ–ãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã„ã‚‹å ´åˆã€ã‚ãªãŸã®ã‚µãƒ¼ãƒã¯å¤–éƒ¨ã‹ã‚‰æ”»æ’ƒã•ã‚Œã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚&lt;/li&gt;</span></div><div class='line' id='LC92'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;ã‚‚ã—ã€ã‚µãƒ¼ãƒãŒèµ·å‹•ã—ã¦ã„ãªã„å ´åˆã€ãã‚Œã‚‰ã®ã‚µãƒ¼ãƒã¯å®‰å…¨ã§ã™ã€‚&lt;/li&gt;&lt;/ul&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC93'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;ã‚ˆãæ¤œè¨ã—ã¦ãã ã•ã„:</span></div><div class='line' id='LC94'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XAMPPã®ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã‚’è¨­å®šã™ã‚‹ã¨ã€ã„ãã¤ã‹ã®ã‚µãƒ³ãƒ—ãƒ«ãŒå®Ÿè¡Œã§ããªããªã‚Šã¾ã™ã€‚ã‚‚ã—ã€ã‚ãªãŸãŒPHPã‚’</span><span class="se">\&quot;</span><span class="s2">safe mode</span><span class="se">\&quot;</span><span class="s2">ã§ä½¿ã£ã¦ã„ãŸå ´åˆã€ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£è¨­å®šã®ã„ãã¤ã‹ã®æ©Ÿèƒ½ãŒå‹•ä½œã—ã¾ã›ã‚“ã€‚ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã‚’è¨­å®šã™ã‚‹ã¨ã€æ©Ÿèƒ½ãŒåˆ¶é™ã•ã‚Œã‚‹å ´åˆãŒã‚ã‚Šã¾ã™ã€‚&lt;/b&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC95'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-text4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒãƒ¼ãƒˆ:&quot;</span><span class="p">;</span></div><div class='line' id='LC96'><br/></div><div class='line' id='LC97'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å®‰å…¨&quot;</span><span class="p">;</span></div><div class='line' id='LC98'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è¦æ³¨æ„&quot;</span><span class="p">;</span></div><div class='line' id='LC99'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-noidea&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ä¸æ˜&quot;</span><span class="p">;</span></div><div class='line' id='LC100'><br/></div><div class='line' id='LC101'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-tab1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å¯¾è±¡&quot;</span><span class="p">;</span></div><div class='line' id='LC102'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-tab2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC103'><br/></div><div class='line' id='LC104'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkapache-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã‚Œã‚‰ã®XAMPPãƒšãƒ¼ã‚¸ã¯ä¸€èˆ¬çš„ã«ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯çµŒç”±ã§ã‚¢ã‚¯ã‚»ã‚¹å¯èƒ½ã§ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC105'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkapache-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã‚Œã‚‰ã®XAMPPãƒšãƒ¼ã‚¸ã¯ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯çµŒç”±ã§ã®ä¸€èˆ¬çš„ãªã‚¢ã‚¯ã‚»ã‚¹ãŒå¯èƒ½ã§ãªããªã‚Šã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC106'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkapache-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç¾åœ¨ã”è¦§ã«ãªã£ã¦ã„ã‚‹ã™ã¹ã¦ã®XAMPPãƒ‡ãƒ¢ãƒšãƒ¼ã‚¸ã¯ã€ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ä¸Šã§ä¸€èˆ¬çš„ã«ã‚¢ã‚¯ã‚»ã‚¹å¯èƒ½ã§ã™ã€‚ã‚ãªãŸã®IPã‚¢ãƒ‰ãƒ¬ã‚¹ã‚’çŸ¥ã£ã¦ã„ã‚‹äººã¯èª°ã§ã‚‚ã“ã‚Œã‚‰ã®ãƒšãƒ¼ã‚¸ã‚’è¦‹ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC107'><br/></div><div class='line' id='LC108'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysqlport-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQL ã¯ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯çµŒç”±ã§ã‚¢ã‚¯ã‚»ã‚¹å¯èƒ½ã§ã™&quot;</span><span class="p">;</span></div><div class='line' id='LC109'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysqlport-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQL ã¯ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ä¸Šã§ã‚¢ã‚¯ã‚»ã‚¹ã§ããªããªã‚Šã¾ã—ãŸ&quot;</span><span class="p">;</span></div><div class='line' id='LC110'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysqlport-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ãƒ»ãƒªãƒ¼ã‚¯ã®å¯èƒ½æ€§ãŒã‚ã‚Šã¾ã™ï¼ˆå°‘ãªãã¨ã‚‚ç†è«–ä¸Šã®ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ãƒ»ãƒªãƒ¼ã‚¯ã§ã™ï¼‰ã€‚ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã«ã¤ã„ã¦ä¸å®‰ãŒã‚ã‚Šã¾ã—ãŸã‚‰ã€MySQLã®ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ãƒ»ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ãƒ¼ã‚¹ã‚’ç„¡åŠ¹ã«ã™ã‚‹ã“ã¨ã‚’ãŠå‹§ã‚ã—ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC111'><br/></div><div class='line' id='LC112'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkpmamysqluser-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;phpMyAdmin ãƒ¦ãƒ¼ã‚¶pma ã«ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒã‚ã‚Šã¾ã›ã‚“&quot;</span><span class="p">;</span></div><div class='line' id='LC113'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkpmamysqluser-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;phpMyAdmin ãƒ¦ãƒ¼ã‚¶pma ã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ç„¡ã—ã®çŠ¶æ…‹ãŒè§£æ¶ˆã•ã‚Œã¾ã—ãŸ&quot;</span><span class="p">;</span></div><div class='line' id='LC114'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkpmamysqluser-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;phpMyAdminã¯ã€ã‚ãªãŸã®è¿½åŠ MySQL databaseã®é¸æŠã‚’ä¿å­˜ã—ã¾ã™ã€‚ã“ã®ãƒ‡ãƒ¼ã‚¿ã«ã‚¢ã‚¯ã‚»ã‚¹ã™ã‚‹ã®ã«ã€phpMyAdminã§ã¯ç‰¹åˆ¥ãªãƒ¦ãƒ¼ã‚¶pmaã‚’ä½¿ç”¨ã—ã¾ã™ã€‚ã“ã®ãƒ¦ãƒ¼ã‚¶ã¯ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã§ã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒä¸ãˆã‚‰ã‚Œã¦ã„ãªã„ã®ã§ã€ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã®ãƒˆãƒ©ãƒ–ãƒ«ã‚’é¿ã‘ã‚‹ãŸã‚ã«ã¯ã“ã®ãƒ¦ãƒ¼ã‚¶ã«ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’ä¸ãˆã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC115'><br/></div><div class='line' id='LC116'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysql-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQLãƒ¦ãƒ¼ã‚¶ãƒ«ãƒ¼ãƒˆã«ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒã‚ã‚Šã¾ã›ã‚“&quot;</span><span class="p">;</span></div><div class='line' id='LC117'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysql-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQLãƒ¦ãƒ¼ã‚¶ãƒ«ãƒ¼ãƒˆã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒç„¡ã—ã®çŠ¶æ…‹ãŒè§£æ¶ˆã•ã‚Œã¾ã—ãŸ&quot;</span><span class="p">;</span></div><div class='line' id='LC118'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysql-out&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQLã‚µãƒ¼ãƒã¯èµ·å‹•ã—ã¦ã„ãªã„ã‹ã€ãƒ•ã‚¡ã‚¤ã‚¢ã‚¦ã‚©ãƒ¼ãƒ«ã§ãƒ–ãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã„ã¾ã™!&quot;</span><span class="p">;</span></div><div class='line' id='LC119'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkmysql-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Windows Boxä¸Šã®ãƒ­ãƒ¼ã‚«ãƒ«ãƒ¦ãƒ¼ã‚¶ã§ã‚ã‚Œã°èª°ã§ã‚‚ã‚ãªãŸã®MySQLãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«ç®¡ç†è€…æ¨©é™ã§ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã™ã€‚ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’è¨­å®šã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC120'><br/></div><div class='line' id='LC121'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-pop-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercury ãƒ¡ãƒ¼ãƒ«ã‚µãƒ¼ãƒ(POP3)ã®ãƒ†ã‚¹ãƒˆãƒ¦ãƒ¼ã‚¶(newuser)ã¯å¤ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®ã¾ã¾ã§ã™(wampp)&quot;</span><span class="p">;</span></div><div class='line' id='LC122'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-pop-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;POP3ã‚µãƒ¼ãƒ(Mercury Mail)ã®ãƒ†ã‚¹ãƒˆãƒ¦ãƒ¼ã‚¶ </span><span class="se">\&quot;</span><span class="s2">newuser</span><span class="se">\&quot;</span><span class="s2"> ã¯å­˜åœ¨ã—ãªã„ã‹ã€æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒè¨­å®šã•ã‚Œã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC123'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-pop-out&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercuryãƒ¡ãƒ¼ãƒ«ã‚µãƒ¼ãƒã®ã‚ˆã†ãªPOP3ã‚µãƒ¼ãƒãŒèµ·å‹•ã—ã¦ã„ãªã„ã‹ã€ãƒ•ã‚¡ã‚¤ã‚¢ã‚¦ã‚©ãƒ¼ãƒ«ã§ãƒ–ãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC124'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-pop-notload&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;i&gt;ã“ã®å®‰å…¨ãƒ†ã‚¹ãƒˆã«å¿…è¦ãªIMAPæ©Ÿèƒ½ãŒèª­ã¿è¾¼ã¾ã‚Œã¦ã„ã¾ã›ã‚“(php.ini)ã€‚&lt;/i&gt;&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC125'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-pop-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercury ãƒ¡ãƒ¼ãƒ«ã‚µãƒ¼ãƒã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚„ãƒ¦ãƒ¼ã‚¶ãªã©è¨­å®šã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC126'><br/></div><div class='line' id='LC127'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkftppassword-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;åŒ¿åã®ãƒ¦ãƒ¼ã‚¶ã®FTPãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒã€Œwamppã€ã®ã¾ã¾ã§ã™&quot;</span><span class="p">;</span></div><div class='line' id='LC128'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkftppassword-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FTPãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒå¤‰æ›´ã«ãªã‚Šã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC129'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkftppassword-out&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FTPã‚µãƒ¼ãƒã¯èµ·å‹•ã—ã¦ã„ãªã„ã‹ã€ãƒ•ã‚¡ã‚¤ã‚¢ã‚¦ã‚©ãƒ¼ãƒ«ã§ãƒ–ãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã„ã¾ã™!&quot;</span><span class="p">;</span></div><div class='line' id='LC130'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkftppassword-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚‚ã—FileZilla FTPã‚µãƒ¼ãƒãŒèµ·å‹•ã—ã¦ã„ã‚Œã°ã€ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒ¦ãƒ¼ã‚¶ </span><span class="se">\&quot;</span><span class="s2">newuser</span><span class="se">\&quot;</span><span class="s2">ã€ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ </span><span class="se">\&quot;</span><span class="s2">wampp</span><span class="se">\&quot;</span><span class="s2">ã§XAMPPã®ã‚¦ã‚§ãƒ–ã‚µãƒ¼ãƒã®ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰ã‚„å¤‰æ›´ãŒã§ãã¾ã™ã€‚ã‚‚ã—FileZilla FTPã‚µãƒ¼ãƒã‚’æœ‰åŠ¹ã«ã™ã‚‹å ´åˆã€</span><span class="se">\&quot;</span><span class="s2">newuser</span><span class="se">\&quot;</span><span class="s2"> ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’è¨­å®šã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC131'><br/></div><div class='line' id='LC132'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-phpmyadmin-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PhpMyAdminã¯ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ä¸Šã‹ã‚‰è‡ªç”±ã«ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¦ã—ã¾ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC133'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-phpmyadmin-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PhpMyAdminã®ãƒ­ã‚°ã‚¤ãƒ³ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒæœ‰åŠ¹ã«ãªã‚Šã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC134'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-phpmyadmin-out&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PhpMyAdmin:&#39;config.inc.php&#39;ãƒ•ã‚¡ã‚¤ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC135'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-phpmyadmin-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PhpMyAdminã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãªã—ã§ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã‹ã‚‰ã‚¢ã‚¯ã‚»ã‚¹ã§ãã¾ã™ã€‚. </span><span class="se">\&quot;</span><span class="s2">config.inc.php</span><span class="se">\&quot;</span><span class="s2">ãƒ•ã‚¡ã‚¤ãƒ«ã®&#39;httpd&#39;ã‹&#39;cookie&#39;ãŒè¨­å®šã®åŠ©ã‘ã«ãªã‚Šã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC136'><br/></div><div class='line' id='LC137'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkphp-nok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHPã¯</span><span class="se">\&quot;</span><span class="s2">safe mode</span><span class="se">\&quot;</span><span class="s2">ã§èµ·å‹•ã—ã¦ã„ã¾ã›ã‚“ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC138'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkphp-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHPã¯</span><span class="se">\&quot;</span><span class="s2">safe mode</span><span class="se">\&quot;</span><span class="s2">ã§èµ·å‹•ã—ã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC139'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkphp-out&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHPã®è¨­å®šã§åˆ¶å¾¡ã§ãã¾ã›ã‚“!&quot;</span><span class="p">;</span></div><div class='line' id='LC140'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;security-checkphp-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚‚ã—ã€å…¬é–‹ã‚µãƒ¼ãƒã§PHPã®å‹•ä½œã‚’è¨±å¯ã™ã‚‹ã®ã§ã‚ã‚Œã°ã€</span><span class="se">\&quot;</span><span class="s2">safe mode</span><span class="se">\&quot;</span><span class="s2">ã®è¨­å®šã‚’è¦–é‡ã«å…¥ã‚Œã¦ãã ã•ã„ã€‚ ã—ã‹ã—ã€ã‚¹ã‚¿ãƒ³ãƒ‰ã‚¢ãƒ­ãƒ³ã§é–‹ç™ºã™ã‚‹å ´åˆã€</span><span class="se">\&quot;</span><span class="s2">safe mode</span><span class="se">\&quot;</span><span class="s2">ã§ã¯ã„ãã¤ã‹ã®é‡è¦ãªæ©Ÿèƒ½ãŒå‹•ä½œã—ãªã„ç‚ºã€</span><span class="se">\&quot;</span><span class="s2">safe mode</span><span class="se">\&quot;</span><span class="s2">ã¯ãŠã™ã™ã‚ã—ã¾ã›ã‚“ã€‚&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.php.net/features.safe-mode</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_new</span><span class="se">\&quot;</span><span class="s2">&gt;&lt;font size=1&gt;è©³ç´°æƒ…å ±&lt;/font&gt;&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC141'><br/></div><div class='line' id='LC142'><br/></div><div class='line' id='LC143'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC144'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// SECURITY SETUP</span></div><div class='line' id='LC145'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC146'><br/></div><div class='line' id='LC147'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-security-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQLã®ã‚»ã‚­ãƒ¥ãƒªãƒ†ã‚£ã‚³ãƒ³ã‚½ãƒ¼ãƒ« &amp; XAMPPã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåˆ¶å¾¡&quot;</span><span class="p">;</span></div><div class='line' id='LC148'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MYSQL é …ç›®: </span><span class="se">\&quot;</span><span class="s2">ROOT</span><span class="se">\&quot;</span><span class="s2"> ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰&quot;</span><span class="p">;</span></div><div class='line' id='LC149'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span></div><div class='line' id='LC150'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-notrunning&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;MySQLã‚µãƒ¼ãƒãŒèµ·å‹•ã—ã¦ã„ãªã„ã‹ã€ãƒ•ã‚¡ã‚¤ã‚¢ã‚¦ã‚©ãƒ¼ãƒ«ã§ãƒ–ãƒ­ãƒƒã‚¯ã•ã‚Œã¦ã„ã¾ã™! ã¾ãšã€ã“ã®å•é¡Œã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC151'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdnotok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯åŒã˜ã‚‚ã®ã‚’å…¥åŠ›ã—ã¾ã™ã€‚ä¸¡æ–¹ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC152'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdnull&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç©ºã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯è¨­å®šã§ãã¾ã›ã‚“ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC153'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdsuccess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æˆåŠŸ: ã‚¹ãƒ¼ãƒ‘ãƒ¼ãƒ¦ãƒ¼ã‚¶ &#39;root&#39; ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒè¨­å®šã€ã¾ãŸã¯æ›´æ–°ã•ã‚Œã¾ã—ãŸ!</span></div><div class='line' id='LC154'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;è¦æ³¨æ„: </span><span class="se">\&quot;</span><span class="s2">root</span><span class="se">\&quot;</span><span class="s2">ã®æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®åˆæœŸåŒ–ã¯MySQLã®å†èµ·å‹•ãŒå¿…è¦ã§ã™ã€‚ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã®ãƒ‡ãƒ¼ã‚¿ã¯ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«æ ¼ç´ã•ã‚Œã¾ã—ãŸ:&quot;</span><span class="p">;</span></div><div class='line' id='LC155'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdnosuccess&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¨ãƒ©ãƒ¼: rootã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯é–“é•ã£ã¦ã„ã¾ã™ã€‚MySQLã¯ç¾åœ¨ã®rootãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã§ã¯ã€ãƒ­ã‚°ã‚¤ãƒ³ã‚’æ‹’å¦ã—ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC156'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdold&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç¾åœ¨ã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰:&quot;</span><span class="p">;</span></div><div class='line' id='LC157'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰:&quot;</span><span class="p">;</span></div><div class='line' id='LC158'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdrepeat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æ–°ã—ã„ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰(ç¢ºèª):&quot;</span><span class="p">;</span></div><div class='line' id='LC159'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-passwdchange&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰æ›´ã—ã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC160'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mysql-rootsetup-phpmyadmin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PhpMyAdminã‚’æ¤œå‡ºã—ã¾ã—ãŸã€‚:&quot;</span><span class="p">;</span></div><div class='line' id='LC161'><br/></div><div class='line' id='LC162'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-setup-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåˆ¶å¾¡ (.htaccess)&quot;</span><span class="p">;</span></div><div class='line' id='LC163'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-setup-user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ¦ãƒ¼ã‚¶:&quot;</span><span class="p">;</span></div><div class='line' id='LC164'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-setup-passwd&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰:&quot;</span><span class="p">;</span></div><div class='line' id='LC165'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-setup-start&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å®‰å…¨ãªXAMPPãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’ä½œæˆã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC166'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-setup-notok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;ã‚¨ãƒ©ãƒ¼:ãƒ¦ãƒ¼ã‚¶åã®æ–‡å­—ã¯ã€ï¼“æ–‡å­—ä»¥ä¸Šï¼‘ï¼•æ–‡å­—æœªæº€ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚ç‰¹æ®Šãªæ–‡å­—ã‚„ç©ºç™½ã¯èªã‚ã‚‰ã‚Œã¦ã„ã¾ã›ã‚“ã€‚&lt;br&gt;&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC167'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-setup-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;rootã®ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ãŒå¤‰æ›´ã•ã‚Œã¾ã—ãŸã€‚è¨­å®šã‚’æœ‰åŠ¹ã«ã™ã‚‹ãŸã‚ã«ã€MySQLã‚’å†èµ·å‹•ã—ã¦ãã ã•ã„ã€‚&lt;br&gt;&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC168'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-config-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;æˆåŠŸ: XAMPPã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåˆ¶å¾¡ãŒè¨­å®šã•ã‚Œã¾ã—ãŸ!å…¨ãƒ¦ãƒ¼ã‚¶ã®ãƒ‡ãƒ¼ã‚¿ã¯ã€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ã«æ ¼ç´ã•ã‚Œã¾ã—ãŸ:&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC169'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;xampp-config-notok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;ã‚¨ãƒ©ãƒ¼: ã‚ãªãŸã®ã‚·ã‚¹ãƒ†ãƒ ã§ã¯ã€ </span><span class="se">\&quot;</span><span class="s2">.htaccess</span><span class="se">\&quot;</span><span class="s2">ã¨</span><span class="se">\&quot;</span><span class="s2">htpasswd.exe</span><span class="se">\&quot;</span><span class="s2">ã«ã‚ˆã‚‹ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªåˆ¶å¾¡ãŒæœ‰åŠ¹ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ãŠãã‚‰ãã€PHPãŒ</span><span class="se">\&quot;</span><span class="s2">Safe Mode</span><span class="se">\&quot;</span><span class="s2">ã§èµ·å‹•ã—ã¦ã„ã¾ã™ã€‚ &lt;br&gt;&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC170'><br/></div><div class='line' id='LC171'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC172'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// START</span></div><div class='line' id='LC173'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC174'><br/></div><div class='line' id='LC175'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPP Windowsç‰ˆã¸ã‚ˆã†ã“ã&quot;</span><span class="p">;</span></div><div class='line' id='LC176'><br/></div><div class='line' id='LC177'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-subhead&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãŠã‚ã§ã¨ã†ã”ã–ã„ã¾ã™:&lt;br&gt;ã‚·ã‚¹ãƒ†ãƒ ä¸Šã«XAMPPãŒæ­£ã—ãã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¾ã—ãŸï¼&quot;</span><span class="p">;</span></div><div class='line' id='LC178'><br/></div><div class='line' id='LC179'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text-newest&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span></div><div class='line' id='LC180'><br/></div><div class='line' id='LC181'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã‚Œã§ã€Apacheã‚’ä½¿ã„å§‹ã‚ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚ã¾ãšã€å·¦ç«¯ã®ãƒŠãƒ“ã‚²ãƒ¼ã‚·ãƒ§ãƒ³ã®â‰ªã‚¹ãƒ†ãƒ¼ã‚¿ã‚¹â‰«ã‹ã‚‰ã€ã™ã¹ã¦å•é¡Œãªãå‹•ä½œã™ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC182'><br/></div><div class='line' id='LC183'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span></div><div class='line' id='LC184'><br/></div><div class='line' id='LC185'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span></div><div class='line' id='LC186'><br/></div><div class='line' id='LC187'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ†ã‚¹ãƒˆè¨¼æ˜æ›¸ã‚’ä½¿ã£ãŸOpenSSLã‚’&lt;a href=&#39;https://127.0.0.1&#39; target=&#39;_top&#39;&gt;https://127.0.0.1&lt;/a&gt;ã€ã‚‚ã—ãã¯&lt;a href=&#39;https://localhost&#39; target=&#39;_top&#39;&gt;https://localhost&lt;/a&gt;ãŒã‚µãƒãƒ¼ãƒˆã—ã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC188'><br/></div><div class='line' id='LC189'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã‚Œã¯ã€ã¨ã¦ã‚‚é‡è¦ã§ã™! ãƒ˜ãƒ«ãƒ—ã‚„ã‚µãƒãƒ¼ãƒˆã«é–¢ã—ã¦Carstenæ°, Nemesisæ°, KriSæ°, Boppyæ°,ãã‚Œã«XAMPPã®å…¨ã¦ã®ãƒ¦ãƒ¼ã‚¶ã«ã¨ã¦ã‚‚æ„Ÿè¬ã—ã¦ã„ã¾ã™!&quot;</span><span class="p">;</span></div><div class='line' id='LC190'><br/></div><div class='line' id='LC191'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;start-text6&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Good luck, Kay Vogelgesang, Kai &#39;Oswald&#39; Seidler&quot;</span><span class="p">;</span></div><div class='line' id='LC192'><br/></div><div class='line' id='LC193'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC194'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// MANUALS</span></div><div class='line' id='LC195'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC196'><br/></div><div class='line' id='LC197'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;manuals-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚ªãƒ³ãƒ©ã‚¤ãƒ³ãƒ»ãƒãƒ‹ãƒ¥ã‚¢ãƒ«&quot;</span><span class="p">;</span></div><div class='line' id='LC198'><br/></div><div class='line' id='LC199'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;manuals-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPã¯ã€ã„ãã¤ã‚‚ã®ç•°ãªã‚‹ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒ»ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’ã²ã¨ã¾ã¨ã‚ã«ã—ã¾ã™ã€‚ æœ€ã‚‚é‡è¦ãªã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒ»ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã®æ¨™æº–çš„ãªãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚’æ²è¼‰ã—ã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC200'><br/></div><div class='line' id='LC201'><br/></div><div class='line' id='LC202'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;manuals-list1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;</span></div><div class='line' id='LC203'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</span></div><div class='line' id='LC204'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://httpd.apache.org/docs/2.2/</span><span class="se">\&quot;</span><span class="s2">&gt;Apache 2 ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;</span></div><div class='line' id='LC205'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.php.net/manual/ja/</span><span class="se">\&quot;</span><span class="s2">&gt;PHP &lt;b&gt;ãƒªãƒ•ã‚¡ãƒ¬ãƒ³ã‚¹&lt;/b&gt;ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;</span></div><div class='line' id='LC206'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://perldoc.perl.org/</span><span class="se">\&quot;</span><span class="s2">&gt;Perl ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;</span></div><div class='line' id='LC207'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://dev.mysql.com/doc/refman/5.0/en/index.html</span><span class="se">\&quot;</span><span class="s2">&gt;MySQL ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;</span></div><div class='line' id='LC208'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://phplens.com/adodb/</span><span class="se">\&quot;</span><span class="s2">&gt;ADODB&lt;/a&gt;</span></div><div class='line' id='LC209'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://eaccelerator.net/DocumentationUk/</span><span class="se">\&quot;</span><span class="s2">&gt;eAccelerator&lt;/a&gt;</span></div><div class='line' id='LC210'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.fpdf.org/en/doc/index.php</span><span class="se">\&quot;</span><span class="s2">&gt;FPDF Class ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;</span></div><div class='line' id='LC211'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC212'><br/></div><div class='line' id='LC213'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;manuals-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«ã®ã‚·ãƒ§ãƒ¼ãƒˆãƒªã‚¹ãƒˆã¨Apache Friendsãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ãƒšãƒ¼ã‚¸ï¼š&quot;</span><span class="p">;</span></div><div class='line' id='LC214'><br/></div><div class='line' id='LC215'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;manuals-list2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;</span></div><div class='line' id='LC216'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;</span></div><div class='line' id='LC217'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.apachefriends.org/en/faq-xampp.html</span><span class="se">\&quot;</span><span class="s2">&gt;Apache Friends ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;</span></div><div class='line' id='LC218'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.freewebmasterhelp.com/tutorials/php/</span><span class="se">\&quot;</span><span class="s2">&gt;PHP ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«&lt;/a&gt; by David Gowans</span></div><div class='line' id='LC219'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.davesite.com/webstation/html/</span><span class="se">\&quot;</span><span class="s2">&gt;HTML - åˆå¿ƒè€…å‘ã‘ã‚¤ãƒ³ã‚¿ãƒ©ã‚¯ãƒ†ã‚£ãƒ–ãƒ»ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«&lt;/a&gt; by Dave Kristula</span></div><div class='line' id='LC220'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.comp.leeds.ac.uk/Perl/start.html</span><span class="se">\&quot;</span><span class="s2">&gt;Perl ãƒãƒ¥ãƒ¼ãƒˆãƒªã‚¢ãƒ«&lt;/a&gt; by Nik Silver</span></div><div class='line' id='LC221'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC222'><br/></div><div class='line' id='LC223'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;manuals-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚°ãƒƒãƒ‰ãƒ©ãƒƒã‚¯ï¼ Have funâ™ª&quot;</span><span class="p">;</span></div><div class='line' id='LC224'><br/></div><div class='line' id='LC225'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC226'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// COMPONENTS</span></div><div class='line' id='LC227'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC228'><br/></div><div class='line' id='LC229'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;components-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPP ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC230'><br/></div><div class='line' id='LC231'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;components-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPã¯ãŸãã•ã‚“ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’çµ„ã¿åˆã‚ã›ã¦æ§‹æˆã•ã‚Œã¦ã„ã¾ã™ã€‚å…¨ã¦ã®ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã—ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC232'><br/></div><div class='line' id='LC233'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;components-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã“ã‚Œã‚‰ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®é–‹ç™ºè€…ã«ã¨ã¦ã‚‚æ„Ÿè¬ã—ã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC234'><br/></div><div class='line' id='LC235'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;components-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;</span><span class="se">\\</span><span class="s2">xampp\licenses&lt;/b&gt;ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã€ã“ã‚Œã‚‰ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã®ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã«ã¤ã„ã¦ç¢ºèªã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC236'><br/></div><div class='line' id='LC237'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC238'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// CD COLLECTION DEMO</span></div><div class='line' id='LC239'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC240'><br/></div><div class='line' id='LC241'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CDã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ (PHP+MySQL+PDF Classã®äº‹ä¾‹)&quot;</span><span class="p">;</span></div><div class='line' id='LC242'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-head-fpdf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CD ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ (PHP+MySQL+FPDF Classã®äº‹ä¾‹)&quot;</span><span class="p">;</span></div><div class='line' id='LC243'><br/></div><div class='line' id='LC244'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚·ãƒ³ãƒ—ãƒ«ãªCDãƒ—ãƒ­ã‚°ãƒ©ãƒ &quot;</span><span class="p">;</span></div><div class='line' id='LC245'><br/></div><div class='line' id='LC246'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CDãƒªã‚¹ãƒˆ&lt;a href=&#39;</span><span class="si">$_SERVER[PHP_SELF]</span><span class="s2">?action=getpdf&#39;&gt;PDF ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆ&lt;/a&gt;.&quot;</span><span class="p">;</span></div><div class='line' id='LC247'><br/></div><div class='line' id='LC248'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚’æ¥ç¶šã§ãã¾ã›ã‚“ï¼&lt;br&gt;MySQLã¯ç¨¼å‹•ã—ã¦ã„ã¾ã™ã‹ï¼Ÿã¾ãŸã¯ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã‚’å¤‰ãˆã¾ã›ã‚“ã§ã—ãŸã‹ï¼Ÿ&quot;</span><span class="p">;</span></div><div class='line' id='LC249'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-head1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;My CDs&quot;</span><span class="p">;</span></div><div class='line' id='LC250'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-attrib1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¢ãƒ¼ãƒ†ã‚£ã‚¹ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC251'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-attrib2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¿ã‚¤ãƒˆãƒ«&quot;</span><span class="p">;</span></div><div class='line' id='LC252'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-attrib3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å¹´&quot;</span><span class="p">;</span></div><div class='line' id='LC253'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-attrib4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚³ãƒãƒ³ãƒ‰&quot;</span><span class="p">;</span></div><div class='line' id='LC254'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-sure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã„ã„ã§ã™ã‹ï¼Ÿ&quot;</span><span class="p">;</span></div><div class='line' id='LC255'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-head2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CDè¿½åŠ &quot;</span><span class="p">;</span></div><div class='line' id='LC256'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-button1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CDå‰Šé™¤&quot;</span><span class="p">;</span></div><div class='line' id='LC257'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;cds-button2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CDè¿½åŠ &quot;</span><span class="p">;</span></div><div class='line' id='LC258'><br/></div><div class='line' id='LC259'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC260'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// BIORHYTHM DEMO</span></div><div class='line' id='LC261'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC262'><br/></div><div class='line' id='LC263'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒã‚¤ã‚ªãƒªã‚ºãƒ  (PHP+GDã®äº‹ä¾‹)&quot;</span><span class="p">;</span></div><div class='line' id='LC264'><br/></div><div class='line' id='LC265'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-by&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;by&quot;</span><span class="p">;</span></div><div class='line' id='LC266'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-ask&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;èª•ç”Ÿæ—¥ã‚’è¨˜å…¥ã—ã¦ãã ã•ã„&quot;</span><span class="p">;</span></div><div class='line' id='LC267'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OK&quot;</span><span class="p">;</span></div><div class='line' id='LC268'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-error1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æ—¥&quot;</span><span class="p">;</span></div><div class='line' id='LC269'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-error2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç„¡åŠ¹ã§ã™&quot;</span><span class="p">;</span></div><div class='line' id='LC270'><br/></div><div class='line' id='LC271'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-birthday&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;èª•ç”Ÿæ—¥&quot;</span><span class="p">;</span></div><div class='line' id='LC272'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-today&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ä»Šæ—¥&quot;</span><span class="p">;</span></div><div class='line' id='LC273'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-intellectual&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;çŸ¥æ€§çš„&quot;</span><span class="p">;</span></div><div class='line' id='LC274'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-emotional&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æ„Ÿæƒ…çš„&quot;</span><span class="p">;</span></div><div class='line' id='LC275'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;bio-physical&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è‚‰ä½“çš„&quot;</span><span class="p">;</span></div><div class='line' id='LC276'><br/></div><div class='line' id='LC277'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC278'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// INSTANT ART DEMO</span></div><div class='line' id='LC279'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC280'><br/></div><div class='line' id='LC281'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;iart-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ãƒˆã‚¢ãƒ¼ãƒˆ (PHP+GD+FreeTypeã®äº‹ä¾‹)&quot;</span><span class="p">;</span></div><div class='line' id='LC282'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;iart-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ•ã‚©ãƒ³ãƒˆ â‰ªAnkeCalligraphâ‰«  by &lt;a class=blue target=extern href=</span><span class="se">\&quot;</span><span class="s2">http://www.anke-art.de/</span><span class="se">\&quot;</span><span class="s2">&gt;Anke Arnold&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC283'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;iart-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OK&quot;</span><span class="p">;</span></div><div class='line' id='LC284'><br/></div><div class='line' id='LC285'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC286'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// FLASH ART DEMO</span></div><div class='line' id='LC287'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC288'><br/></div><div class='line' id='LC289'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;flash-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Flash Art (Example for PHP+MING)&quot;</span><span class="p">;</span></div><div class='line' id='LC290'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;flash-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;The MING project for win32 does not exist any longer and it is not complete.&lt;br&gt;Please read this: &lt;a class=blue target=extern href=</span><span class="se">\&quot;</span><span class="s2">http://www.opaque.net/wiki/index.php?Ming</span><span class="se">\&quot;</span><span class="s2">&gt;Ming - an SWF output library and PHP module&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC291'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;flash-ok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OK&quot;</span><span class="p">;</span></div><div class='line' id='LC292'><br/></div><div class='line' id='LC293'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC294'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// PHONE BOOK DEMO</span></div><div class='line' id='LC295'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC296'><br/></div><div class='line' id='LC297'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ•ãƒ©ãƒƒã‚·ãƒ¥ã‚¢ãƒ¼ãƒˆ (PHP+MINGã®äº‹ä¾‹)&quot;</span><span class="p">;</span></div><div class='line' id='LC298'><br/></div><div class='line' id='LC299'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç°¡å˜ãªé›»è©±å¸³ã‚¹ã‚¯ãƒªãƒ—ãƒˆã§ã™ãŒã€æœ€æ–°ã®ãƒ†ã‚¯ãƒãƒ­ã‚¸ãƒ¼ã‚’é§†ä½¿ã—ã¦å®Ÿè£…ã•ã‚Œã¦ã„ã¾ã™ï¼šã€€SQLiteã€SQLãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã€ã‚µãƒ¼ãƒã¯ä½¿ç”¨ã—ã¾ã›ã‚“ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC300'><br/></div><div class='line' id='LC301'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-error&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚’é–‹ã‘ã¾ã›ã‚“ã§ã—ãŸï¼&quot;</span><span class="p">;</span></div><div class='line' id='LC302'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-head1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒã‚¤é›»è©±ç•ªå·&quot;</span><span class="p">;</span></div><div class='line' id='LC303'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-attrib1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å§“&quot;</span><span class="p">;</span></div><div class='line' id='LC304'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-attrib2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å&quot;</span><span class="p">;</span></div><div class='line' id='LC305'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-attrib3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;é›»è©±ç•ªå·&quot;</span><span class="p">;</span></div><div class='line' id='LC306'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-attrib4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚³ãƒãƒ³ãƒ‰&quot;</span><span class="p">;</span></div><div class='line' id='LC307'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-sure&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã„ã„ã§ã™ã‹?&quot;</span><span class="p">;</span></div><div class='line' id='LC308'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-head2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¨ãƒ³ãƒˆãƒªè¿½åŠ &quot;</span><span class="p">;</span></div><div class='line' id='LC309'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-button1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å‰Šé™¤&quot;</span><span class="p">;</span></div><div class='line' id='LC310'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;phonebook-button2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è¿½åŠ &quot;</span><span class="p">;</span></div><div class='line' id='LC311'><br/></div><div class='line' id='LC312'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC313'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ABOUT</span></div><div class='line' id='LC314'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC315'><br/></div><div class='line' id='LC316'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;about-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPã«ã¤ã„ã¦&quot;</span><span class="p">;</span></div><div class='line' id='LC317'><br/></div><div class='line' id='LC318'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;about-subhead1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¢ã‚¤ãƒ‡ã‚£ã‚¢ã¨å®Ÿç¾&quot;</span><span class="p">;</span></div><div class='line' id='LC319'><br/></div><div class='line' id='LC320'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;about-subhead2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ã‚¶ã‚¤ãƒ³&quot;</span><span class="p">;</span></div><div class='line' id='LC321'><br/></div><div class='line' id='LC322'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;about-subhead3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚³ãƒ©ãƒœãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³&quot;</span><span class="p">;</span></div><div class='line' id='LC323'><br/></div><div class='line' id='LC324'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;about-subhead4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚³ãƒ³ã‚¿ã‚¯ãƒˆå…ˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC325'><br/></div><div class='line' id='LC326'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC327'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// MERCURY</span></div><div class='line' id='LC328'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC329'><br/></div><div class='line' id='LC330'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercuryãƒ¡ãƒ¼ãƒ«ã‚µãƒ¼ãƒã«ã‚ˆã‚‹SMTPã¨POP3&quot;</span><span class="p">;</span></div><div class='line' id='LC331'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-hinweise&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercuryã‚’åˆ©ç”¨ã™ã‚‹éš›ã®é‡è¦ãªãƒ¡ãƒ¢!&quot;</span><span class="p">;</span></div><div class='line' id='LC332'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-adress&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;é€ä¿¡è€…:&quot;</span><span class="p">;</span></div><div class='line' id='LC333'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-adressat&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å—ä¿¡è€…:&quot;</span><span class="p">;</span></div><div class='line' id='LC334'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-cc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;CC:&quot;</span><span class="p">;</span></div><div class='line' id='LC335'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ä»¶å:&quot;</span><span class="p">;</span></div><div class='line' id='LC336'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-message&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸:&quot;</span><span class="p">;</span></div><div class='line' id='LC337'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-sendnow&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’é€ä¿¡ã—ã¦ã„ã¾ã™...&quot;</span><span class="p">;</span></div><div class='line' id='LC338'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-sendok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®é€ä¿¡ãŒå®Œäº†ã—ã¾ã—ãŸ!&quot;</span><span class="p">;</span></div><div class='line' id='LC339'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-sendnotok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚¨ãƒ©ãƒ¼!ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®é€ä¿¡ãŒå®Œäº†ã—ã¦ã„ã¾ã›ã‚“!&quot;</span><span class="p">;</span></div><div class='line' id='LC340'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-help1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Mercuryã‚’åˆ©ç”¨ã™ã‚‹éš›ã®ãƒ¡ãƒ¢:&lt;br&gt;&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC341'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-help2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;ul&gt;</span></div><div class='line' id='LC342'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Mercuryã¯èµ·å‹•æ™‚ã«å¤–éƒ¨ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯ã¸ã®æ¥ç¶šãŒå¿…è¦ã§ã™ã€‚;&lt;/li&gt;</span></div><div class='line' id='LC343'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;èµ·å‹•æ™‚ã€Mercuryã¯ãƒ—ãƒ­ãƒã‚¤ãƒ€ã®DNSã‚µãƒ¼ãƒã‚’è‡ªå‹•çš„ã«ã€DNSã‚µãƒ¼ãƒã¨ã—ã¦å®šç¾©ã—ã¾ã™ã€‚;&lt;/li&gt;</span></div><div class='line' id='LC344'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;å…¨ãƒ¦ãƒ¼ã‚¶ç”¨ã‚²ãƒ¼ãƒˆã‚¦ã‚§ã‚¤ã‚µãƒ¼ãƒ: TCP/IPçµŒç”±ã§DNSã‚µãƒ¼ãƒã‚’è¨­å®šã—ã¦ãã ã•ã„(ä¾‹ï¼š NICã®IPã‚¢ãƒ‰ãƒ¬ã‚¹ 198.41.0.4);&lt;/li&gt;</span></div><div class='line' id='LC345'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Mercuryã®è¨­å®šã¯MERCURY.INIã‚’å‘¼ã³å‡ºã—ã¦ã„ã¾ã™ã€‚;&lt;/li&gt;</span></div><div class='line' id='LC346'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸é€ä¿¡ã®ãƒ†ã‚¹ãƒˆã¯postmaster@localhostã‹admin@localhostã«é€ä¿¡ã—ã¦ã€æ¬¡ã®ãƒ•ã‚©ãƒ«ãƒ€ã«ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒæ ¼ç´ã•ã‚Œã¦ã„ã‚‹ã‹ç¢ºèªã—ã¦ãã ã•ã„: xampp.../mailserver/MAIL/postmaster ã¾ãŸã¯ã€(...)/admin;&lt;/li&gt;</span></div><div class='line' id='LC347'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;ãƒ†ã‚¹ãƒˆãƒ¦ãƒ¼ã‚¶ã¨ã—ã¦</span><span class="se">\&quot;</span><span class="s2">newuser</span><span class="se">\&quot;</span><span class="s2"> (newuser@localhost) ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ = wampp ãŒå­˜åœ¨ã—ã¾ã™ã€‚;&lt;/li&gt;</span></div><div class='line' id='LC348'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;ã‚¹ãƒ‘ãƒ ã‚„ç¦æ­¢ç”¨èªã¯ã€Mercuryã§å…¨ä½“çš„ã«è¨±å¯ã•ã‚Œã¦ã„ã¾ã›ã‚“!;&lt;/li&gt;</span></div><div class='line' id='LC349'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC350'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.pmail.com/overviews/ovw_mercury.htm</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_top</span><span class="se">\&quot;</span><span class="s2">&gt;http://www.pmail.com/overviews/ovw_mercury.htm&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC351'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-note-important&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;IMPORTANT&quot;</span><span class="p">;</span></div><div class='line' id='LC352'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-note-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;There are three variants for sending emails with PHP. One of these three possibilities have to be activated in the xampp\php\php.ini file.&quot;</span><span class="p">;</span></div><div class='line' id='LC353'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-note-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;mailToDisk&lt;/b&gt; (&lt;i&gt;Default&lt;/i&gt;) - All emails are written in the xampp\mailoutput folder on local disk. XAMPP mailToDisk is the default and you have nothing to do in the php.ini.&quot;</span><span class="p">;</span></div><div class='line' id='LC354'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-note-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;fakemail&lt;/b&gt; - With fakemail (sendmail.exe)) all emails are forwarding to your mailbox. Please edit the xampp\sendmail\sendmail.ini first with your mailbox credentials. And do not forget to activate fakemail (senmail.exe)) in the xampp\php\php.ini.&quot;</span><span class="p">;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC355'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;mail-note-text4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;Mercury Mail Server&lt;/b&gt; or some other Mail Socket Server on localhost. This option have to be activated in the php.ini also.&quot;</span><span class="p">;</span></div><div class='line' id='LC356'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC357'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC358'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// FileZilla FTP</span></div><div class='line' id='LC359'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC360'><br/></div><div class='line' id='LC361'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;filezilla-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FileZilla FTP Server&quot;</span><span class="p">;</span></div><div class='line' id='LC362'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;filezilla-install&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Apacheã¯FTPã‚µãƒ¼ãƒã§ã¯&lt;U&gt;ã‚ã‚Šã¾ã›ã‚“&lt;/U&gt;... ã—ã‹ã—FileZillaã¯FTPã‚µãƒ¼ãƒã§ã™ã€‚æ¬¡ã‚’å‚ç…§ã—ã¦æ¤œè¨ã—ã¦ãã ã•ã„ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC363'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;filezilla-install2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;XAMPPã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç§»å‹•ã—ã¦ã€ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—ã®ãŸã‚ã«</span><span class="se">\&quot;</span><span class="s2">filezilla_setup.bat</span><span class="se">\&quot;</span><span class="s2">ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚ æ³¨ç›®: For Windows NT, 2000 ã¨ XP Professionalã§ã¯ã€FileZillaã¯ã‚µãƒ¼ãƒ“ã‚¹ã¨ã—ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC364'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;filezilla-install3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\&quot;</span><span class="s2">FileZilla FTP</span><span class="se">\&quot;</span><span class="s2">ã‚’è¨­å®šã—ã¾ã™ã€‚ è¨­å®šã®ãŸã‚ã«,FileZillaã®ã‚¤ãƒ³ã‚¿ãƒ¼ãƒ•ã‚§ã‚¤ã‚¹ã§ã‚ã‚‹</span><span class="se">\&quot;</span><span class="s2">FileZilla Server Interface.exe</span><span class="se">\&quot;</span><span class="s2">ã‚’ä½¿ã£ã¦ãã ã•ã„ã€‚æ¬¡ã¯äºŒã¤ã®ãƒ¦ãƒ¼ã‚¶ã«ã¤ã„ã¦ã®ä¾‹ã§ã™:&lt;br&gt;&lt;br&gt;</span></div><div class='line' id='LC365'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A: ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®ãƒ¦ãƒ¼ã‚¶ã¯</span><span class="se">\&quot;</span><span class="s2">newuser</span><span class="se">\&quot;</span><span class="s2">, ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯</span><span class="se">\&quot;</span><span class="s2">wampp</span><span class="se">\&quot;</span><span class="s2">ã§ã™ã€‚ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¯xampp\htdocsã§ã™ã€‚&lt;br&gt;</span></div><div class='line' id='LC366'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B: åŒ¿åãƒ¦ãƒ¼ã‚¶ã¯</span><span class="se">\&quot;</span><span class="s2">anonymous</span><span class="se">\&quot;</span><span class="s2">, ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚ãƒ›ãƒ¼ãƒ ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã¯xampp\anonymousã§ã™ã€‚&lt;br&gt;&lt;br&gt;</span></div><div class='line' id='LC367'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ãƒ«ãƒ¼ãƒ—ãƒãƒƒã‚¯ã§ã‚ã‚‹127.0.0.1ãŒæŒ‡å®šã•ã‚Œã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC368'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;filezilla-install4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FTPã‚µãƒ¼ãƒã¯</span><span class="se">\&quot;</span><span class="s2">FileZillaFTP_stop.bat</span><span class="se">\&quot;</span><span class="s2">ã§åœæ­¢ã—ã¦ãã ã•ã„ã€‚FileZillaã®ã‚µãƒ¼ãƒ“ã‚¹ã¯ã€</span><span class="se">\&quot;</span><span class="s2">FileZillaServer.exe</span><span class="se">\&quot;</span><span class="s2">ã‚’ç›´æ¥ä½¿ã£ã¦ãã ã•ã„ã€‚ãã—ã¦ã€ã‚ãªãŸã¯å…¨ã¦ã®èµ·å‹•ã‚ªãƒ—ã‚·ãƒ§ãƒ³ã‚’è¨­å®šã§ãã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC369'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;filezilla-url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://filezilla.sourceforge.net</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_top</span><span class="se">\&quot;</span><span class="s2">&gt;http://filezilla.sourceforge.net&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC370'><br/></div><div class='line' id='LC371'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC372'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// PEAR</span></div><div class='line' id='LC373'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC374'><br/></div><div class='line' id='LC375'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;pear-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PEARã‚’ä½¿ã£ãŸExcelãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¨ã‚¯ã‚¹ãƒãƒ¼ãƒˆ (PHP)&quot;</span><span class="p">;</span></div><div class='line' id='LC376'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;pear-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç°¡å˜ãª&lt;a class=blue target=extern href=</span><span class="se">\&quot;</span><span class="s2">http://www.contentmanager.de/magazin/artikel_310-print_excel_export_mit_pear.html</span><span class="se">\&quot;</span><span class="s2">&gt;ãƒãƒ‹ãƒ¥ã‚¢ãƒ«&lt;/A&gt;ãŒ&lt;a class=blue target=extern href=</span><span class="se">\&quot;</span><span class="s2">http://www.thinkphp.de/</span><span class="se">\&quot;</span><span class="s2">&gt;ThinkPHP&lt;/A&gt; (ãƒ‰ã‚¤ãƒ„èªã®ã¿)ã®Bjî’šn Schotteæ°ã‹ã‚‰æä¾›ã•ã‚Œã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC377'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;pear-cell&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚»ãƒ«ã®å€¤&quot;</span><span class="p">;</span></div><div class='line' id='LC378'><br/></div><div class='line' id='LC379'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC380'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// JPGRAPH</span></div><div class='line' id='LC381'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC382'><br/></div><div class='line' id='LC383'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;jpgraph-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;JpGraph - Graph Library for PHP&quot;</span><span class="p">;</span></div><div class='line' id='LC384'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;jpgraph-url&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.aditus.nu/jpgraph/</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_top</span><span class="se">\&quot;</span><span class="s2">&gt;http://www.aditus.nu/jpgraph/&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC385'><br/></div><div class='line' id='LC386'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC387'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ADODB</span></div><div class='line' id='LC388'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC389'><br/></div><div class='line' id='LC390'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADOdb - ãã®ã»ã‹ã®ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚¢ã‚¯ã‚»ã‚¹(PHP)&quot;</span><span class="p">;</span></div><div class='line' id='LC391'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ADOdbã¯Active Data Objectsãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ç”¨ã«ã§ãã¦ã„ã¾ã™ã€‚ç§ãŸã¡ã¯ç¾åœ¨ã€MySQL, PostgreSQL, Interbase, Firebird, Informix, Oracle, MS SQL 7, Foxpro, Access, ADO, Sybase, FrontBase, DB2, SAP DB, SQLite,ãã—ã¦generic ODBCã‚’ã‚µãƒãƒ¼ãƒˆã—ã¦ã„ã¾ã™ã€‚ Sybase, Informix, FrontBase, PostgreSQLã®ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã¯ã‚³ãƒŸãƒ¥ãƒ‹ãƒ†ã‚£ãƒ¼ã®è²¢çŒ®ã§ä½œæˆã•ã‚Œã¾ã—ãŸã€‚ã‚ãªãŸã¯\(mini)xampp\php\pear\adodbã§è¦‹ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC392'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-example&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ä¾‹:&quot;</span><span class="p">;</span></div><div class='line' id='LC393'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-dbserver&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚µãƒ¼ãƒ (MySQL, Oracle ..?)&quot;</span><span class="p">;</span></div><div class='line' id='LC394'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-host&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚µãƒ¼ãƒã®ãƒ›ã‚¹ãƒˆ (åå‰ã‹IPã‚¢ãƒ‰ãƒ¬ã‚¹)&quot;</span><span class="p">;</span></div><div class='line' id='LC395'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ¦ãƒ¼ã‚¶å &quot;</span><span class="p">;</span></div><div class='line' id='LC396'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-password&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰&quot;</span><span class="p">;</span></div><div class='line' id='LC397'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-database&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚µãƒ¼ãƒä¸Šã®ç¾åœ¨ã®ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC398'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-table&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ä¸Šã®é¸æŠã•ã‚ŒãŸãƒ†ãƒ¼ãƒ–ãƒ«&quot;</span><span class="p">;</span></div><div class='line' id='LC399'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-nottable&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;p&gt;&lt;b&gt;ãƒ†ãƒ¼ãƒ–ãƒ«ãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“!&lt;/b&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC400'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ADOdb-notdbserver&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;p&gt;&lt;b&gt;ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚µãƒ¼ãƒç”¨ã®ãƒ‰ãƒ©ã‚¤ãƒãŒè¦‹ã¤ã‹ã‚‰ãªã„ã€ã‚‚ã—ãã¯ãƒ‰ãƒ©ã‚¤ãƒãŒODBC,ADOã‚‚ã—ãã¯OLEDBãƒ‰ãƒ©ã‚¤ãƒã§ã™!&lt;/b&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC401'><br/></div><div class='line' id='LC402'><br/></div><div class='line' id='LC403'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC404'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// INFO</span></div><div class='line' id='LC405'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC406'><br/></div><div class='line' id='LC407'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-package&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‘ãƒƒã‚±ãƒ¼ã‚¸&quot;</span><span class="p">;</span></div><div class='line' id='LC408'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-pages&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒšãƒ¼ã‚¸&quot;</span><span class="p">;</span></div><div class='line' id='LC409'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-extension&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;æ‹¡å¼µ&quot;</span><span class="p">;</span></div><div class='line' id='LC410'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-module&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Apache module&quot;</span><span class="p">;</span></div><div class='line' id='LC411'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-description&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;èª¬æ˜&quot;</span><span class="p">;</span></div><div class='line' id='LC412'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-signature&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ç½²å&quot;</span><span class="p">;</span></div><div class='line' id='LC413'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-docdir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Document root&quot;</span><span class="p">;</span></div><div class='line' id='LC414'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-port&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆãƒãƒ¼ãƒˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC415'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-service&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã‚µãƒ¼ãƒ“ã‚¹&quot;</span><span class="p">;</span></div><div class='line' id='LC416'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-examples&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ä¾‹&quot;</span><span class="p">;</span></div><div class='line' id='LC417'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-conf&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«&quot;</span><span class="p">;</span></div><div class='line' id='LC418'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-requires&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;å¿…é ˆ&quot;</span><span class="p">;</span></div><div class='line' id='LC419'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-alternative&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;é¸æŠ&quot;</span><span class="p">;</span></div><div class='line' id='LC420'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-tomcatwarn&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è­¦å‘Š! Tomcatã¯ãƒãƒ¼ãƒˆ8080ä»¥å¤–ã§èµ·å‹•ã—ã¦ã„ã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC421'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-tomcatok&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;OK! Tomcatã¯ãƒãƒ¼ãƒˆ8080ã§èµ·å‹•ã—ã¾ã—ãŸã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC422'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-tryjava&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Apache MOD_JKã¨java(JSP)ã®ä¾‹ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC423'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-nococoon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;è­¦å‘Š! Tomcatã¯ãƒãƒ¼ãƒˆ8080ã§èµ·å‹•ã—ã¦ã„ã¾ã›ã‚“ã€‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã§ãã¾ã›ã‚“ã€‚</span></div><div class='line' id='LC424'><span class="s2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="se">\&quot;</span><span class="s2">Cocoon</span><span class="se">\&quot;</span><span class="s2">ã¯Tomcatãªã—ã§èµ·å‹•ã—ã¦ã„ã¾ã™!&quot;</span><span class="p">;</span></div><div class='line' id='LC425'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;info-okcocoon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Ok!Tomcatã¯æ­£å¸¸ã«èµ·å‹•ã—ã¦ã„ã¾ã™ã€‚ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ä½œæ¥­ã¯ã‚‚ã†å°‘ã—ã§å®Œäº†ã—ã¾ã™ã€‚ </span><span class="se">\&quot;</span><span class="s2">Cocoon</span><span class="se">\&quot;</span><span class="s2">ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã¯ã“ã“ã‚’ã‚¯ãƒªãƒƒã‚¯ã—ã¦ãã ã•ã„...&quot;</span><span class="p">;</span></div><div class='line' id='LC426'><br/></div><div class='line' id='LC427'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC428'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// PHP Switch</span></div><div class='line' id='LC429'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC430'><br/></div><div class='line' id='LC431'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP Switch 1.0 win32 for XAMPP&quot;</span><span class="p">;</span></div><div class='line' id='LC432'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-phpversion&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;i&gt;&lt;b&gt;ç¾åœ¨ã“ã®XAMPPã«ã¯&quot;</span><span class="p">;</span></div><div class='line' id='LC433'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-whatis&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;PHP switchã§ä½•ã‹ä½œã‚Œã¾ã™ã‹?&lt;/b&gt;&lt;br&gt;apachefriendsã®PHP Switchã¯ XAMPPã®PHPã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ï¼”ã‹ã‚‰ï¼•ã«åˆ‡ã‚Šæ›¿ãˆãŸã‚Šã€æˆ»ã—ãŸã‚Šã—ã¾ã™ã€‚ã‚ãªãŸã¯PHP4ã‹PHP5ã§ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®ãƒ†ã‚¹ãƒˆã‚’ã™ã‚‹äº‹ãŒã§ãã¾ã™ã€‚&lt;p&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC434'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-find&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;PHP Switchã¯ã©ã“ã«ã‚ã‚Šã¾ã™ã‹?&lt;/b&gt;&lt;br&gt;XAMPPã®PHP Switchã¯</span><span class="se">\&quot;</span><span class="s2">php-switch.php</span><span class="se">\&quot;</span><span class="s2">ã¨ã„ã†åå‰ã®PHPãƒ•ã‚¡ã‚¤ãƒ«ï¼ˆXAMPPã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ï¼‰ã§å®Ÿè¡Œã§ãã¾ã™ã€‚å®Ÿè¡Œã®ãŸã‚ã«ã¯ã€ã“ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½¿ã‚ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“: &quot;</span><span class="p">;</span></div><div class='line' id='LC435'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-care&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;é›£ã—ãã‚ã‚Šã¾ã›ã‚“ã‹?&lt;/b&gt;&lt;br&gt;PHP Switchã¯ æ¬¡ã®å ´åˆPHPã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ãŒå¤‰æ›´ã§ãã¾ã›ã‚“ã€‚a) Apache HTTPD ãŒèµ·å‹•ã—ã¦ã„ã‚‹ã€‚ ã¾ãŸã¯/ã‹ã¤ b) ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ•ã‚©ãƒ«ãƒ€ã®</span><span class="se">\&quot;</span><span class="s2">.phpversion</span><span class="se">\&quot;</span><span class="s2">ãƒ•ã‚¡ã‚¤ãƒ«ãŒç©ºç™½ã€ã¾ãŸã¯ãƒã‚°ãŒã‚ã‚‹ã€‚ </span><span class="se">\&quot;</span><span class="s2">.phpversion</span><span class="se">\&quot;</span><span class="s2">ã«ã¯, </span><span class="se">\&quot;</span><span class="s2">4</span><span class="se">\&quot;</span><span class="s2">ã‹</span><span class="se">\&quot;</span><span class="s2">5</span><span class="se">\&quot;</span><span class="s2">ã®ã‚ˆã†ã«XAMPPã®ç¾åœ¨ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ãŒæ›¸ã‹ã‚Œã¦ã„ã¾ã™ã€‚Apache HTTPDã‚’</span><span class="se">\&quot;</span><span class="s2">shutdown</span><span class="se">\&quot;</span><span class="s2">ã—ã¦ã‹ã‚‰</span><span class="se">\&quot;</span><span class="s2">php-switch.bat</span><span class="se">\&quot;</span><span class="s2">ã‚’å®Ÿè¡Œã—ã¦ãã ã•ã„ã€‚&lt;p&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC436'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-where4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;ã©ã“ã«(å¤ã„)è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ãŒã‚ã‚Šã¾ã™ã‹?&lt;/b&gt;&lt;br&gt;&lt;br&gt;PHP 4ç”¨:&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC437'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-where5&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;PHP 5ç”¨:&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC438'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-make1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;è¨­å®šãƒ•ã‚¡ã‚¤ãƒ«ã®ä½•ãŒå¤‰æ›´ã•ã‚Œã¾ã™ã‹?&lt;/b&gt;&lt;br&gt;&lt;br&gt;There lives! For PHP4 or PHP5 in the&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC439'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-make2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt; .. PHP4ç”¨ã¯å®‰å…¨ã§ã™ ...&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC440'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-make3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt; .. PHP5ç”¨ã¯å®‰å…¨ã§ã™ ...&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC441'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-make4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;br&gt;&lt;br&gt;ãã—ã¦ã€ã“ã‚Œã‚‰ã®ãƒ•ã‚¡ã‚¤ãƒ«ã¯PHP switchingã§æˆ»ã™ã“ã¨ãŒã§ãã¾ã™ã€‚&lt;p&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC442'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;switch-not&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;b&gt;PHPã«ã¯å•é¡Œã‚ã‚Šã¾ã›ã‚“ãŒ</span><span class="se">\&quot;</span><span class="s2">åˆ‡ã‚Šæ›¿ãˆ</span><span class="se">\&quot;</span><span class="s2">ã§ãã¾ã›ã‚“ã€‚&lt;/b&gt;&lt;br&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC443'><br/></div><div class='line' id='LC444'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC445'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// Cocoon</span></div><div class='line' id='LC446'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC447'><br/></div><div class='line' id='LC448'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;go-cocoon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Cocoonã¯æ¬¡ã®ã€http://localhost/cocoon/ã«ã‚ã‚Šã¾ã™ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC449'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;path-cocoon&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ãã—ã¦ã€æ¬¡ã®ãƒ•ã‚©ãƒ«ãƒ€ã«é›†ã‚ã¦ãã ã•ã„ã€‚: ...</span><span class="se">\\</span><span class="s2">xampp</span><span class="se">\\</span><span class="s2">tomcat</span><span class="se">\\</span><span class="s2">webapps</span><span class="se">\\</span><span class="s2">cocoon&quot;</span><span class="p">;</span></div><div class='line' id='LC450'><br/></div><div class='line' id='LC451'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC452'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// Guest</span></div><div class='line' id='LC453'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC454'><br/></div><div class='line' id='LC455'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;guest1-name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ä»Šã®ãƒªãƒªãƒ¼ã‚¹ã®ç¾åœ¨ã®ã‚²ã‚¹ãƒˆ: &lt;i&gt;FCKeditor&lt;/i&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC456'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;guest1-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;ã¨ã¦ã‚‚ã‚ˆã„HTMLã‚ªãƒ³ãƒ©ã‚¤ãƒ³ã‚¨ãƒ‡ã‚£ã‚¿ã§ã€JavaScriptã§å®Ÿè£…ã•ã‚Œã¦ã„ã¾ã™ã€‚IEã«æœ€é©åŒ–ã•ã‚Œã¦ã„ã¾ã™ã€‚ã—ã‹ã—ã€MozillaFireFoxã§ã¯æ©Ÿèƒ½ã—ã¾ã›ã‚“ã€‚&quot;</span><span class="p">;</span></div><div class='line' id='LC457'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;guest1-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FCKeditor ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸: &lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.fckeditor.net</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_new</span><span class="se">\&quot;</span><span class="s2">&gt;www.fckeditor.net&lt;/a&gt;ã€‚ &quot;</span><span class="p">;</span></div><div class='line' id='LC458'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;guest1-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;a href=</span><span class="se">\&quot;</span><span class="s2">guest-FCKeditor/fckedit-dynpage.php</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_new</span><span class="se">\&quot;</span><span class="s2">&gt;FCKeditorã§ä½œã£ãŸãƒ†ã‚¹ãƒˆãƒšãƒ¼ã‚¸&lt;/A&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC459'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC460'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC461'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// NAVI SPECIALS SECTION</span></div><div class='line' id='LC462'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC463'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC464'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-specials&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Specials&quot;</span><span class="p">;</span></div><div class='line' id='LC465'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC466'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC467'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// PS AND PARADOX EXAMPLE</span></div><div class='line' id='LC468'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="c1">// ---------------------------------------------------------------------</span></div><div class='line' id='LC469'><br/></div><div class='line' id='LC470'>&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-ps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP PostScript&quot;</span><span class="p">;</span></div><div class='line' id='LC471'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ps-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PostScript Module Example&quot;</span><span class="p">;</span></div><div class='line' id='LC472'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ps-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PostScript Module ï½»php_psï½« by &lt;a class=blue target=extern href=</span><span class="se">\&quot;</span><span class="s2">mailto:steinm@php.net</span><span class="se">\&quot;</span><span class="s2">&gt;Uwe Steinmann&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC473'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;ps-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Tip: To convert PS files to PDF files on win32, you can use &lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.shbox.de/</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_new</span><span class="se">\&quot;</span><span class="s2">&gt;FreePDF&lt;/a&gt; with &lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://www.ghostscript.com/awki/</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_new</span><span class="se">\&quot;</span><span class="s2">&gt;GhostScript&lt;/a&gt;.&quot;</span><span class="p">;</span></div><div class='line' id='LC474'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div><div class='line' id='LC475'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;navi-paradox&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;PHP Paradox&quot;</span><span class="p">;</span></div><div class='line' id='LC476'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;paradox-head&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Paradox Module Example&quot;</span><span class="p">;</span></div><div class='line' id='LC477'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;paradox-text1&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Paradox Module ï½»php_paradoxï½« by &lt;a class=blue target=extern href=</span><span class="se">\&quot;</span><span class="s2">mailto:steinm@php.net</span><span class="se">\&quot;</span><span class="s2">&gt;Uwe Steinmann&lt;/a&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC478'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;paradox-text2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;&lt;h2&gt;Reading and writing a paradox database&lt;/h2&gt;&quot;</span><span class="p">;</span></div><div class='line' id='LC479'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;paradox-text3&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;More examples you can find in the directory &quot;</span><span class="p">;</span></div><div class='line' id='LC480'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="nv">$TEXT</span><span class="p">[</span><span class="s1">&#39;paradox-text4&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Further information to Paradox databases in &lt;a href=</span><span class="se">\&quot;</span><span class="s2">http://en.wikipedia.org/wiki/Paradox</span><span class="se">\&quot;</span><span class="s2"> target=</span><span class="se">\&quot;</span><span class="s2">_new</span><span class="se">\&quot;</span><span class="s2">&gt;WikiPedia&lt;/a&gt;.&quot;</span><span class="p">;</span></div><div class='line' id='LC481'><span class="cp">?&gt;</span><span class="x"></span></div></pre></div>
+            </td>
+          </tr>
+        </table>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2013 <span title="0.08511s from github-fe128-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/nroxana/isi_proiect/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" title="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      title="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
 
-	$TEXT['xampp-setup-head'] = "XAMPP‚ÌƒfƒBƒŒƒNƒgƒŠ§Œä (.htaccess)";
-	$TEXT['xampp-setup-user'] = "ƒ†[ƒU:";
-	$TEXT['xampp-setup-passwd'] = "ƒpƒXƒ[ƒh:";
-	$TEXT['xampp-setup-start'] = "ˆÀ‘S‚ÈXAMPPƒfƒBƒŒƒNƒgƒŠ‚ğì¬‚µ‚Ä‚­‚¾‚³‚¢B";
-	$TEXT['xampp-setup-notok'] = "<br><br>ƒGƒ‰[:ƒ†[ƒU–¼‚Ì•¶š‚ÍA‚R•¶šˆÈã‚P‚T•¶š–¢–‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B“Áê‚È•¶š‚â‹ó”’‚Í”F‚ß‚ç‚ê‚Ä‚¢‚Ü‚¹‚ñB<br><br>";
-	$TEXT['xampp-setup-ok'] = "<br><br>root‚ÌƒpƒXƒ[ƒh‚ª•ÏX‚³‚ê‚Ü‚µ‚½Bİ’è‚ğ—LŒø‚É‚·‚é‚½‚ß‚ÉAMySQL‚ğÄ‹N“®‚µ‚Ä‚­‚¾‚³‚¢B<br><br>";
-	$TEXT['xampp-config-ok'] = "<br><br>¬Œ÷: XAMPP‚ÌƒfƒBƒŒƒNƒgƒŠ§Œä‚ªİ’è‚³‚ê‚Ü‚µ‚½!‘Sƒ†[ƒU‚Ìƒf[ƒ^‚ÍAˆÈ‰º‚Ìƒtƒ@ƒCƒ‹‚ÉŠi”[‚³‚ê‚Ü‚µ‚½:<br>";
-	$TEXT['xampp-config-notok'] = "<br><br>ƒGƒ‰[: ‚ ‚È‚½‚ÌƒVƒXƒeƒ€‚Å‚ÍA \".htaccess\"‚Æ\"htpasswd.exe\"‚É‚æ‚éƒfƒBƒŒƒNƒgƒŠ§Œä‚ª—LŒø‚Å‚Í‚ ‚è‚Ü‚¹‚ñB‚¨‚»‚ç‚­APHP‚ª\"Safe Mode\"‚Å‹N“®‚µ‚Ä‚¢‚Ü‚·B <br><br>";
-
-	// ---------------------------------------------------------------------
-	// START
-	// ---------------------------------------------------------------------
-
-	$TEXT['start-head'] = "XAMPP Windows”Å‚Ö‚æ‚¤‚±‚»";
-
-	$TEXT['start-subhead'] = "‚¨‚ß‚Å‚Æ‚¤‚²‚´‚¢‚Ü‚·:<br>ƒVƒXƒeƒ€ã‚ÉXAMPP‚ª³‚µ‚­ƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ü‚µ‚½I";
-
-	$TEXT['start-text-newest'] = "";
-
-	$TEXT['start-text1'] = "‚±‚ê‚ÅAApache‚ğg‚¢n‚ß‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B‚Ü‚¸A¶’[‚ÌƒiƒrƒQ[ƒVƒ‡ƒ“‚ÌáƒXƒe[ƒ^ƒXâ‚©‚çA‚·‚×‚Ä–â‘è‚È‚­“®ì‚·‚é‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B";
-
-	$TEXT['start-text2'] = "";
-
-	$TEXT['start-text3'] = "";
-
-	$TEXT['start-text4'] = "ƒeƒXƒgØ–¾‘‚ğg‚Á‚½OpenSSL‚ğ<a href='https://127.0.0.1' target='_top'>https://127.0.0.1</a>A‚à‚µ‚­‚Í<a href='https://localhost' target='_top'>https://localhost</a>‚ªƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·B";
-
-	$TEXT['start-text5'] = "‚±‚ê‚ÍA‚Æ‚Ä‚àd—v‚Å‚·! ƒwƒ‹ƒv‚âƒTƒ|[ƒg‚ÉŠÖ‚µ‚ÄCarsten, Nemesis, KriS, Boppy,‚»‚ê‚ÉXAMPP‚Ì‘S‚Ä‚Ìƒ†[ƒU‚É‚Æ‚Ä‚àŠ´Ó‚µ‚Ä‚¢‚Ü‚·!";
-
-	$TEXT['start-text6'] = "Good luck, Kay Vogelgesang, Kai 'Oswald' Seidler";
-
-	// ---------------------------------------------------------------------
-	// MANUALS
-	// ---------------------------------------------------------------------
-
-	$TEXT['manuals-head'] = "ƒIƒ“ƒ‰ƒCƒ“Eƒ}ƒjƒ…ƒAƒ‹";
-
-	$TEXT['manuals-text1'] = "XAMPP‚ÍA‚¢‚­‚Â‚à‚ÌˆÙ‚È‚éƒ\ƒtƒgƒEƒFƒAEƒpƒbƒP[ƒW‚ğ‚Ğ‚Æ‚Ü‚Æ‚ß‚É‚µ‚Ü‚·B Å‚àd—v‚Èƒ\ƒtƒgƒEƒFƒAEƒpƒbƒP[ƒW‚Ì•W€“I‚ÈƒhƒLƒ…ƒƒ“ƒg‚ğŒfÚ‚µ‚Ü‚µ‚½B";
-
-
-	$TEXT['manuals-list1'] = "
-	<ul>
-	<li><a href=\"http://httpd.apache.org/docs/2.2/\">Apache 2 ƒhƒLƒ…ƒƒ“ƒg</a>
-	<li><a href=\"http://www.php.net/manual/ja/\">PHP <b>ƒŠƒtƒ@ƒŒƒ“ƒX</b>ƒhƒLƒ…ƒƒ“ƒg</a>
-	<li><a href=\"http://perldoc.perl.org/\">Perl ƒhƒLƒ…ƒƒ“ƒg</a>
-	<li><a href=\"http://dev.mysql.com/doc/refman/5.0/en/index.html\">MySQL ƒhƒLƒ…ƒƒ“ƒg</a>
-	<li><a href=\"http://phplens.com/adodb/\">ADODB</a>
-	<li><a href=\"http://eaccelerator.net/DocumentationUk/\">eAccelerator</a>
-	<li><a href=\"http://www.fpdf.org/en/doc/index.php\">FPDF Class ƒhƒLƒ…ƒƒ“ƒg</a>
-	</ul>";
-
-	$TEXT['manuals-text2'] = "ƒ`ƒ…[ƒgƒŠƒAƒ‹‚ÌƒVƒ‡[ƒgƒŠƒXƒg‚ÆApache FriendsƒhƒLƒ…ƒƒ“ƒg‚Ìƒy[ƒWF";
-
-	$TEXT['manuals-list2'] = "
-	<ul>
-	<li><a href=\"http://www.apachefriends.org/en/faq-xampp.html\">Apache Friends ƒhƒLƒ…ƒƒ“ƒg</a>
-	<li><a href=\"http://www.freewebmasterhelp.com/tutorials/php/\">PHP ƒ`ƒ…[ƒgƒŠƒAƒ‹</a> by David Gowans
-	<li><a href=\"http://www.davesite.com/webstation/html/\">HTML - ‰SÒŒü‚¯ƒCƒ“ƒ^ƒ‰ƒNƒeƒBƒuEƒ`ƒ…[ƒgƒŠƒAƒ‹</a> by Dave Kristula
-	<li><a href=\"http://www.comp.leeds.ac.uk/Perl/start.html\">Perl ƒ`ƒ…[ƒgƒŠƒAƒ‹</a> by Nik Silver
-	</ul>";
-
-	$TEXT['manuals-text3'] = "ƒOƒbƒhƒ‰ƒbƒNI Have funô";
-
-	// ---------------------------------------------------------------------
-	// COMPONENTS
-	// ---------------------------------------------------------------------
-
-	$TEXT['components-head'] = "XAMPP ƒRƒ“ƒ|[ƒlƒ“ƒg";
-
-	$TEXT['components-text1'] = "XAMPP‚Í‚½‚­‚³‚ñ‚Ìƒ\ƒtƒgƒEƒFƒAƒpƒbƒP[ƒW‚ğ‘g‚İ‡‚í‚¹‚Ä\¬‚³‚ê‚Ä‚¢‚Ü‚·B‘S‚Ä‚Ìƒ\ƒtƒgƒEƒFƒAƒpƒbƒP[ƒW‚ğ•\¦‚µ‚Ü‚·B";
-
-	$TEXT['components-text2'] = "‚±‚ê‚ç‚ÌƒvƒƒOƒ‰ƒ€‚ÌŠJ”­Ò‚É‚Æ‚Ä‚àŠ´Ó‚µ‚Ä‚¢‚Ü‚·B";
-
-	$TEXT['components-text3'] = "<b>\\xampp\licenses</b>ƒfƒBƒŒƒNƒgƒŠ‚ÅA‚±‚ê‚ç‚ÌƒvƒƒOƒ‰ƒ€‚Ìƒ‰ƒCƒZƒ“ƒX‚É‚Â‚¢‚ÄŠm”F‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B";
-
-	// ---------------------------------------------------------------------
-	// CD COLLECTION DEMO
-	// ---------------------------------------------------------------------
-
-	$TEXT['cds-head'] = "CDƒRƒŒƒNƒVƒ‡ƒ“ (PHP+MySQL+PDF Class‚Ì–—á)";
-	$TEXT['cds-head-fpdf'] = "CD ƒRƒŒƒNƒVƒ‡ƒ“ (PHP+MySQL+FPDF Class‚Ì–—á)";
-
-	$TEXT['cds-text1'] = "ƒVƒ“ƒvƒ‹‚ÈCDƒvƒƒOƒ‰ƒ€";
-
-	$TEXT['cds-text2'] = "CDƒŠƒXƒg<a href='$_SERVER[PHP_SELF]?action=getpdf'>PDF ƒhƒLƒ…ƒƒ“ƒg</a>.";
-
-	$TEXT['cds-error'] = "ƒf[ƒ^ƒx[ƒX‚ğÚ‘±‚Å‚«‚Ü‚¹‚ñI<br>MySQL‚Í‰Ò“®‚µ‚Ä‚¢‚Ü‚·‚©H‚Ü‚½‚ÍƒpƒXƒ[ƒh‚ğ•Ï‚¦‚Ü‚¹‚ñ‚Å‚µ‚½‚©H";
-	$TEXT['cds-head1'] = "My CDs";
-	$TEXT['cds-attrib1'] = "ƒA[ƒeƒBƒXƒg";
-	$TEXT['cds-attrib2'] = "ƒ^ƒCƒgƒ‹";
-	$TEXT['cds-attrib3'] = "”N";
-	$TEXT['cds-attrib4'] = "ƒRƒ}ƒ“ƒh";
-	$TEXT['cds-sure'] = "‚¢‚¢‚Å‚·‚©H";
-	$TEXT['cds-head2'] = "CD’Ç‰Á";
-	$TEXT['cds-button1'] = "CDíœ";
-	$TEXT['cds-button2'] = "CD’Ç‰Á";
-
-	// ---------------------------------------------------------------------
-	// BIORHYTHM DEMO
-	// ---------------------------------------------------------------------
-
-	$TEXT['bio-head'] = "ƒoƒCƒIƒŠƒYƒ€ (PHP+GD‚Ì–—á)";
-
-	$TEXT['bio-by'] = "by";
-	$TEXT['bio-ask'] = "’a¶“ú‚ğ‹L“ü‚µ‚Ä‚­‚¾‚³‚¢";
-	$TEXT['bio-ok'] = "OK";
-	$TEXT['bio-error1'] = "“ú";
-	$TEXT['bio-error2'] = "–³Œø‚Å‚·";
-
-	$TEXT['bio-birthday'] = "’a¶“ú";
-	$TEXT['bio-today'] = "¡“ú";
-	$TEXT['bio-intellectual'] = "’m«“I";
-	$TEXT['bio-emotional'] = "Š´î“I";
-	$TEXT['bio-physical'] = "“÷‘Ì“I";
-
-	// ---------------------------------------------------------------------
-	// INSTANT ART DEMO
-	// ---------------------------------------------------------------------
-
-	$TEXT['iart-head'] = "ƒCƒ“ƒXƒ^ƒ“ƒgƒA[ƒg (PHP+GD+FreeType‚Ì–—á)";
-	$TEXT['iart-text1'] = "ƒtƒHƒ“ƒg áAnkeCalligraphâ  by <a class=blue target=extern href=\"http://www.anke-art.de/\">Anke Arnold</a>";
-	$TEXT['iart-ok'] = "OK";
-
-	// ---------------------------------------------------------------------
-	// FLASH ART DEMO
-	// ---------------------------------------------------------------------
-
-	$TEXT['flash-head'] = "Flash Art (Example for PHP+MING)";
-	$TEXT['flash-text1'] = "The MING project for win32 does not exist any longer and it is not complete.<br>Please read this: <a class=blue target=extern href=\"http://www.opaque.net/wiki/index.php?Ming\">Ming - an SWF output library and PHP module</a>";
-	$TEXT['flash-ok'] = "OK";
-
-	// ---------------------------------------------------------------------
-	// PHONE BOOK DEMO
-	// ---------------------------------------------------------------------
-
-	$TEXT['phonebook-head'] = "ƒtƒ‰ƒbƒVƒ…ƒA[ƒg (PHP+MING‚Ì–—á)";
-
-	$TEXT['phonebook-text1'] = "ŠÈ’P‚È“d˜b’ ƒXƒNƒŠƒvƒg‚Å‚·‚ªAÅV‚ÌƒeƒNƒmƒƒW[‚ğ‹ìg‚µ‚ÄÀ‘•‚³‚ê‚Ä‚¢‚Ü‚·F@SQLiteASQLƒf[ƒ^ƒx[ƒXAƒT[ƒo‚Íg—p‚µ‚Ü‚¹‚ñB";
-
-	$TEXT['phonebook-error'] = "ƒf[ƒ^ƒx[ƒX‚ğŠJ‚¯‚Ü‚¹‚ñ‚Å‚µ‚½I";
-	$TEXT['phonebook-head1'] = "ƒ}ƒC“d˜b”Ô†";
-	$TEXT['phonebook-attrib1'] = "©";
-	$TEXT['phonebook-attrib2'] = "–¼";
-	$TEXT['phonebook-attrib3'] = "“d˜b”Ô†";
-	$TEXT['phonebook-attrib4'] = "ƒRƒ}ƒ“ƒh";
-	$TEXT['phonebook-sure'] = "‚¢‚¢‚Å‚·‚©?";
-	$TEXT['phonebook-head2'] = "ƒGƒ“ƒgƒŠ’Ç‰Á";
-	$TEXT['phonebook-button1'] = "íœ";
-	$TEXT['phonebook-button2'] = "’Ç‰Á";
-
-	// ---------------------------------------------------------------------
-	// ABOUT
-	// ---------------------------------------------------------------------
-
-	$TEXT['about-head'] = "XAMPP‚É‚Â‚¢‚Ä";
-
-	$TEXT['about-subhead1'] = "ƒAƒCƒfƒBƒA‚ÆÀŒ»";
-
-	$TEXT['about-subhead2'] = "ƒfƒUƒCƒ“";
-
-	$TEXT['about-subhead3'] = "ƒRƒ‰ƒ{ƒŒ[ƒVƒ‡ƒ“";
-
-	$TEXT['about-subhead4'] = "ƒRƒ“ƒ^ƒNƒgæ";
-
-	// ---------------------------------------------------------------------
-	// MERCURY
-	// ---------------------------------------------------------------------
-
-	$TEXT['mail-head'] = "Mercuryƒ[ƒ‹ƒT[ƒo‚É‚æ‚éSMTP‚ÆPOP3";
-	$TEXT['mail-hinweise'] = "Mercury‚ğ—˜—p‚·‚éÛ‚Ìd—v‚Èƒƒ‚!";
-	$TEXT['mail-adress'] = "‘—MÒ:";
-	$TEXT['mail-adressat'] = "óMÒ:";
-	$TEXT['mail-cc'] = "CC:";
-	$TEXT['mail-subject'] = "Œ–¼:";
-	$TEXT['mail-message'] = "ƒƒbƒZ[ƒW:";
-	$TEXT['mail-sendnow'] = "ƒƒbƒZ[ƒW‚ğ‘—M‚µ‚Ä‚¢‚Ü‚·...";
-	$TEXT['mail-sendok'] = "ƒƒbƒZ[ƒW‚Ì‘—M‚ªŠ®—¹‚µ‚Ü‚µ‚½!";
-	$TEXT['mail-sendnotok'] = "ƒGƒ‰[!ƒƒbƒZ[ƒW‚Ì‘—M‚ªŠ®—¹‚µ‚Ä‚¢‚Ü‚¹‚ñ!";
-	$TEXT['mail-help1'] = "Mercury‚ğ—˜—p‚·‚éÛ‚Ìƒƒ‚:<br><br>";
-	$TEXT['mail-help2'] = "<ul>
-	<li>Mercury‚Í‹N“®‚ÉŠO•”ƒlƒbƒgƒ[ƒN‚Ö‚ÌÚ‘±‚ª•K—v‚Å‚·B;</li>
-	<li>‹N“®AMercury‚ÍƒvƒƒoƒCƒ_‚ÌDNSƒT[ƒo‚ğ©“®“I‚ÉADNSƒT[ƒo‚Æ‚µ‚Ä’è‹`‚µ‚Ü‚·B;</li>
-	<li>‘Sƒ†[ƒU—pƒQ[ƒgƒEƒFƒCƒT[ƒo: TCP/IPŒo—R‚ÅDNSƒT[ƒo‚ğİ’è‚µ‚Ä‚­‚¾‚³‚¢(—áF NIC‚ÌIPƒAƒhƒŒƒX 198.41.0.4);</li>
-	<li>Mercury‚Ìİ’è‚ÍMERCURY.INI‚ğŒÄ‚Ño‚µ‚Ä‚¢‚Ü‚·B;</li>
-	<li>ƒƒbƒZ[ƒW‘—M‚ÌƒeƒXƒg‚Ípostmaster@localhost‚©admin@localhost‚É‘—M‚µ‚ÄAŸ‚ÌƒtƒHƒ‹ƒ_‚ÉƒƒbƒZ[ƒW‚ªŠi”[‚³‚ê‚Ä‚¢‚é‚©Šm”F‚µ‚Ä‚­‚¾‚³‚¢: xampp.../mailserver/MAIL/postmaster ‚Ü‚½‚ÍA(...)/admin;</li>
-	<li>ƒeƒXƒgƒ†[ƒU‚Æ‚µ‚Ä\"newuser\" (newuser@localhost) ƒpƒXƒ[ƒh = wampp ‚ª‘¶İ‚µ‚Ü‚·B;</li>
-	<li>ƒXƒpƒ€‚â‹Ö~—pŒê‚ÍAMercury‚Å‘S‘Ì“I‚É‹–‰Â‚³‚ê‚Ä‚¢‚Ü‚¹‚ñ!;</li>
-	</ul>";
-	$TEXT['mail-url'] = "<a href=\"http://www.pmail.com/overviews/ovw_mercury.htm\" target=\"_top\">http://www.pmail.com/overviews/ovw_mercury.htm</a>";
-	$TEXT['mail-note-important'] = "IMPORTANT";
-	$TEXT['mail-note-text1'] = "There are three variants for sending emails with PHP. One of these three possibilities have to be activated in the xampp\php\php.ini file.";
-	$TEXT['mail-note-text2'] = "<b>mailToDisk</b> (<i>Default</i>) - All emails are written in the xampp\mailoutput folder on local disk. XAMPP mailToDisk is the default and you have nothing to do in the php.ini.";
-	$TEXT['mail-note-text3'] = "<b>fakemail</b> - With fakemail (sendmail.exe)) all emails are forwarding to your mailbox. Please edit the xampp\sendmail\sendmail.ini first with your mailbox credentials. And do not forget to activate fakemail (senmail.exe)) in the xampp\php\php.ini.";	
-	$TEXT['mail-note-text4'] = "<b>Mercury Mail Server</b> or some other Mail Socket Server on localhost. This option have to be activated in the php.ini also.";
-	
-	// ---------------------------------------------------------------------
-	// FileZilla FTP
-	// ---------------------------------------------------------------------
-
-	$TEXT['filezilla-head'] = "FileZilla FTP Server";
-	$TEXT['filezilla-install'] = "Apache‚ÍFTPƒT[ƒo‚Å‚Í<U>‚ ‚è‚Ü‚¹‚ñ</U>... ‚µ‚©‚µFileZilla‚ÍFTPƒT[ƒo‚Å‚·BŸ‚ğQÆ‚µ‚ÄŒŸ“¢‚µ‚Ä‚­‚¾‚³‚¢B";
-	$TEXT['filezilla-install2'] = "XAMPP‚ÌƒfƒBƒŒƒNƒgƒŠ‚ÉˆÚ“®‚µ‚ÄAƒZƒbƒgƒAƒbƒv‚Ì‚½‚ß‚É\"filezilla_setup.bat\"‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢B ’–Ú: For Windows NT, 2000 ‚Æ XP Professional‚Å‚ÍAFileZilla‚ÍƒT[ƒrƒX‚Æ‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹‚·‚é•K—v‚ª‚ ‚è‚Ü‚·B";
-	$TEXT['filezilla-install3'] = "\"FileZilla FTP\"‚ğİ’è‚µ‚Ü‚·B İ’è‚Ì‚½‚ß‚É,FileZilla‚ÌƒCƒ“ƒ^[ƒtƒFƒCƒX‚Å‚ ‚é\"FileZilla Server Interface.exe\"‚ğg‚Á‚Ä‚­‚¾‚³‚¢BŸ‚Í“ñ‚Â‚Ìƒ†[ƒU‚É‚Â‚¢‚Ä‚Ì—á‚Å‚·:<br><br>
-	A: ƒfƒtƒHƒ‹ƒg‚Ìƒ†[ƒU‚Í\"newuser\", ƒpƒXƒ[ƒh‚Í\"wampp\"‚Å‚·Bƒz[ƒ€ƒfƒBƒŒƒNƒgƒŠ‚Íxampp\htdocs‚Å‚·B<br>
-	B: “½–¼ƒ†[ƒU‚Í\"anonymous\", ƒpƒXƒ[ƒh‚Í‚ ‚è‚Ü‚¹‚ñBƒz[ƒ€ƒfƒBƒŒƒNƒgƒŠ‚Íxampp\anonymous‚Å‚·B<br><br>
-	ƒfƒtƒHƒ‹ƒg‚Å‚Íƒ‹[ƒvƒoƒbƒN‚Å‚ ‚é127.0.0.1‚ªw’è‚³‚ê‚Ä‚¢‚Ü‚·B";
-	$TEXT['filezilla-install4'] = "FTPƒT[ƒo‚Í\"FileZillaFTP_stop.bat\"‚Å’â~‚µ‚Ä‚­‚¾‚³‚¢BFileZilla‚ÌƒT[ƒrƒX‚ÍA\"FileZillaServer.exe\"‚ğ’¼Úg‚Á‚Ä‚­‚¾‚³‚¢B‚»‚µ‚ÄA‚ ‚È‚½‚Í‘S‚Ä‚Ì‹N“®ƒIƒvƒVƒ‡ƒ“‚ğİ’è‚Å‚«‚Ü‚·B";
-	$TEXT['filezilla-url'] = "<br><br><a href=\"http://filezilla.sourceforge.net\" target=\"_top\">http://filezilla.sourceforge.net</a>";
-
-	// ---------------------------------------------------------------------
-	// PEAR
-	// ---------------------------------------------------------------------
-
-	$TEXT['pear-head'] = "PEAR‚ğg‚Á‚½Excelƒtƒ@ƒCƒ‹‚ÌƒGƒNƒXƒ|[ƒg (PHP)";
-	$TEXT['pear-text'] = "ŠÈ’P‚È<a class=blue target=extern href=\"http://www.contentmanager.de/magazin/artikel_310-print_excel_export_mit_pear.html\">ƒ}ƒjƒ…ƒAƒ‹</A>‚ª<a class=blue target=extern href=\"http://www.thinkphp.de/\">ThinkPHP</A> (ƒhƒCƒcŒê‚Ì‚İ)‚ÌBjörn Schotte‚©‚ç’ñ‹Ÿ‚³‚ê‚Ä‚¢‚Ü‚·B";
-	$TEXT['pear-cell'] = "ƒZƒ‹‚Ì’l";
-
-	// ---------------------------------------------------------------------
-	// JPGRAPH
-	// ---------------------------------------------------------------------
-
-	$TEXT['jpgraph-head'] = "JpGraph - Graph Library for PHP";
-	$TEXT['jpgraph-url'] = "<br><br><a href=\"http://www.aditus.nu/jpgraph/\" target=\"_top\">http://www.aditus.nu/jpgraph/</a>";
-
-	// ---------------------------------------------------------------------
-	// ADODB
-	// ---------------------------------------------------------------------
-
-	$TEXT['ADOdb-head'] = "ADOdb - ‚»‚Ì‚Ù‚©‚Ìƒf[ƒ^ƒx[ƒXƒAƒNƒZƒX(PHP)";
-	$TEXT['ADOdb-text'] = "ADOdb‚ÍActive Data Objectsƒf[ƒ^ƒx[ƒX—p‚É‚Å‚«‚Ä‚¢‚Ü‚·B„‚½‚¿‚ÍŒ»İAMySQL, PostgreSQL, Interbase, Firebird, Informix, Oracle, MS SQL 7, Foxpro, Access, ADO, Sybase, FrontBase, DB2, SAP DB, SQLite,‚»‚µ‚Ägeneric ODBC‚ğƒTƒ|[ƒg‚µ‚Ä‚¢‚Ü‚·B Sybase, Informix, FrontBase, PostgreSQL‚Ìƒhƒ‰ƒCƒo[‚ÍƒRƒ~ƒ…ƒjƒeƒB[‚ÌvŒ£‚Åì¬‚³‚ê‚Ü‚µ‚½B‚ ‚È‚½‚Í\(mini)xampp\php\pear\adodb‚ÅŒ©‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B";
-	$TEXT['ADOdb-example'] = "—á:";
-	$TEXT['ADOdb-dbserver'] = "ƒf[ƒ^ƒx[ƒXƒT[ƒo (MySQL, Oracle ..?)";
-	$TEXT['ADOdb-host'] = "ƒf[ƒ^ƒx[ƒXƒT[ƒo‚ÌƒzƒXƒg (–¼‘O‚©IPƒAƒhƒŒƒX)";
-	$TEXT['ADOdb-user'] = "ƒ†[ƒU–¼ ";
-	$TEXT['ADOdb-password'] = "ƒpƒXƒ[ƒh";
-	$TEXT['ADOdb-database'] = "ƒf[ƒ^ƒx[ƒXƒT[ƒoã‚ÌŒ»İ‚Ìƒf[ƒ^ƒx[ƒX";
-	$TEXT['ADOdb-table'] = "ƒf[ƒ^ƒx[ƒXã‚Ì‘I‘ğ‚³‚ê‚½ƒe[ƒuƒ‹";
-	$TEXT['ADOdb-nottable'] = "<p><b>ƒe[ƒuƒ‹‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ!</b>";
-	$TEXT['ADOdb-notdbserver'] = "<p><b>ƒf[ƒ^ƒx[ƒXƒT[ƒo—p‚Ìƒhƒ‰ƒCƒo‚ªŒ©‚Â‚©‚ç‚È‚¢A‚à‚µ‚­‚Íƒhƒ‰ƒCƒo‚ªODBC,ADO‚à‚µ‚­‚ÍOLEDBƒhƒ‰ƒCƒo‚Å‚·!</b>";
-
-
-	// ---------------------------------------------------------------------
-	// INFO
-	// ---------------------------------------------------------------------
-
-	$TEXT['info-package'] = "ƒpƒbƒP[ƒW";
-	$TEXT['info-pages'] = "ƒy[ƒW";
-	$TEXT['info-extension'] = "Šg’£";
-	$TEXT['info-module'] = "Apache module";
-	$TEXT['info-description'] = "à–¾";
-	$TEXT['info-signature'] = "–¼";
-	$TEXT['info-docdir'] = "Document root";
-	$TEXT['info-port'] = "ƒfƒtƒHƒ‹ƒgƒ|[ƒg";
-	$TEXT['info-service'] = "ƒT[ƒrƒX";
-	$TEXT['info-examples'] = "—á";
-	$TEXT['info-conf'] = "İ’èƒtƒ@ƒCƒ‹";
-	$TEXT['info-requires'] = "•K{";
-	$TEXT['info-alternative'] = "‘I‘ğ";
-	$TEXT['info-tomcatwarn'] = "Œx! Tomcat‚Íƒ|[ƒg8080ˆÈŠO‚Å‹N“®‚µ‚Ä‚¢‚Ü‚·B";
-	$TEXT['info-tomcatok'] = "OK! Tomcat‚Íƒ|[ƒg8080‚Å‹N“®‚µ‚Ü‚µ‚½B";
-	$TEXT['info-tryjava'] = "Apache MOD_JK‚Æjava(JSP)‚Ì—áB";
-	$TEXT['info-nococoon'] = "Œx! Tomcat‚Íƒ|[ƒg8080‚Å‹N“®‚µ‚Ä‚¢‚Ü‚¹‚ñBƒCƒ“ƒXƒg[ƒ‹‚Å‚«‚Ü‚¹‚ñB
-	\"Cocoon\"‚ÍTomcat‚È‚µ‚Å‹N“®‚µ‚Ä‚¢‚Ü‚·!";
-	$TEXT['info-okcocoon'] = "Ok!Tomcat‚Í³í‚É‹N“®‚µ‚Ä‚¢‚Ü‚·BƒCƒ“ƒXƒg[ƒ‹ì‹Æ‚Í‚à‚¤­‚µ‚ÅŠ®—¹‚µ‚Ü‚·B \"Cocoon\"‚ÌƒCƒ“ƒXƒg[ƒ‹‚Í‚±‚±‚ğƒNƒŠƒbƒN‚µ‚Ä‚­‚¾‚³‚¢...";
-
-	// ---------------------------------------------------------------------
-	// PHP Switch
-	// ---------------------------------------------------------------------
-
-	$TEXT['switch-head'] = "PHP Switch 1.0 win32 for XAMPP";
-	$TEXT['switch-phpversion'] = "<i><b>Œ»İ‚±‚ÌXAMPP‚É‚Í";
-	$TEXT['switch-whatis'] = "<b>PHP switch‚Å‰½‚©ì‚ê‚Ü‚·‚©?</b><br>apachefriends‚ÌPHP Switch‚Í XAMPP‚ÌPHP‚Ìƒo[ƒWƒ‡ƒ“‚S‚©‚ç‚T‚ÉØ‚è‘Ö‚¦‚½‚èA–ß‚µ‚½‚è‚µ‚Ü‚·B‚ ‚È‚½‚ÍPHP4‚©PHP5‚ÅƒXƒNƒŠƒvƒg‚ÌƒeƒXƒg‚ğ‚·‚é–‚ª‚Å‚«‚Ü‚·B<p>";
-	$TEXT['switch-find'] = "<b>PHP Switch‚Í‚Ç‚±‚É‚ ‚è‚Ü‚·‚©?</b><br>XAMPP‚ÌPHP Switch‚Í\"php-switch.php\"‚Æ‚¢‚¤–¼‘O‚ÌPHPƒtƒ@ƒCƒ‹iXAMPPƒCƒ“ƒXƒg[ƒ‹ƒtƒHƒ‹ƒ_j‚ÅÀs‚Å‚«‚Ü‚·BÀs‚Ì‚½‚ß‚É‚ÍA‚±‚Ìƒtƒ@ƒCƒ‹‚ğg‚í‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñ: ";
-	$TEXT['switch-care'] = "<b>“ï‚µ‚­‚ ‚è‚Ü‚¹‚ñ‚©?</b><br>PHP Switch‚Í Ÿ‚Ìê‡PHP‚Ìƒo[ƒWƒ‡ƒ“‚ª•ÏX‚Å‚«‚Ü‚¹‚ñBa) Apache HTTPD ‚ª‹N“®‚µ‚Ä‚¢‚éB ‚Ü‚½‚Í/‚©‚Â b) ƒCƒ“ƒXƒg[ƒ‹ƒtƒHƒ‹ƒ_‚Ì\".phpversion\"ƒtƒ@ƒCƒ‹‚ª‹ó”’A‚Ü‚½‚ÍƒoƒO‚ª‚ ‚éB \".phpversion\"‚É‚Í, \"4\"‚©\"5\"‚Ì‚æ‚¤‚ÉXAMPP‚ÌŒ»İ‚Ìƒo[ƒWƒ‡ƒ“‚Ì‚ª‘‚©‚ê‚Ä‚¢‚Ü‚·BApache HTTPD‚ğ\"shutdown\"‚µ‚Ä‚©‚ç\"php-switch.bat\"‚ğÀs‚µ‚Ä‚­‚¾‚³‚¢B<p>";
-	$TEXT['switch-where4'] = "<b>‚Ç‚±‚É(ŒÃ‚¢)İ’èƒtƒ@ƒCƒ‹‚ª‚ ‚è‚Ü‚·‚©?</b><br><br>PHP 4—p:<br>";
-	$TEXT['switch-where5'] = "<br><br>PHP 5—p:<br>";
-	$TEXT['switch-make1'] = "<b>İ’èƒtƒ@ƒCƒ‹‚Ì‰½‚ª•ÏX‚³‚ê‚Ü‚·‚©?</b><br><br>There lives! For PHP4 or PHP5 in the<br>";
-	$TEXT['switch-make2'] = "<br><br> .. PHP4—p‚ÍˆÀ‘S‚Å‚· ...<br>";
-	$TEXT['switch-make3'] = "<br><br> .. PHP5—p‚ÍˆÀ‘S‚Å‚· ...<br>";
-	$TEXT['switch-make4'] = "<br><br>‚»‚µ‚ÄA‚±‚ê‚ç‚Ìƒtƒ@ƒCƒ‹‚ÍPHP switching‚Å–ß‚·‚±‚Æ‚ª‚Å‚«‚Ü‚·B<p>";
-	$TEXT['switch-not'] = "<b>PHP‚É‚Í–â‘è‚ ‚è‚Ü‚¹‚ñ‚ª\"Ø‚è‘Ö‚¦\"‚Å‚«‚Ü‚¹‚ñB</b><br>";
-
-	// ---------------------------------------------------------------------
-	// Cocoon
-	// ---------------------------------------------------------------------
-
-	$TEXT['go-cocoon'] = "Cocoon‚ÍŸ‚ÌAhttp://localhost/cocoon/‚É‚ ‚è‚Ü‚·B";
-	$TEXT['path-cocoon'] = "‚»‚µ‚ÄAŸ‚ÌƒtƒHƒ‹ƒ_‚ÉW‚ß‚Ä‚­‚¾‚³‚¢B: ...\\xampp\\tomcat\\webapps\\cocoon";
-
-	// ---------------------------------------------------------------------
-	// Guest
-	// ---------------------------------------------------------------------
-
-	$TEXT['guest1-name'] = "¡‚ÌƒŠƒŠ[ƒX‚ÌŒ»İ‚ÌƒQƒXƒg: <i>FCKeditor</i>";
-	$TEXT['guest1-text1'] = "‚Æ‚Ä‚à‚æ‚¢HTMLƒIƒ“ƒ‰ƒCƒ“ƒGƒfƒBƒ^‚ÅAJavaScript‚ÅÀ‘•‚³‚ê‚Ä‚¢‚Ü‚·BIE‚ÉÅ“K‰»‚³‚ê‚Ä‚¢‚Ü‚·B‚µ‚©‚µAMozillaFireFox‚Å‚Í‹@”\‚µ‚Ü‚¹‚ñB";
-	$TEXT['guest1-text2'] = "FCKeditor ƒz[ƒ€ƒy[ƒW: <a href=\"http://www.fckeditor.net\" target=\"_new\">www.fckeditor.net</a>B ";
-	$TEXT['guest1-text3'] = "<a href=\"guest-FCKeditor/fckedit-dynpage.php\" target=\"_new\">FCKeditor‚Åì‚Á‚½ƒeƒXƒgƒy[ƒW</A>";
-	
-	// ---------------------------------------------------------------------
-	// NAVI SPECIALS SECTION
-	// ---------------------------------------------------------------------
-	
-	$TEXT['navi-specials'] = "Specials";
-	
-	// ---------------------------------------------------------------------
-	// PS AND PARADOX EXAMPLE
-	// ---------------------------------------------------------------------
-
-  $TEXT['navi-ps'] = "PHP PostScript";
-	$TEXT['ps-head'] = "PostScript Module Example";
-	$TEXT['ps-text1'] = "PostScript Module »php_ps« by <a class=blue target=extern href=\"mailto:steinm@php.net\">Uwe Steinmann</a>";
-	$TEXT['ps-text2'] = "Tip: To convert PS files to PDF files on win32, you can use <a href=\"http://www.shbox.de/\" target=\"_new\">FreePDF</a> with <a href=\"http://www.ghostscript.com/awki/\" target=\"_new\">GhostScript</a>.";
-	
-	$TEXT['navi-paradox'] = "PHP Paradox";
-	$TEXT['paradox-head'] = "Paradox Module Example";
-	$TEXT['paradox-text1'] = "Paradox Module »php_paradox« by <a class=blue target=extern href=\"mailto:steinm@php.net\">Uwe Steinmann</a>";
-	$TEXT['paradox-text2'] = "<h2>Reading and writing a paradox database</h2>";
-	$TEXT['paradox-text3'] = "More examples you can find in the directory ";
-	$TEXT['paradox-text4'] = "Further information to Paradox databases in <a href=\"http://en.wikipedia.org/wiki/Paradox\" target=\"_new\">WikiPedia</a>.";
-?>
