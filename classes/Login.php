@@ -135,23 +135,18 @@ class Login
 						//redirect users to their respective page according to tip_angajat
 						switch ($_SESSION['tip_angajat']) {
 							case 'angajat': 
-								//header("Location: http://localhost/views/angajat.php");
 								$this->angajat_is_logged_in = true;
 								break;
 							case 'sefDivizie': 
-								//header("Location: http://localhost/views/sefDivizie.php");
 								$this->sefDivizie_is_logged_in = true;
 								break;
 							case 'sefDepartament': 
-								//header("Location: http://localhost/views/sefDepartament.php");
 								$this->sefDepartament_is_logged_in = true;
 								break;
 							case 'director': 
-								//header("Location: http://localhost/views/director.php");
 								$this->director_is_logged_in = true;
 								break;
 							case 'administrator': 
-								//header("Location: http://localhost/views/administrator.php");
 								$this->administrator_is_logged_in = true;
 								break;
 						}
