@@ -16,3 +16,6 @@ parola la root și directory protection.
 * pornesti xampp_start
 
 * https://asana.com/
+
+
+* pentru adăugat baza de date : D:\Programe\XAMPP\mysql\data\login
