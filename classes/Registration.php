@@ -81,6 +81,8 @@ class Registration
             $this->errors[] = "Your email address is not in a valid email format";
         } elseif (empty($_POST['tip_angajat'])) {
 			$this->errors[] = "Nu ai introdus tipul angajatului";
+		} elseif (empty($_POST['dept_id'])) {
+			$this->errors[] = "Nu ai introdus departamentul";
 		} elseif (!empty($_POST['user_name'])
             && strlen($_POST['user_name']) <= 64
             && strlen($_POST['user_name']) >= 2
@@ -93,7 +95,7 @@ class Registration
             && ($_POST['user_password_new'] === $_POST['user_password_repeat'])
         ) {
 
-            // TODO: the above check is redundant, but from a developer's perspective it makes clear
+            // TODO: the above check is redundant, but from a developers perspective it makes clear
             // what exactly we want to reach to go into this if-block
 
             // creating a database connection
@@ -101,11 +103,11 @@ class Registration
 
             // if no connection errors (= working database connection)
             if (!$this->db_connection->connect_errno) {
-
-                // escapin' this, additionally removing everything that could be (html/javascript-) code
-                $this->user_name = $this->db_connection->real_escape_string(htmlentities($_POST['user_name'], ENT_QUOTES));
-                $this->user_email = $this->db_connection->real_escape_string(htmlentities($_POST['user_email'], ENT_QUOTES));
-
+                // escapin this, additionally removing everything that could be (html/javascript-) code
+                $this->user_name   = $this->db_connection->real_escape_string(htmlentities($_POST['user_name'], ENT_QUOTES));
+                $this->user_email  = $this->db_connection->real_escape_string(htmlentities($_POST['user_email'], ENT_QUOTES));
+                $this->tip_angajat = $this->db_connection->real_escape_string(htmlentities($_POST['tip_angajat'], ENT_QUOTES));
+                $this->dept_id     = $this->db_connection->real_escape_string(htmlentities($_POST['dept_id'], ENT_QUOTES));
                 $this->user_password = $_POST['user_password_new'];
 
                 // crypt the user's password with the PHP 5.5's password_hash() function, results in a 60 character hash string
@@ -113,16 +115,14 @@ class Registration
                 // compatibility library                
                 $this->user_password_hash = password_hash($this->user_password, PASSWORD_DEFAULT);
 				
-				$this->tip_angajat = $this->db_connection->real_escape_string(htmlentities($_POST['tip_angajat'], ENT_QUOTES));
-
                 // check if user already exists
-                $query_check_user_name = $this->db_connection->query("SELECT * FROM users WHERE user_name = '" . $this->user_name . "';");
+                $query_check_user_name = $this->db_connection->query("SELECT * FROM employee WHERE name = '" . $this->user_name . "';");
 
                 if ($query_check_user_name->num_rows == 1) {
                     $this->errors[] = "Sorry, that user name is already taken. Please choose another one.";
                 } else {
                     // write new users data into database
-                    $query_new_user_insert = $this->db_connection->query("INSERT INTO users (user_name, user_password_hash, user_email, tip_angajat) VALUES('" . $this->user_name . "', '" . $this->user_password_hash . "', '" . $this->user_email . "', '" . $this->tip_angajat . "');");
+                    $query_new_user_insert = $this->db_connection->query("INSERT INTO employee (name, pass_hash, email, role_id, dept_id) VALUES('" . $this->user_name . "', '" . $this->user_password_hash . "', '" . $this->user_email . "', '" . $this->tip_angajat . "', '" . $this->dept_id . "');");
 
                     if ($query_new_user_insert) {
                         $this->messages[] = "Your account has been created successfully. You can now log in.";

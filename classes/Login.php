@@ -111,7 +111,7 @@ class Login
                 // escape the POST stuff
                 $this->user_name = $this->db_connection->real_escape_string($_POST['user_name']);
                 // database query, getting all the info of the selected user
-                $checklogin = $this->db_connection->query("SELECT user_name, user_email, user_password_hash, tip_angajat FROM users WHERE user_name = '" . $this->user_name . "';");
+                $checklogin = $this->db_connection->query("SELECT * FROM employee WHERE name = '" . $this->user_name . "';");
 
                 // if this user exists
                 if ($checklogin->num_rows == 1) {
@@ -120,33 +120,33 @@ class Login
                     $result_row = $checklogin->fetch_object();
 
                     // using PHP 5.5's password_verify() function to check if the provided passwords fits to the hash of that user's password
-                    if (password_verify($_POST['user_password'], $result_row->user_password_hash)) {
+                    if (password_verify($_POST['user_password'], $result_row->pass_hash)) {
 
                         // write user data into PHP SESSION [a file on your server]
-                        $_SESSION['user_name'] = $result_row->user_name;
-                        $_SESSION['user_email'] = $result_row->user_email;
+                        $_SESSION['user_name'] = $result_row->name;
+                        $_SESSION['user_email'] = $result_row->email;
                         $_SESSION['user_logged_in'] = 1;
 
                         // set the login status to true
                         $this->user_is_logged_in = true;
 						
-						$_SESSION['tip_angajat'] = $result_row->tip_angajat;
+						$_SESSION['tip_angajat'] = $result_row->role_id;
 						
 						//redirect users to their respective page according to tip_angajat
 						switch ($_SESSION['tip_angajat']) {
-							case 'angajat': 
+							case 1: 
 								$this->angajat_is_logged_in = true;
 								break;
-							case 'sefDivizie': 
+							case 2: 
 								$this->sefDivizie_is_logged_in = true;
 								break;
-							case 'sefDepartament': 
+							case 3: 
 								$this->sefDepartament_is_logged_in = true;
 								break;
-							case 'director': 
+							case 4: 
 								$this->director_is_logged_in = true;
 								break;
-							case 'administrator': 
+							case 5: 
 								$this->administrator_is_logged_in = true;
 								break;
 						}

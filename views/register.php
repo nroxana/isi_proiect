@@ -37,36 +37,57 @@ function displayForm(){
     $r .= '<input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" /><br>';
     
 	$r .= '<label for="login_input_tip_angajat">Selecteaza tip angajat</label>';
-	$r .= getAngajat();
-	
+	$r .= getEmployeeRole();
+    $r .= '<br>';
+    
+    $r .= '<label for="login_input_department">Selecteaza departamentul</label>';
+	$r .= getEmployeeDept();
+	$r .= '<br>';
+    
 	$r .= '<input type="submit"  name="register" value="Register" />';
 
 	return $r; 
 } 
 
-function getAngajat(){
+function getEmployeeRole(){
 	$r = '';
-
-	$choices = array('' => '------', 'angajat' => 'Angajat', 'sefDivizie' => 'Sef de divizie', 'sefDepartament' => 'Sef de departmanet', 'director' => 'Director', 'administrator' => 'Administrator de aplicatie');
-	@$payment = $_SESSION['tip_angajat'];
+    $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query_result = $db_connection->query("SELECT * FROM role;");
+    
+    $role_ids = array();
+    $role_names = array();    
+    while($obj = $query_result->fetch_object()){ 
+        array_push($role_ids, $obj->id);
+        array_push($role_names, $obj->name); 
+    }
 
 	$r .= '<select name="tip_angajat">';
-	if(count($choices)>0) {
-		foreach($choices as $key => $value) {
-			//find out if it is selected
-			if($key == $payment){
-				$selectedAttribute = 'selected = "selected"';
-			} else {
-				$selectedAttribute = '';
-			}
-				
-			$r .= '<option value="' . $key . '"' . $selectedAttribute . '>' . $value . '</option>';
-		}
-
-	}
-
+    for($i = 0; $i < count($role_ids); $i++) {
+        $r .= '<option value="' . $role_ids[$i] . '">' . $role_names[$i] . '</option>';
+    }
 	$r .= '</select>';
+	return $r;
 
+}
+
+function getEmployeeDept(){
+	$r = '';
+
+    $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query_result = $db_connection->query("SELECT * FROM department;");
+    
+    $role_ids = array();
+    $role_names = array();    
+    while($obj = $query_result->fetch_object()){ 
+        array_push($role_ids, $obj->id);
+        array_push($role_names, $obj->name); 
+    }
+	
+	$r .= '<select name="dept_id">';
+	for($i = 0; $i < count($role_ids); $i++) {
+        $r .= '<option value="' . $role_ids[$i] . '">' . $role_names[$i] . '</option>';
+	}
+	$r .= '</select>';
 	return $r;
 
 }
@@ -75,4 +96,4 @@ function getAngajat(){
 <!-- errors & messages --->
 
 <!-- backlink -->
-<a href="index.php">Back to Login Page</a>
+<a href="index.php">Back to my Page</a>

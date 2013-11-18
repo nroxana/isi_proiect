@@ -21,7 +21,6 @@ if ($login->isadministratorLoggedIn() == true) {
 	} elseif ($login->issefDivizieLoggedIn() == true) {
 		header("Location: http://localhost/views/sefDivizie.php");
 	} else {
-    // the user is not logged in...
-    include("views/not_logged_in.php");
+        include("views/not_logged_in.php");
 }
 ?>
