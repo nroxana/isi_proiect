@@ -1,8 +1,8 @@
- <div>
-<?php session_start();?>
- Hey directorule, <b><?php echo $_SESSION['user_name']; ?></b>.
- 
- <a href="..\index.php?logout">Logout</a>
- 
- </div>
- 
+ <table>
+    <tr>
+        <td width = "100">
+            <input type="button" name="check_btn" value="Verifica rapoarte">
+            <input type="button" onclick="location.href = 'http://localhost/index.php?logout';" value="Logout">
+        </td>       
+    </tr>
+ </table>

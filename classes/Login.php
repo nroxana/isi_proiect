@@ -124,6 +124,7 @@ class Login
 
                         // write user data into PHP SESSION [a file on your server]
                         $_SESSION['user_name'] = $result_row->name;
+                        $_SESSION['user_id'] = $result_row->id;
                         $_SESSION['user_email'] = $result_row->email;
                         $_SESSION['user_logged_in'] = 1;
 
@@ -131,6 +132,9 @@ class Login
                         $this->user_is_logged_in = true;
 						
 						$_SESSION['tip_angajat'] = $result_row->role_id;
+                        
+                        $role_result = $this->db_connection->query("SELECT name FROM role WHERE id = '" . $_SESSION['tip_angajat'] . "';")->fetch_object();
+                        $_SESSION['role_name'] = $role_result->name;
 						
 						//redirect users to their respective page according to tip_angajat
 						switch ($_SESSION['tip_angajat']) {
@@ -180,8 +184,12 @@ class Login
         $this->sefDivizie_is_logged_in = false;
         $this->sefDepartament_is_logged_in = false;
         $this->director_is_logged_in = false;
+        $_SESSION['user_name'] = "";
+        $_SESSION['user_email'] = "";
+        $_SESSION['user_logged_in'] = 0;
+        $_SESSION['role_name'] = "";
+        $_SESSION['tip_angajat'] = 0;
         $this->messages[] = "You have been logged out.";
-
     }
 
     /**

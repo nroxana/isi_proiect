@@ -1,3 +1,8 @@
-<?php session_start();?>
- Hey, <b><?php echo $_SESSION['user_name']; ?></b>.
- <a href="..\index.php?logout">Logout</a>
+ <table>
+    <tr>
+        <td width = "100">
+            <input type="button" onclick="location.href = 'http://localhost/views/my_raport.php';" value="Raport">
+            <input type="button" onclick="location.href = 'http://localhost/index.php?logout';" value="Logout">
+        </td>
+    </tr>
+ </table>

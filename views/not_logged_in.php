@@ -35,7 +35,7 @@ if ($login->messages) {
                     <tr>
                         <td>Password</td>
                         <td>:</td>
-                        <td><input name="user_password" type="text"></td>
+                        <td><input name="user_password" type="password"></td>
                     </tr>
                     <tr>
                         <td>&nbsp;</td>
