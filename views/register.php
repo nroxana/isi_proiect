@@ -36,11 +36,11 @@ function displayForm(){
     $r .= '<label for="login_input_password_repeat">Repeat password</label>';
     $r .= '<input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" /><br>';
     
-	$r .= '<label for="login_input_tip_angajat">Selecteaza tip angajat</label>';
+	$r .= '<label for="login_input_tip_angajat">Selecteaza tip angajat: </label>';
 	$r .= getEmployeeRole();
     $r .= '<br>';
     
-    $r .= '<label for="login_input_department">Selecteaza departamentul</label>';
+    $r .= '<label for="login_input_department">Selecteaza departamentul/divizia: </label>';
 	$r .= getEmployeeDept();
 	$r .= '<br>';
     
@@ -56,6 +56,7 @@ function getEmployeeRole(){
     
     $role_ids = array();
     $role_names = array();    
+	
     while($obj = $query_result->fetch_object()){ 
         array_push($role_ids, $obj->id);
         array_push($role_names, $obj->name); 
@@ -77,7 +78,7 @@ function getEmployeeDept(){
     $query_result = $db_connection->query("SELECT * FROM department;");
     
     $role_ids = array();
-    $role_names = array();    
+    $role_names = array();  
     while($obj = $query_result->fetch_object()){ 
         array_push($role_ids, $obj->id);
         array_push($role_names, $obj->name); 
