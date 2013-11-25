@@ -126,7 +126,9 @@ class Login
                         $_SESSION['user_name'] = $result_row->name;
                         $_SESSION['user_id'] = $result_row->id;
                         $_SESSION['user_email'] = $result_row->email;
+                        $_SESSION['dept_id'] = $result_row->dept_id;
                         $_SESSION['user_logged_in'] = 1;
+                        
 
                         // set the login status to true
                         $this->user_is_logged_in = true;
