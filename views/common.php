@@ -1,3 +1,6 @@
+<head>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css">
+</head>
 <b>Bine ati venit <?php echo $_SESSION['user_name']; ?></b>.<br>
  Statutul: <?php echo $_SESSION['role_name']; ?><br>
  
