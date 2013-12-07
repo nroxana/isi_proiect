@@ -4,12 +4,13 @@ session_start();
 
 function addLine() {
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    $query_insert = $db_connection->query("INSERT INTO timesheet (emp_id, date, hours, project_id, description) 
+    $query_insert = $db_connection->query("INSERT INTO timesheet (emp_id, date, hours, project_id, description, extra_hours) 
         VALUES( '" . $_SESSION['user_id'] . "', 
                 '" . $_POST['fill_date'] . "', 
                 '" . $_POST['fill_interval'] . "', 
                 '" . $_POST['fill_project'] . "', 
-                '" . $_POST['fill_description'] . "'
+                '" . $_POST['fill_description'] . "',
+                '" . $_POST['fill_extra_interval']. "'
                );
     ");
 }

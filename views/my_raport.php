@@ -11,8 +11,9 @@ function displayRaport(){
     $r .= ' <table id="testTable" border="2">';
     $r .= '    <tr style="background-color:#ccc;">';
     $r .= '         <td width="100" align="center">Data</td>';
-    $r .= '         <td width="100" align="center">Interval</td>';
-    $r .= '         <td width="150" align="center">Nume proiect</td>';
+    $r .= '         <td width="75" align="center">Ore lucrate</td>';
+    $r .= '         <td width="75" align="center">Extra Ore</td>';
+    $r .= '         <td width="100" align="center">Nume proiect</td>';
     $r .= '         <td width="450" align="center">Descrierea lucrului</td>';
     $r .= '    </tr>';
     while( $query_result && $timesheet = $query_result->fetch_object() )
@@ -20,15 +21,17 @@ function displayRaport(){
         $project_result = $db_connection->query("SELECT name FROM projects where id = '" . $timesheet->project_id . "';");
         $project_name = $project_result->fetch_object();
         $r .= ' <tr>';
-        $r .= '     <td width="100" align="center">"'. $timesheet->date .'"</td>';
-        $r .= '     <td width="100" align="center">"'. $timesheet->hours .'"</td>';
-        $r .= '     <td width="150" align="center">"'. $project_name->name .'"</td>';
-        $r .= '     <td width="450" align="center">"'. $timesheet->description .'"</td>';
+        $r .= '     <td align="center">"'. $timesheet->date .'"</td>';
+        $r .= '     <td align="center">"'. $timesheet->hours .'"</td>';
+        $r .= '     <td align="center">"'. $timesheet->extra_hours .'"</td>';
+        $r .= '     <td align="center">"'. $project_name->name .'"</td>';
+        $r .= '     <td align="center">"'. $timesheet->description .'"</td>';
         $r .= ' </tr>';
     }
     $r .= '     <tr>';
     $r .= '         <td><input type="date" name="fill_date"></td>';
     $r .= '         <td><input type="number" name="fill_interval"></td>';
+    $r .= '         <td><input type="number" name="fill_extra_interval"></td>';
     $r .= '         <td>';
     $r .=               projectSelectField();
     $r .=           '</td>';     
@@ -57,30 +60,16 @@ function projectSelectField() {
 	$r .= '</select>';
     return $r;
 }
-
 ?>
-
-<script src="../JavaScript/raport_export.js"></script>
+<script src="../javascript/raport_export.js"></script>
 <form method="post" action="../classes/timesheet_management.php" name="raportform">
     <table>
         <tr>
-            <td width = "100">
-                <?php
-                if( $_SESSION['tip_angajat'] != 4 )//director
-                    echo ('<input type="button" onclick="location.href = "http://localhost/views/my_raport.php";" value="Raport">');
-                ?>
-                <?php
-                if( $_SESSION['tip_angajat'] != 1 )//angajat
-                    echo '<input type="button" name="check_btn" value="Verifica rapoarte">';
-                ?>
-                <input type="button" onclick="location.href = 'http://localhost/index.php?logout';" value="Logout">
-            </td>
             <td width = "800">
                 <?php echo displayRaport(); ?>
             </td>
         </tr>
         <tr>
-            <td width="100">&nbsp;</td>
             <td align="right">
                 <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('testTable')">
                 <input type="submit" name="add_line_btn" value="Adauga linia">
