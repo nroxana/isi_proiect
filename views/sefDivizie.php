@@ -5,11 +5,11 @@
     <ul id="nav-primary">
         <li><a href="#">Menu 1</a>
             <ul class="subnav">
-                <li><a href="http://localhost/views/rapoarte/raport_a_form.php">punctul a</a>
+                <li><a href="http://localhost/views/rapoarte/raport_d_form.php">punctul d</a>
                 </li>
-                <li><a href="#">punctul b</a>
+                <li><a href="http://localhost/views/rapoarte/raport_e_form.php">punctul e</a>
                 </li>
-                <li><a href="#">punctul c</a>
+                <li><a href="http://localhost/views/rapoarte/raport_f_form.php">punctul f</a>
                 </li>
             </ul>
         </li>

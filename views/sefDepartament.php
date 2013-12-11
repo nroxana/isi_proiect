@@ -9,7 +9,7 @@
             <ul class="subnav">
                 <li><a href="http://localhost/views/rapoarte/raport_a_form.php">punctul a</a>
                 </li>
-                <li><a href="#">punctul b</a>
+                <li><a href="http://localhost/views/rapoarte/raport_b_form.php">punctul b</a>
                 </li>
                 <li><a href="#">punctul c</a>
                 </li>
