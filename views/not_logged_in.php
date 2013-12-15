@@ -19,7 +19,7 @@ if ($login->messages) {
 <!-- errors & messages --->
 
 <!-- login form box -->
-<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
+<!--<table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#CCCCCC">
     <tr>
         <form name="loginform" method="post" action="index.php">
             <td>
@@ -46,4 +46,18 @@ if ($login->messages) {
             </td>
         </form>
     </tr>
-</table>
+</table>-->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
+<form class="form-1" name="loginform" method="post" action="index.php">
+	<p class="field">
+		<input type="text" name="user_name" placeholder="Username or email">
+		<i class="icon-user icon-large"></i>
+		</p>
+		<p class="field">
+			<input type="password" name="user_password" placeholder="Password">
+			<i class="icon-lock icon-large"></i>
+	</p>
+	<p class="submit">
+		<button type="submit" name="login"><i class="icon-arrow-right icon-large"></i></button>
+	</p>
+</form>

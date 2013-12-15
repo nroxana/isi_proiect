@@ -1,4 +1,4 @@
 AuthName "xampp user"
 AuthType Basic
-AuthUserFile "D:\Programe\XAMPP\security\xampp.users"
+AuthUserFile "D:\XAMPP\install\security\xampp.users"
 require valid-user

@@ -1,7 +1,7 @@
 <!-- here include just buttons for this kind of user -->
 <input type="button" onclick="location.href = 'http://localhost/views/my_raport.php';" value="Raport">
 <input type="button" name="check_btn" value="Verifica rapoarte">
-<input type="button" name="add_project_btn" value="Adauga proiect">
+<input type="button" onclick="location.href = 'http://localhost/views/addProject_form.php';" value="Adauga proiect">
 
 <nav id="main-nav">
     <ul id="nav-primary">
@@ -11,7 +11,7 @@
                 </li>
                 <li><a href="http://localhost/views/rapoarte/raport_b_form.php">punctul b</a>
                 </li>
-                <li><a href="#">punctul c</a>
+                <li><a href="http://localhost/views/rapoarte/raport_c_form.php">punctul c</a>
                 </li>
             </ul>
         </li>

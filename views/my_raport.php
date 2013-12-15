@@ -21,11 +21,11 @@ function displayRaport(){
         $project_result = $db_connection->query("SELECT name FROM projects where id = '" . $timesheet->project_id . "';");
         $project_name = $project_result->fetch_object();
         $r .= ' <tr>';
-        $r .= '     <td align="center">"'. $timesheet->date .'"</td>';
-        $r .= '     <td align="center">"'. $timesheet->hours .'"</td>';
-        $r .= '     <td align="center">"'. $timesheet->extra_hours .'"</td>';
-        $r .= '     <td align="center">"'. $project_name->name .'"</td>';
-        $r .= '     <td align="center">"'. $timesheet->description .'"</td>';
+        $r .= '     <td align="center">'. $timesheet->date .'</td>';
+        $r .= '     <td align="center">'. $timesheet->hours .'</td>';
+        $r .= '     <td align="center">'. $timesheet->extra_hours .'</td>';
+        $r .= '     <td align="center">'. $project_name->name .'</td>';
+        $r .= '     <td align="center">'. $timesheet->description .'</td>';
         $r .= ' </tr>';
     }
     $r .= '     <tr>';
@@ -44,6 +44,7 @@ function displayRaport(){
 function projectSelectField() {
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     $query_result = $db_connection->query("SELECT * FROM projects where dept_id = '" . $_SESSION['dept_id']. "';");
+	//$query_result = $db_connection->query("SELECT * FROM projects;");
     
     $projects_name = array();    
     $projects_id = array();
