@@ -38,11 +38,11 @@ function showRaport() {
         array_push($prj_names, $obj->prj_name);
         array_push($prj_hours, $obj->suma_total);
         $r .= ' <tr>';
-        $r .= '     <td align="center">"'. $obj->dept_name .'"</td>';
-        $r .= '     <td align="center">"'. $obj->prj_name .'"</td>';
-        $r .= '     <td align="center">"'. $obj->suma .'"</td>';
-        $r .= '     <td align="center">"'. $obj->suma_extra .'"</td>';
-        $r .= '     <td align="center">"'. $obj->suma_total .'"</td>';
+        $r .= '     <td align="center">'. $obj->dept_name .'</td>';
+        $r .= '     <td align="center">'. $obj->prj_name .'</td>';
+        $r .= '     <td align="center">'. $obj->suma .'</td>';
+        $r .= '     <td align="center">'. $obj->suma_extra .'</td>';
+        $r .= '     <td align="center">'. $obj->suma_total .'</td>';
         $r .= ' </tr>';
     }
     $r .= ' </table>';

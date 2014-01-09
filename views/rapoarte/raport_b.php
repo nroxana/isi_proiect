@@ -30,10 +30,10 @@ function showRaport() {
             array_push($emp_names, $emp_name);
             array_push($prj_hours, $timesheet->suma);
             $r .= ' <tr>';
-            $r .= '     <td align="center">"'. $emp_name .'"</td>';
-            $r .= '     <td align="center">"'. $timesheet->suma .'"</td>';
-            $r .= '     <td align="center">"'. $timesheet->suma_extra .'"</td>';
-            $r .= '     <td align="center">"'. $timesheet->suma_total .'"</td>';
+            $r .= '     <td align="center">'. $emp_name .'</td>';
+            $r .= '     <td align="center">'. $timesheet->suma .'</td>';
+            $r .= '     <td align="center">'. $timesheet->suma_extra .'</td>';
+            $r .= '     <td align="center">'. $timesheet->suma_total .'</td>';
             $r .= ' </tr>';
             $emp_result->close();
         }

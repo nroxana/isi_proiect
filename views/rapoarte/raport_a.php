@@ -26,10 +26,10 @@ BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY pro
         array_push($prj_names, $project_name->name);
         array_push($prj_hours, $timesheet->suma);
         $r .= ' <tr>';
-        $r .= '     <td align="center">"'. $project_name->name .'"</td>';
-        $r .= '     <td align="center">"'. $timesheet->suma .'"</td>';
-        $r .= '     <td align="center">"'. $timesheet->suma_extra .'"</td>';
-        $r .= '     <td align="center">"'. $timesheet->suma_total .'"</td>';
+        $r .= '     <td align="center">'. $project_name->name .'</td>';
+        $r .= '     <td align="center">'. $timesheet->suma .'</td>';
+        $r .= '     <td align="center">'. $timesheet->suma_extra .'</td>';
+        $r .= '     <td align="center">'. $timesheet->suma_total .'</td>';
         $r .= ' </tr>';
         $project_result->close();
     }
