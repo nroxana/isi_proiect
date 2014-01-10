@@ -2,15 +2,18 @@
 <?php
 require_once("../config/db.php");
 session_start();
+include("../common.php");
 
+echo $_SESSION['dept_id'];
 function addProject() {
+
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-	$aflaDepartament = $db_connection->query("");
+	//$aflaDepartament = $db_connection->query("");
     
     $adauga_proiect = $db_connection->query("INSERT INTO projects (id, dept_id, name, client) 
 		VALUES (
 				NULL,
-				'" . $_SESSION['dept_id'] . "',		//TODO !!!
+				'" . $_SESSION['dept_id'] . "',
 				'" . $_POST['numeProiect'] . "',
 				'" . $_POST['numeClient'] . "'
 				);
@@ -24,11 +27,14 @@ function addProject() {
                 '" . $_POST['fill_description'] . "',
                 '" . $_POST['fill_extra_interval']. "'
                );
-    ");*/
+    ");
+	
+	INSERT INTO  `login`.`projects` (`id` ,`dept_id` ,`name` ,`client`)
+	VALUES (NULL ,  '3',  'laptop',  'ASUS');*/
 }
 
 if (isset($_POST["submitProject"])) {
-    addProject();
+    echo addProject();
 }
 header('Location: ../user_page.php')
 ?>
