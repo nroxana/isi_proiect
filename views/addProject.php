@@ -1,14 +1,16 @@
+<link rel="stylesheet" type="text/css" href="../../css/style.css" />
 <?php
 require_once("../config/db.php");
 session_start();
 
 function addProject() {
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	$aflaDepartament = $db_connection->query("");
     
     $adauga_proiect = $db_connection->query("INSERT INTO projects (id, dept_id, name, client) 
 		VALUES (
 				NULL,
-				'" . $_POST['idDept'] . "',
+				'" . $_SESSION['dept_id'] . "',		//TODO !!!
 				'" . $_POST['numeProiect'] . "',
 				'" . $_POST['numeClient'] . "'
 				);

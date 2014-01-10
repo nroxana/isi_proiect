@@ -1,6 +1,8 @@
 <head>
     <link href="../../css/global.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 </head>
+<body>
 <b>Bine ati venit <?php echo $_SESSION['user_name']; ?></b>.<br>
  Statutul: <?php echo $_SESSION['role_name']; ?><br>
  
@@ -29,3 +31,4 @@
         </td>
     </tr>
 </table>
+</body>

@@ -1,4 +1,5 @@
 <!-- errors & messages --->
+<link rel="stylesheet" type="text/css" href="../css/style.css" />
 <?php
 
 // show negative messages
