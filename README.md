@@ -38,9 +38,9 @@ TODO:
 - documentul + prezentare in pptx
 - raportele c, d in excel
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest)
-- functionalitate buton "Adauga proiect" de la seful de departament
 
 
 DONE:
 - pct a, b, d, e : ""
 - pct a : de afisat numele angajatului (sau ID)
+- functionalitate buton "Adauga proiect" de la seful de departament
