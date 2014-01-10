@@ -30,7 +30,6 @@ TODO:
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
 - audit (loguri cu nivele)
 - popularea bazei de date (de trimis login.sql)
-- pct a : de afisat numele angajatului (sau ID)
 - pct c : sortare asc/desc ale rezultatelor in functie de ore
 - pct c : de scos numele angajatului (verificat group by project)
 - directorul trebuie sa aiba acces la pct d) si e)
@@ -41,5 +40,6 @@ TODO:
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest)
 
 
-FACUTE:
-pct a, b, d, e : ""
+DONE:
+- pct a, b, d, e : ""
+- pct a : de afisat numele angajatului (sau ID)
