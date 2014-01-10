@@ -38,6 +38,7 @@ TODO:
 - documentul + prezentare in pptx
 - raportele c, d in excel
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest)
+- functionalitate buton "Adauga proiect" de la seful de departament
 
 
 DONE:
