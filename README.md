@@ -29,15 +29,17 @@ TODO:
 - seful de departament poate adauga sau sterge angajatii
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
 - audit (loguri cu nivele)
-- popularea bazei de date (de trimis login.sql)
+- popularea bazei de date (de trimis login.sql) ------ taken by RARES
 - pct c : sortare asc/desc ale rezultatelor in functie de ore
 - pct c : de scos numele angajatului (verificat group by project)
 - directorul trebuie sa aiba acces la pct d) si e)
 - pct f (doar la director)
 - fiecare raport trebuie sa aiba si o versiune pdf disponibila pt download
-- documentul + prezentare in pptx
+- documentul + prezentare in pptx ------ taken by RARES
 - raportele c, d in excel
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest)
+
+
 
 
 DONE:
