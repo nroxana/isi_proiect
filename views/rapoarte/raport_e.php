@@ -21,10 +21,10 @@ function showRaport() {
     while( $query_result && $emp = $query_result->fetch_object() )
     {
         $r .= ' <tr>';
-        $r .= '     <td align="center">"'. $emp->id .'"</td>';
-        $r .= '     <td align="center">"'. $emp->name .'"</td>';
-        $r .= '     <td align="center">"'. $emp->functia .'"</td>';
-        $r .= '     <td align="center">"'. $emp->email .'"</td>';
+        $r .= '     <td align="center">'. $emp->id .'</td>';
+        $r .= '     <td align="center">'. $emp->name .'</td>';
+        $r .= '     <td align="center">'. $emp->functia .'</td>';
+        $r .= '     <td align="center">'. $emp->email .'</td>';
         $r .= ' </tr>';
     }
     $r .= ' </table>';
