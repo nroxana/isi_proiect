@@ -38,14 +38,29 @@ BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY pro
         $project_result->close();
 		$nume_angajat->close();
     }
-    $r .= ' </table>';
+    $r .= ' <tr></tr></table>';
     echo $r;
     $query_result->close();
     if( count($prj_names) )
         savePie($prj_names, $prj_hours);
 }
-
-if (isset($_POST["find"])) {
-    showRaport();
-}
 ?>
+<script src="../../javascript/raport_export.js"></script>
+<form method="post" action="../../classes/timesheet_management.php" name="raportform">
+    <table>
+        <tr>
+            <td width = "800">
+                <?php 
+					if (isset($_POST["find"])) {
+						showRaport();
+					} 
+				?>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
+            </td>
+        </tr>
+    </table>
+</form>r

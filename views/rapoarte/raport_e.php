@@ -27,12 +27,27 @@ function showRaport() {
         $r .= '     <td align="center">'. $emp->email .'</td>';
         $r .= ' </tr>';
     }
-    $r .= ' </table>';
+    $r .= ' <tr></tr></table>';
     echo $r;
     $query_result->close();
 }
-
-if (isset($_POST["find"])) {
-    showRaport();
-}
 ?>
+<script src="../../javascript/raport_export.js"></script>
+<form method="post" action="../../classes/timesheet_management.php" name="raportform">
+    <table>
+        <tr>
+            <td width = "800">
+                <?php 
+					if (isset($_POST["find"])) {
+						showRaport();
+					} 
+				?>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
+            </td>
+        </tr>
+    </table>
+</form>

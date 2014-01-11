@@ -31,11 +31,8 @@ TODO:
 - audit (loguri cu nivele)
 - popularea bazei de date (de trimis login.sql) ------ taken by RARES
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
-- directorul trebuie sa aiba acces la pct d) si e) ------ taken by ROXANA
 - pct f (doar la director) ------ taken by ROXANA
-- fiecare raport trebuie sa aiba si o versiune pdf disponibila pt download ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
-- raportele c, d in excel ------ taken by ROXANA
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest)
 
 
@@ -46,3 +43,6 @@ DONE:
 - pct a : de afisat numele angajatului (sau ID)
 - functionalitate buton "Adauga proiect" de la seful de departament
 - pct c : de scos numele angajatului (verificat group by project)
+- raportele c, d in excel
+- fiecare raport trebuie sa aiba si o versiune excel disponibila pt download
+- directorul trebuie sa aiba acces la pct d) si e)
