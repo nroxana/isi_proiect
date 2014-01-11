@@ -144,7 +144,7 @@ function buttons() {
     }
     
     $obj = $query_result->fetch_object();
-    if(  ( $bIntrat && $obj->state == "REJECT") || ( $bIntrat == false && ($obj->state == "REJECT" || $obj->state == "OPEN") )
+    if(  ( $bIntrat && $obj->state == "REJECT") || ( $bIntrat == false && ($obj->state == "REJECT" || $obj->state == "OPEN") ) )
     {
         $r = '';
         $r .= '<td align="right">';
