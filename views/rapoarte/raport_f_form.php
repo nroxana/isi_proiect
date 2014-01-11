@@ -6,6 +6,8 @@ include("../common.php");
 echo displayForm();
 function displayForm(){
 	$r = '';
+	
+	$r = '<h2>Afiseaza clientii din perioada introdusa</h2>';
 
 	$r .= '<form method = "post" action = "raport_f.php" name="raport_f">';
     
