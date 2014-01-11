@@ -26,17 +26,16 @@ TODO:
 - OPEN / SUBMIT / APPROVE / REJECT timesheet
 - la final unei luni, timesheetul nu mai poate fi editat
 - notificare prin email (de facut submit)
-- seful de departament poate adauga sau sterge angajatii
+- seful de departament poate adauga sau sterge angajatii ------ taken by ROXANA
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
 - audit (loguri cu nivele)
 - popularea bazei de date (de trimis login.sql) ------ taken by RARES
-- pct c : sortare asc/desc ale rezultatelor in functie de ore
-- pct c : de scos numele angajatului (verificat group by project)
-- directorul trebuie sa aiba acces la pct d) si e)
-- pct f (doar la director)
-- fiecare raport trebuie sa aiba si o versiune pdf disponibila pt download
+- pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
+- directorul trebuie sa aiba acces la pct d) si e) ------ taken by ROXANA
+- pct f (doar la director) ------ taken by ROXANA
+- fiecare raport trebuie sa aiba si o versiune pdf disponibila pt download ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
-- raportele c, d in excel
+- raportele c, d in excel ------ taken by ROXANA
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest)
 
 
@@ -46,3 +45,4 @@ DONE:
 - pct a, b, d, e : ""
 - pct a : de afisat numele angajatului (sau ID)
 - functionalitate buton "Adauga proiect" de la seful de departament
+- pct c : de scos numele angajatului (verificat group by project)
