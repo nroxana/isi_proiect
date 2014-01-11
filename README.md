@@ -46,3 +46,7 @@ DONE:
 - raportele c, d in excel
 - fiecare raport trebuie sa aiba si o versiune excel disponibila pt download
 - directorul trebuie sa aiba acces la pct d) si e)
+<<<<<<< HEAD
+=======
+- adaugat numele angajatilor la inregistrare
+>>>>>>> DONE adaugat nume si prenume angajati la inregist

@@ -9,8 +9,6 @@
                 </li>
                 <li><a href="http://localhost/views/rapoarte/raport_e_form.php">punctul e</a>
                 </li>
-                <li><a href="http://localhost/views/rapoarte/raport_f_form.php">punctul f</a>
-                </li>
             </ul>
         </li>
     </ul>

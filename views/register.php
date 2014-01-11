@@ -37,6 +37,9 @@ function displayForm(){
     $r .= '<label for="login_input_password_repeat">Repeat password</label>';
     $r .= '<input id="login_input_password_repeat" class="login_input" type="password" name="user_password_repeat" pattern=".{6,}" required autocomplete="off" /><br>';
     
+	$r .= '<label for="login_input_numeprenume">First and last name</label>';
+	$r .= '<input id="login_input_numeprenume" class="login_input" type="text" pattern="[ a-zA-Z]{2,50}" name="numeprenume" required /><br>';
+	
 	$r .= '<label for="login_input_tip_angajat">Selecteaza tip angajat: </label>';
 	$r .= getEmployeeRole();
     $r .= '<br>';

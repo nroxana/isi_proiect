@@ -26,6 +26,8 @@ class Registration
      * @var string $user_password The user's password
      */
     private $user_password = "";
+	
+	private $user_numeprenume = "";
     /**
      * @var string $user_password_hash The user's password hash
      */
@@ -79,6 +81,10 @@ class Registration
             $this->errors[] = "Email cannot be longer than 64 characters";
         } elseif (!filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)) {
             $this->errors[] = "Your email address is not in a valid email format";
+        } elseif (empty($_POST['numeprenume'])) {
+			$this->errors[] = "Nu ai introdus numele si prenumele angajatului";
+		} elseif (!preg_match('/^[ a-z\d]{2,50}$/i', $_POST['numeprenume'])) {
+            $this->errors[] = "Username does not fit the name scheme";
         } elseif (empty($_POST['tip_angajat'])) {
 			$this->errors[] = "Nu ai introdus tipul angajatului";
 		} elseif (empty($_POST['dept_id'])) {
@@ -87,6 +93,7 @@ class Registration
             && strlen($_POST['user_name']) <= 64
             && strlen($_POST['user_name']) >= 2
             && preg_match('/^[a-z\d]{2,64}$/i', $_POST['user_name'])
+			&& preg_match('/^[ a-z\d]{2,50}$/i', $_POST['numeprenume'])
             && !empty($_POST['user_email'])
             && strlen($_POST['user_email']) <= 64
             && filter_var($_POST['user_email'], FILTER_VALIDATE_EMAIL)
@@ -106,6 +113,7 @@ class Registration
                 // escapin this, additionally removing everything that could be (html/javascript-) code
                 $this->user_name   = $this->db_connection->real_escape_string(htmlentities($_POST['user_name'], ENT_QUOTES));
                 $this->user_email  = $this->db_connection->real_escape_string(htmlentities($_POST['user_email'], ENT_QUOTES));
+				$this->user_numeprenume  = $this->db_connection->real_escape_string(htmlentities($_POST['numeprenume'], ENT_QUOTES));
                 $this->tip_angajat = $this->db_connection->real_escape_string(htmlentities($_POST['tip_angajat'], ENT_QUOTES));
                 $this->dept_id     = $this->db_connection->real_escape_string(htmlentities($_POST['dept_id'], ENT_QUOTES));
                 $this->user_password = $_POST['user_password_new'];
@@ -122,7 +130,7 @@ class Registration
                     $this->errors[] = "Sorry, that user name is already taken. Please choose another one.";
                 } else {
                     // write new users data into database
-                    $query_new_user_insert = $this->db_connection->query("INSERT INTO employee (name, pass_hash, email, role_id, dept_id) VALUES('" . $this->user_name . "', '" . $this->user_password_hash . "', '" . $this->user_email . "', '" . $this->tip_angajat . "', '" . $this->dept_id . "');");
+                    $query_new_user_insert = $this->db_connection->query("INSERT INTO employee (name, pass_hash, email, numeprenume, role_id, dept_id) VALUES('" . $this->user_name . "', '" . $this->user_password_hash . "', '" . $this->user_email . "', '"  . $this->user_numeprenume . "', '" . $this->tip_angajat . "', '" . $this->dept_id . "');");
 
                     if ($query_new_user_insert) {
                         $this->messages[] = "Your account has been created successfully. You can now log in.";
