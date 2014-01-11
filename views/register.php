@@ -1,7 +1,7 @@
 <!-- errors & messages --->
 <link rel="stylesheet" type="text/css" href="../css/style.css" />
 <?php
-
+include("common.php");
 // show negative messages
 if ($registration->errors) {
     foreach ($registration->errors as $error) {
@@ -44,9 +44,13 @@ function displayForm(){
 	$r .= getEmployeeRole();
     $r .= '<br>';
     
-    $r .= '<label for="login_input_department">Selecteaza departamentul/divizia: </label>';
-	$r .= getEmployeeDept();
-	$r .= '<br>';
+	// daca e administrator
+	if ($_SESSION['tip_angajat'] == 5)
+	{
+		$r .= '<label for="login_input_department">Selecteaza departamentul/divizia: </label>';
+		$r .= getEmployeeDept();
+		$r .= '<br>';
+	}
     
 	$r .= '<input type="submit"  name="register" value="Register" />';
 

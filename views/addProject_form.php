@@ -1,6 +1,8 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
 <?php
+
 session_start();
+include("common.php");
 
 echo addProjectForm();
 

@@ -1,9 +1,10 @@
 <head>
     <link href="../../css/global.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<a href="http://localhost/index.php"><img src="http://localhost/images/cooltext1.png" width="240" height="60"></a> <br>
 </head>
 <body>
-<b>Bine ati venit <?php echo $_SESSION['user_name']; ?></b>.<br>
+<b>Bine ati venit <?php echo $_SESSION['numeprenume']; ?></b>.<br>
  Statutul: <?php echo $_SESSION['role_name']; ?><br>
  
 <table style="float:left;">

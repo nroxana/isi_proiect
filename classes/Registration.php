@@ -8,6 +8,8 @@
  * @link https://github.com/panique/php-login/
  * @license http://opensource.org/licenses/MIT MIT License
  */
+session_start();
+
 class Registration
 {
     /**
@@ -87,7 +89,7 @@ class Registration
             $this->errors[] = "Username does not fit the name scheme";
         } elseif (empty($_POST['tip_angajat'])) {
 			$this->errors[] = "Nu ai introdus tipul angajatului";
-		} elseif (empty($_POST['dept_id'])) {
+		} elseif ($_SESSION['tip_angajat'] != 2 && empty($_POST['dept_id'])) {
 			$this->errors[] = "Nu ai introdus departamentul";
 		} elseif (!empty($_POST['user_name'])
             && strlen($_POST['user_name']) <= 64
@@ -115,7 +117,10 @@ class Registration
                 $this->user_email  = $this->db_connection->real_escape_string(htmlentities($_POST['user_email'], ENT_QUOTES));
 				$this->user_numeprenume  = $this->db_connection->real_escape_string(htmlentities($_POST['numeprenume'], ENT_QUOTES));
                 $this->tip_angajat = $this->db_connection->real_escape_string(htmlentities($_POST['tip_angajat'], ENT_QUOTES));
-                $this->dept_id     = $this->db_connection->real_escape_string(htmlentities($_POST['dept_id'], ENT_QUOTES));
+                if ($_SESSION['tip_angajat'] != 2)
+					$this->dept_id     = $this->db_connection->real_escape_string(htmlentities($_POST['dept_id'], ENT_QUOTES));
+				else
+					$this->dept_id = $_SESSION['dept_id'];
                 $this->user_password = $_POST['user_password_new'];
 
                 // crypt the user's password with the PHP 5.5's password_hash() function, results in a 60 character hash string
