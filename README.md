@@ -25,7 +25,7 @@ TODO:
 
 - OPEN / SUBMIT / APPROVE / REJECT timesheet
 - la final unei luni, timesheetul nu mai poate fi editat
-- notificare prin email (de facut submit)
+- notificare prin email (de facut submit) ------ taken by ROXANA
 - seful de departament poate adauga sau sterge angajatii ------ taken by ROXANA
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
 - audit (loguri cu nivele)
