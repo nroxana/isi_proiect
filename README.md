@@ -24,7 +24,7 @@ parola la root și directory protection.
 TODO:
 - notificare prin email (de facut submit) ------ taken by ROXANA
 - audit (loguri cu nivele)
-- popularea bazei de date (de trimis login.sql) ------ taken by RARES
+
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest) ------ taken by Viku
@@ -44,3 +44,4 @@ DONE:
 - OPEN / SUBMIT / APPROVE / REJECT timesheet
 - la final unei luni, timesheetul nu mai poate fi editat
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
+-  popularea bazei de date (de trimis login.sql)
