@@ -14,7 +14,7 @@ function displayRaport(){
     $r .= '         <td width="75" align="center">Ore lucrate</td>';
     $r .= '         <td width="75" align="center">Extra Ore</td>';
     $r .= '         <td width="100" align="center">Nume proiect</td>';
-    $r .= '         <td width="450" align="center">Descrierea lucrului</td>';
+    $r .= '         <td width="350" align="center">Descrierea lucrului</td>';
     $r .= '    </tr>';
     while( $query_result && $timesheet = $query_result->fetch_object() )
     {
@@ -34,10 +34,26 @@ function displayRaport(){
     $r .= '         <td><input type="number" name="fill_extra_interval"></td>';
     $r .= '         <td>';
     $r .=               projectSelectField();
-    $r .=           '</td>';     
-    $r .= '         <td><textarea rows="2" cols="50" name = "fill_description"></textarea></td>';
+    $r .= '         </td>';
+    $r .= '         <td>';
+    $r .=               selectActivity();
+    $r .= '             <textarea rows="2" cols="50" name = "fill_description"></textarea>';
+    $r .= '         </td>';
     $r .= '     </tr>';
     $r .= ' </table>';
+    return $r;
+}
+
+function selectActivity()
+{
+    $r = '';
+	$r .= '<select style="float:left;" name="fill_activity">';
+    $r .=   '<option value=" "></option>';
+    $r .=   '<option value="lucru din sediu : ">lucru din sediu</option>';
+    $r .=   '<option value="deplasare la client : ">deplasare la client</option>';
+    $r .=   '<option value="sedinte : ">sedinte</option>';
+    $r .=   '<option value="cursuri : ">cursuri</option>';
+    $r .= '</select>';
     return $r;
 }
 
@@ -61,22 +77,98 @@ function projectSelectField() {
 	$r .= '</select>';
     return $r;
 }
+
+function renderPage() {
+    $current_m = date("n");
+    $current_y = date("Y");
+    $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query_result = $db_connection->query("SELECT * FROM timesheet_info 
+        where emp_id = '" . $_SESSION['user_id']. "' and month='". $current_m ."' and year='". $current_y ."' ;");
+        
+    if( $query_result )//daca exista timesheet pt aceasta luna
+    {
+        $obj = $query_result->fetch_object();
+        if( $obj->state == "OPEN" || $obj->state == "REJECT" )
+            return displayRaport();
+                
+        if( $obj->state == "SUBMIT" )
+            return "Timesheet-ul D-stra inca nu a fost verificat";
+        if( $obj->state == "APPROVE" )
+        {
+            return "Timesheet-ul a fost aprobat" . displayRaport();
+        }
+    }
+    else
+    {
+        if( $current_m > 2 )
+        {
+            $current_m--;
+        }
+        else
+        {
+            $current_m = 12;
+            $current_y--;
+        }
+        $query_result = $db_connection->query("SELECT * FROM timesheet_info 
+            where emp_id = '" . $_SESSION['user_id']. "' and month='". $current_m ."' and year='". $current_y ."' ;");
+        $obj = $query_result->fetch_object();
+        if( $obj->state == "OPEN" || $obj->state == "REJECT" )
+            return "Va rugam sa trimite-ti timesheet-ul spre verificare" . displayRaport();
+                
+        if( $obj->state == "SUBMIT" )
+            return "Timesheet-ul D-stra inca nu a fost verificat";
+    }
+}
+
+function buttons() {
+    $current_m = date("n");
+    $current_y = date("Y");
+    $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query_result = $db_connection->query("SELECT * FROM timesheet_info 
+        where emp_id = '" . $_SESSION['user_id']. "' and month='". $current_m ."' and year='". $current_y ."' ;");
+    $bIntrat = false;    
+    if( !$query_result )
+    {
+        if( $current_m > 2 )
+        {
+            $current_m--;
+        }
+        else
+        {
+            $current_m = 12;
+            $current_y--;
+        }
+        $query_result = $db_connection->query("SELECT * FROM timesheet_info 
+            where emp_id = '" . $_SESSION['user_id']. "' and month='". $current_m ."' and year='". $current_y ."' ;");
+        $bIntrat = true;
+    }
+    
+    $obj = $query_result->fetch_object();
+    if(  ( $bIntrat && $obj->state == "REJECT") || ( $bIntrat == false && ($obj->state == "REJECT" || $obj->state == "OPEN") )
+    {
+        $r = '';
+        $r .= '<td align="right">';
+        $r .= '    <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel("testTable")">';
+        $r .= '    <input type="submit" name="add_line_btn" value="Adauga linia">';
+        $r .= '    <input type="submit" name="del_line_btn" value="Sterge linia">';
+        $r .= '    <input type="submit" name="submit_btn" value="Trimite spre verificare">';
+        $r .= '</td>';
+        return $r;
+    }
+}
 ?>
+
 <script src="../javascript/raport_export.js"></script>
+
 <form method="post" action="../classes/timesheet_management.php" name="raportform">
     <table>
         <tr>
             <td width = "800">
-                <?php echo displayRaport(); ?>
+                <?php echo renderPage(); ?>
             </td>
         </tr>
         <tr>
-            <td align="right">
-                <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('testTable')">
-                <input type="submit" name="add_line_btn" value="Adauga linia">
-                <input type="submit" name="del_line_btn" value="Sterge linia">
-                <input type="submit" name="send_btn" value="Trimite spre verificare">
-            </td>
+            <?php echo buttons(); ?>
         </tr>
     </table>
 </form>

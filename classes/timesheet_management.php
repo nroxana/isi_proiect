@@ -9,7 +9,7 @@ function addLine() {
                 '" . $_POST['fill_date'] . "', 
                 '" . $_POST['fill_interval'] . "', 
                 '" . $_POST['fill_project'] . "', 
-                '" . $_POST['fill_description'] . "',
+                '" . $_POST['fill_activity'] . $_POST['fill_description'] . "',
                 '" . $_POST['fill_extra_interval']. "'
                );
     ");
@@ -23,6 +23,16 @@ function delLine() {
         $db_connection->query("DELETE FROM timesheet WHERE id='". $obj->id ."'");
     }
     
+}
+
+function submitTimesheet() {
+    $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $query_result = $db_connection->query("UPDATE timesheet_info SET state='".SUBMIT."' 
+        WHERE emp_id= '". $_SESSION['user_id'] ."' and month='". date("n") ."' and year='". date("Y") ."';");    
+}
+
+if (isset($_POST["submit_btn"])) {
+    submitTimesheet();
 }
 
 if (isset($_POST["add_line_btn"])) {
