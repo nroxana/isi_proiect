@@ -23,11 +23,11 @@ parola la root și directory protection.
 
 TODO:
 
-- OPEN / SUBMIT / APPROVE / REJECT timesheet
-- la final unei luni, timesheetul nu mai poate fi editat
+- OPEN / SUBMIT / APPROVE / REJECT timesheet ------ taken by Viku
+- la final unei luni, timesheetul nu mai poate fi editat ------ taken by Viku
 - notificare prin email (de facut submit) ------ taken by ROXANA
 - seful de departament poate adauga sau sterge angajatii ------ taken by ROXANA
-- baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
+- baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list) ------ taken by Viku
 - audit (loguri cu nivele)
 - popularea bazei de date (de trimis login.sql) ------ taken by RARES
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
