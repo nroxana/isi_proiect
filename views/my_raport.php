@@ -157,7 +157,7 @@ function buttons() {
     {
         $r = '';
         $r .= '<td align="right">';
-        $r .= '    <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel("testTable")">';
+        $r .= '    <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel(\'testTable\')">';
         $r .= '    <input type="submit" name="add_line_btn" value="Adauga linia">';
         $r .= '    <input type="submit" name="del_line_btn" value="Sterge linia">';
         $r .= '    <input type="submit" name="submit_btn" value="Trimite spre verificare">';
