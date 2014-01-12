@@ -1,6 +1,6 @@
 <!-- here include just buttons for this kind of user -->
 <input type="button" onclick="location.href = 'http://localhost/views/my_raport.php';" value="Raport">
-<input type="button" name="check_btn" value="Verifica rapoarte">
+<input type="button" onclick="location.href = 'http://localhost/views/list_emps.php';" value="Verifica rapoarte">
 <input type="button" onclick="location.href = 'http://localhost/views/addProject_form.php';" value="Adauga proiect">
 <input type="button" onclick="location.href = 'http://localhost/register.php';" value="Adauga utilizatori">
 <input type="button" onclick="location.href = 'http://localhost/views/delete.php';" value="Sterge utilizatori">
