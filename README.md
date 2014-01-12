@@ -23,11 +23,11 @@ parola la root și directory protection.
 
 TODO:
 - notificare prin email (de facut submit) ------ taken by ROXANA
-- audit (loguri cu nivele)
-
+- audit (loguri cu nivele) ------ taken by ROXANA
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
 - functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest) ------ taken by Viku
+- CSS / design / frontend ------ taken by ROXANA
 
 DONE:
 - pct a, b, d, e : ""
