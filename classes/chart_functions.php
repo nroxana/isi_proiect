@@ -12,7 +12,7 @@ function savePie($prj_names, $prj_hours) {
     $DataSet->SetAbsciseLabelSerie("Serie2");
 
     // Initialise the graph
-    $Test = new pChart(420,250);
+    $Test = new pChart(600,350);
     $Test->drawFilledRoundedRectangle(7,7,413,243,5,240,240,240);
     $Test->drawRoundedRectangle(5,5,415,245,5,230,230,230);
 
@@ -25,8 +25,8 @@ function savePie($prj_names, $prj_hours) {
     // Write the title
     $Test->setFontProperties("../../Fonts/MankSans.ttf",10);
     $Test->drawTitle(10,20,"Statistica",100,100,100);
-    $Test->Render("example10.png");
-    echo '<img src="example10.png">';
+    $Test->Render("example10.jpeg");
+    echo '<img src="example10.jpeg">';
 }
 
 ?>

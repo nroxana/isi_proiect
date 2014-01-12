@@ -7,7 +7,7 @@
 
 <nav id="main-nav">
     <ul id="nav-primary">
-        <li><a href="#">Menu 1</a>
+        <li><a href="#">Rapoarte</a>
             <ul class="subnav">
                 <li><a href="http://localhost/views/rapoarte/raport_a_form.php">punctul a</a>
                 </li>

@@ -1,0 +1,3 @@
+Ienisor Petre;Aplicatie sharing;17;0;17
+Ienisor Petre;Portal web;8;0;8
+Ienisor Petre;Aplicatie editare video;19;4;23
