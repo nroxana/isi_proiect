@@ -1,0 +1,12 @@
+Consultanta;Aplicatie sharing;55;2;57
+Consultanta;Portal web;50;5;55
+Consultanta;Aplicatie editare video;48;8;56
+Dezvoltare Software;Aplicatie telecomunicatii RED;87;2;89
+Dezvoltare Software;Aplicatie editare video release;75;8;83
+Dezvoltare Software;3D Game Platform;54;6;60
+Service;Reinnoire piese Samsung;50;5;55
+Service;stabilirea lista piese uzate BOSCH;43;0;43
+Service;efectuare probe si reglaje auto 2013;35;3;38
+Asamblare Calculatoare;Asamblare piese laptop Lenovo;38;0;38
+Asamblare Calculatoare;Asamblare componente PC (CompZone);44;3;47
+Asamblare Calculatoare;Asamblare componente 200 placi de baza;46;5;51

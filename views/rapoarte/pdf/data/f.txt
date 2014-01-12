@@ -1,0 +1,20 @@
+Popescu Ion;Aplicatie sharing;57;6.12
+Vodafone;Portal web;55;5.90
+WebGraphics;Aplicatie editare video;56;6.01
+Vodafone;Aplicatie telecomunicatii RED;89;9.55
+WebGraphics;Aplicatie editare video release;83;8.91
+Macromedia SRL;3D Game Platform;60;6.44
+SAMSUNG;Reinnoire piese Samsung;55;5.90
+Bosch;stabilirea lista piese uzate BOSCH;43;4.61
+dacia;efectuare probe si reglaje auto 2013;38;4.08
+Lenovo;Asamblare piese laptop Lenovo;38;4.08
+Computer Zone;Asamblare componente PC (CompZone);47;5.04
+Gigabyte;Asamblare componente 200 placi de baza;51;5.47
+Gigabyte;Plata componente 200 placi de baza;30;3.22
+SAMSUNG;Cost piese Samsung;33;3.54
+Vodafone;Creare ordine de plata;31;3.33
+Raviro;Evidenta concediilor 2013;37;3.97
+Raviro;Incadrarea personalului nou;24;2.58
+Raviro;Reorganizarea companiei in 2014;28;3.00
+Raviro;Realizarea evidentei incasari si plati;40;4.29
+Raviro;organizarea licitatiilor;37;3.97

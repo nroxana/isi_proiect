@@ -6,6 +6,9 @@ include("../common.php");
 include("../../classes/chart_functions.php");
 
 function showRaport() {
+
+	file_put_contents("pdf/data/e.txt", "");
+	
     $r = '';
     $r .= ' <table id="raportTable" border="2">';
     $r .= '    <tr style="background-color:#ccc;">';
@@ -16,16 +19,23 @@ function showRaport() {
     $r .= '    </tr>';
     
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    $query_result = $db_connection->query("SELECT emp.id, emp.name, rol.name functia, email FROM employee emp 
+    $query_result = $db_connection->query("SELECT emp.id, emp.numeprenume, rol.name functia, email FROM employee emp 
                                             left join role rol on rol.id = emp.role_id where dept_id = '" . $_POST['dept_id'] . "';");
     while( $query_result && $emp = $query_result->fetch_object() )
     {
         $r .= ' <tr>';
         $r .= '     <td align="center">'. $emp->id .'</td>';
-        $r .= '     <td align="center">'. $emp->name .'</td>';
+        $r .= '     <td align="center">'. $emp->numeprenume .'</td>';
         $r .= '     <td align="center">'. $emp->functia .'</td>';
         $r .= '     <td align="center">'. $emp->email .'</td>';
         $r .= ' </tr>';
+		
+		$file = 'pdf/data/e.txt';
+		$data = $emp->id . ";";
+		$data .= $emp->numeprenume . ";";
+		$data .= $emp->functia . ";";
+		$data .= $emp->email . "\n";
+		file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
     }
     $r .= ' <tr></tr></table>';
     echo $r;
@@ -49,5 +59,10 @@ function showRaport() {
                 <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
             </td>
         </tr>
+		<tr>
+			<td align="right">
+				<p>[<a href="pdf/pdf_e.php" title="PDF [new window]" target="_blank">PDF</a>]<p>
+			</td>
+		</tr>
     </table>
 </form>
