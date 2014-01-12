@@ -26,7 +26,7 @@ TODO:
 - audit (loguri cu nivele) ------ taken by ROXANA
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
-- functionalitate buton "Verifica rapoarte" + "Cautare avansata" (director + rest) ------ taken by Viku
+- functionalitate buton "Verifica rapoarte" (sef div + sef dept) ------ taken by Viku
 - CSS / design / frontend ------ taken by ROXANA
 
 DONE:
@@ -44,4 +44,5 @@ DONE:
 - OPEN / SUBMIT / APPROVE / REJECT timesheet
 - la final unei luni, timesheetul nu mai poate fi editat
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
--  popularea bazei de date (de trimis login.sql)
+- popularea bazei de date (de trimis login.sql)
+- functionalitate buton "Verifica rapoarte" ( director )

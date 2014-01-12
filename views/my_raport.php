@@ -5,7 +5,13 @@ require_once("../config/db.php");
 
 function displayRaport(){
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-    $query_result = $db_connection->query("SELECT * FROM timesheet where emp_id = '" . $_SESSION['user_id']. "';");
+    $query_result = $db_connection->query("SELECT * FROM timesheet_info 
+        WHERE emp_id= '". $_SESSION['user_id'] ."' ORDER BY id DESC LIMIT 1;");
+    $tm_info = $query_result->fetch_object();
+    $first = $tm_info->year . "-" . $tm_info->month . "-" . 1;
+    $second = $tm_info->year . "-" . ($tm_info->month + 1) . "-" . 1;
+    
+    $query_result = $db_connection->query("SELECT * FROM timesheet where emp_id = '" . $_SESSION['user_id']. "' and date between '".$first."' and '".$second."';");
         
     $r = '';
     $r .= ' <table id="testTable" border="2">';
@@ -28,18 +34,21 @@ function displayRaport(){
         $r .= '     <td align="center">'. $timesheet->description .'</td>';
         $r .= ' </tr>';
     }
-    $r .= '     <tr>';
-    $r .= '         <td><input type="date" name="fill_date"></td>';
-    $r .= '         <td><input type="number" name="fill_interval"></td>';
-    $r .= '         <td><input type="number" name="fill_extra_interval"></td>';
-    $r .= '         <td>';
-    $r .=               projectSelectField();
-    $r .= '         </td>';
-    $r .= '         <td>';
-    $r .=               selectActivity();
-    $r .= '             <textarea rows="2" cols="50" name = "fill_description"></textarea>';
-    $r .= '         </td>';
-    $r .= '     </tr>';
+    if( $tm_info->state == "OPEN" || $tm_info->state == "REJECT" )
+    {
+        $r .= '     <tr>';
+        $r .= '         <td><input type="date" name="fill_date"></td>';
+        $r .= '         <td><input type="number" name="fill_interval"></td>';
+        $r .= '         <td><input type="number" name="fill_extra_interval"></td>';
+        $r .= '         <td>';
+        $r .=               projectSelectField();
+        $r .= '         </td>';
+        $r .= '         <td>';
+        $r .=               selectActivity();
+        $r .= '             <textarea rows="2" cols="50" name = "fill_description"></textarea>';
+        $r .= '         </td>';
+        $r .= '     </tr>';
+    }
     $r .= ' </table>';
     return $r;
 }

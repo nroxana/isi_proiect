@@ -27,8 +27,11 @@ function delLine() {
 
 function submitTimesheet() {
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $current = $db_connection->query("SELECT * FROM timesheet_info 
+        WHERE emp_id= '". $_SESSION['user_id'] ."' ORDER BY id DESC LIMIT 1;");
+    $obj = $current->fetch_object();
     $query_result = $db_connection->query("UPDATE timesheet_info SET state='".SUBMIT."' 
-        WHERE emp_id= '". $_SESSION['user_id'] ."' and month='". date("n") ."' and year='". date("Y") ."';");    
+        WHERE emp_id= '". $_SESSION['user_id'] ."' and month='". $obj->month ."' and year='". $obj->year ."';");  
 }
 
 if (isset($_POST["submit_btn"])) {

@@ -1,6 +1,5 @@
 <!-- here include just buttons for this kind of user -->
-<input type="button" name="check_btn" value="Verifica rapoarte">
-<input type="button" name="search_btn" value="Cautare avansata">
+<input type="button" onclick="location.href = 'http://localhost/views/list_emps.php';" value="Verifica rapoarte">
 <nav id="main-nav">
     <ul id="nav-primary">
         <li><a href="#">Menu 1</a>
