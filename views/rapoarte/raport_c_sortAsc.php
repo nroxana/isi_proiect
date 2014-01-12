@@ -9,7 +9,7 @@ include("../../classes/chart_functions.php");
 
 
 function showRaportAsc() {
-	
+	file_put_contents("pdf/data/c.txt", "");
 	$db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     
     $project_result = $db_connection->query("SELECT id FROM projects;");
@@ -52,6 +52,13 @@ function showRaportAsc() {
             $r .= '     <td align="center">'. $timesheet->suma_total .'</td>';
             $r .= ' </tr>';
 			
+			$file = 'pdf/data/c.txt';
+			$data = $proj_name . ";";
+			$data .= $timesheet->suma . ";";
+			$data .= $timesheet->suma_extra . ";";
+			$data .= $timesheet->suma_total . "\n";
+			file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
+			
 			$inter[] = array($proj_name, $timesheet->suma, $timesheet->suma_extra, $timesheet->suma_total);
 			
             $emp_result->close();
@@ -88,5 +95,10 @@ function showRaportAsc() {
                 <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
             </td>
         </tr>
+		<tr>
+			<td align="right">
+				<p>[<a href="pdf/pdf_c.php" title="PDF [new window]" target="_blank">PDF</a>]<p>
+			</td>
+		</tr>
     </table>
 </form>

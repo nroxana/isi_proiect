@@ -6,6 +6,7 @@ include("../common.php");
 include("../../classes/chart_functions.php");
 
 function showRaport() {
+	file_put_contents("pdf/data/b.txt", "");
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     
     $project_result = $db_connection->query("SELECT id FROM projects where name = '" . $_POST['prj_name'] . "';");
@@ -26,8 +27,8 @@ function showRaport() {
         $prj_hours = array();
         while( $query_result && $timesheet = $query_result->fetch_object() )
         {
-            $emp_result = $db_connection->query("SELECT name FROM employee where id = '" . $timesheet->emp_id . "';");
-            $emp_name = $emp_result->fetch_object()->name;
+            $emp_result = $db_connection->query("SELECT numeprenume FROM employee where id = '" . $timesheet->emp_id . "';");
+            $emp_name = $emp_result->fetch_object()->numeprenume;
             array_push($emp_names, $emp_name);
             array_push($prj_hours, $timesheet->suma);
             $r .= ' <tr>';
@@ -37,6 +38,14 @@ function showRaport() {
             $r .= '     <td align="center">'. $timesheet->suma_total .'</td>';
             $r .= ' </tr>';
             $emp_result->close();
+			
+			
+			$file = 'pdf/data/b.txt';
+			$data = $emp_name . ";";
+			$data .= $timesheet->suma . ";";
+			$data .= $timesheet->suma_extra . ";";
+			$data .= $timesheet->suma_total . "\n";
+			file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
         }
         $r .= ' <tr></tr></table>';
         echo $r;
@@ -71,5 +80,10 @@ function showRaport() {
                 <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
             </td>
         </tr>
+		<tr>
+			<td align="right">
+				<p>[<a href="pdf/pdf_b.php" title="PDF [new window]" target="_blank">PDF</a>]<p>
+			</td>
+		</tr>
     </table>
 </form>

@@ -10,6 +10,8 @@ include("../../classes/chart_functions.php");
 
 function showRaport() {
 	
+	file_put_contents("pdf/data/c.txt", "");
+	
 	$_SESSION['c_start_date'] = $_POST['start_date'];
 	$_SESSION['c_end_date'] = $_POST['end_date'];
 	
@@ -56,6 +58,13 @@ function showRaport() {
             $r .= '     <td align="center">'. $timesheet->suma_total .'</td>';
             $r .= ' </tr>';
 			
+			$file = 'pdf/data/c.txt';
+			$data = $proj_name . ";";
+			$data .= $timesheet->suma . ";";
+			$data .= $timesheet->suma_extra . ";";
+			$data .= $timesheet->suma_total . "\n";
+			file_put_contents($file, $data, FILE_APPEND | LOCK_EX);
+			
 			$inter[] = array($proj_name, $timesheet->suma, $timesheet->suma_extra, $timesheet->suma_total);
 			
             $emp_result->close();
@@ -90,5 +99,10 @@ function showRaport() {
                 <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
             </td>
         </tr>
+		<tr>
+			<td align="right">
+				<p>[<a href="pdf/pdf_c.php" title="PDF [new window]" target="_blank">PDF</a>]<p>
+			</td>
+		</tr>
     </table>
 </form>

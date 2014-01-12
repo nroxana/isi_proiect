@@ -25,7 +25,7 @@ class MYPDF extends TCPDF {
 		$this->SetLineWidth(0.3);
 		$this->SetFont('', 'B');
 		// Header
-		$w = array(45, 80, 25, 20, 20);
+		$w = array(60, 25, 25, 20);
 		$num_headers = count($header);
 		for($i = 0; $i < $num_headers; ++$i) {
 			$this->Cell($w[$i], 7, $header[$i], 1, 0, 'C', 1);
@@ -42,7 +42,6 @@ class MYPDF extends TCPDF {
 			$this->Cell($w[1], 6, $row[1], 'LR', 0, 'L', $fill);
 			$this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
 			$this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R', $fill);
-			$this->Cell($w[4], 6, number_format($row[4]), 'LR', 0, 'R', $fill);
 			$this->Ln();
 			$fill=!$fill;
 		}
@@ -55,7 +54,7 @@ $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 
 // set document information
 $pdf->SetAuthor('RAVIRO');
-$pdf->SetTitle('Raport a');
+$pdf->SetTitle('Raport b');
 
 // set default header data
 //$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 011', PDF_HEADER_STRING);
@@ -92,10 +91,10 @@ $pdf->SetFont('helvetica', '', 12);
 $pdf->AddPage();
 
 // column titles
-$header = array('Nume angajat', 'Nume proiect', 'Ore Lucrate', 'Ore Extra', 'Ore Total');
+$header = array('Nume angajat', 'Ore Lucrate', 'Ore Extra', 'Ore Total');
 
 // data loading
-$data = $pdf->LoadData('data/a.txt');
+$data = $pdf->LoadData('data/b.txt');
 // print colored table
 $pdf->ColoredTable($header, $data);
 
@@ -108,7 +107,7 @@ $pdf->Image('../example10.png', 15, 15, 250, 170, 'PNG', 'http://www.tcpdf.org',
 // ---------------------------------------------------------
 
 // close and output PDF document
-$pdf->Output('pdf_a.pdf', 'I');
+$pdf->Output('pdf_b.pdf', 'I');
 
 //============================================================+
 // END OF FILE

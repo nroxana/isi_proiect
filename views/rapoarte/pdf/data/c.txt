@@ -1,0 +1,3 @@
+Aplicatie sharing;55;2;57
+Aplicatie editare video;48;8;56
+Portal web;50;5;55

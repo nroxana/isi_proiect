@@ -25,8 +25,8 @@ function savePie($prj_names, $prj_hours) {
     // Write the title
     $Test->setFontProperties("../../Fonts/MankSans.ttf",10);
     $Test->drawTitle(10,20,"Statistica",100,100,100);
-    $Test->Render("example10.jpeg");
-    echo '<img src="example10.jpeg">';
+    $Test->Render("example10.png");
+    echo '<img src="example10.png">';
 }
 
 ?>

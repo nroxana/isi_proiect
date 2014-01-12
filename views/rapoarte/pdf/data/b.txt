@@ -1,0 +1,3 @@
+Crangaru Ioana;20;3;23
+Ienisor Petre;8;0;8
+Adelin Costin;22;2;24
