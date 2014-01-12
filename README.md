@@ -23,7 +23,6 @@ parola la root și directory protection.
 
 TODO:
 - audit (loguri cu nivele) ------ taken by ROXANA
-- pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
 - CSS / design / frontend ------ taken by ROXANA
 - la rapoartele a,b,e de modificat numele angajatilor din angajat1, angajat2 in numele lor efectiv 
@@ -46,3 +45,4 @@ DONE:
 - popularea bazei de date (de trimis login.sql)
 - functionalitate buton "Verifica rapoarte" ( director + sef div + sef dept )
 - notificare prin email (de facut submit)
+- pct c : sortare asc/desc ale rezultatelor in functie de ore

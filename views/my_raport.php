@@ -122,7 +122,7 @@ function renderPage() {
             where emp_id = '" . $_SESSION['user_id']. "' and month='". $current_m ."' and year='". $current_y ."' ;");
         $obj = $query_result->fetch_object();
         if( $obj->state == "OPEN" || $obj->state == "REJECT" )
-            return "Va rugam sa trimite-ti timesheet-ul spre verificare" . displayRaport();
+            return "Va rugam sa trimiteti timesheet-ul spre verificare" . displayRaport();
                 
         if( $obj->state == "SUBMIT" )
             return "Timesheet-ul D-stra inca nu a fost verificat";

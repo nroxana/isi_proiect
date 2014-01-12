@@ -8,18 +8,14 @@ include("../../classes/chart_functions.php");
 //error_reporting(E_ALL & ~E_NOTICE);
 
 
-function showRaport() {
-	
-	$_SESSION['c_start_date'] = $_POST['start_date'];
-	$_SESSION['c_end_date'] = $_POST['end_date'];
+function showRaportAsc() {
 	
 	$db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     
     $project_result = $db_connection->query("SELECT id FROM projects;");
-
-		$obj = $project_result->fetch_object();
-		$query_result = $db_connection->query("SELECT emp_id, project_id, SUM(hours) suma, SUM(extra_hours) suma_extra, SUM(hours) + SUM(extra_hours) suma_total 
-							FROM (SELECT * from timesheet where project_id in (SELECT id from projects where dept_id = '" . $_SESSION['dept_id'] . "')) as x where date BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY project_id;");
+	$obj = $project_result->fetch_object();
+	$query_result = $db_connection->query("SELECT emp_id, project_id, SUM(hours) suma, SUM(extra_hours) suma_extra, SUM(hours) + SUM(extra_hours) suma_total 
+							FROM (SELECT * from timesheet where project_id in (SELECT id from projects where dept_id = '" . $_SESSION['dept_id'] . "')) as x where date BETWEEN '". $_SESSION['c_start_date'] ."' AND '". $_SESSION['c_end_date'] ."' GROUP BY project_id ORDER BY suma_total ASC;");
 		
 		$r = '';
         $r .= ' <table id="raportTable" border="2">';
@@ -60,6 +56,10 @@ function showRaport() {
 			
             $emp_result->close();
         }
+		//echo $inter;
+		$counttoken = count($inter);
+		$k=count($inter[0]);
+		
         $r .= ' <tr></tr></table>';
         echo $r;
 		
@@ -67,8 +67,8 @@ function showRaport() {
         $query_result->close();
         if( count($project_names) )
             savePie($project_names, $prj_hours);
-        
 }
+
 ?>
 <button type="button" onclick="location.href = 'http://localhost/views/rapoarte/raport_c_sortAsc.php'">Sort asc</button>
 <button type="button" onclick="location.href = 'http://localhost/views/rapoarte/raport_c_sortDesc.php'">Sort desc</button>
@@ -79,9 +79,7 @@ function showRaport() {
         <tr>
             <td width = "800">
                 <?php 
-					if (isset($_POST["find"])) {
-						showRaport();
-					} 
+					showRaportAsc();
 				?>
             </td>
         </tr>
