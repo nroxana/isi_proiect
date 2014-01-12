@@ -5,18 +5,36 @@ require_once("../../config/db.php");
 session_start();
 include("../common.php");
 include("../../classes/chart_functions.php");
+//error_reporting(E_ALL & ~E_NOTICE);
+
 
 function showRaport() {
-    $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	
+	$_SESSION['c_start_date'] = $_POST['start_date'];
+	$_SESSION['c_end_date'] = $_POST['end_date'];
+    
+	$db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     
     $project_result = $db_connection->query("SELECT id FROM projects;");
     /*if( $project_result &&*/  //($obj = $project_result->fetch_object()) )
     //{*/
 		$obj = $project_result->fetch_object();
         //S$project_id = $obj->id;
-        $query_result = $db_connection->query("SELECT emp_id, project_id, SUM(hours) suma, SUM(extra_hours) suma_extra, SUM(hours) + SUM(extra_hours) suma_total 
-							FROM timesheet where date BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY project_id;");
-        $r = '';
+        /*$query_result = $db_connection->query("SELECT emp_id, project_id, SUM(hours) suma, SUM(extra_hours) suma_extra, SUM(hours) + SUM(extra_hours) suma_total 
+							FROM timesheet where date BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY project_id;");*/
+        
+		/*SELECT `emp_id`, `project_id`, SUM(`hours`) suma, SUM(`extra_hours`) suma_extra, SUM(`hours`) + SUM(`extra_hours`) suma_total	FROM
+		(SELECT * from `timesheet` where `project_id` in 
+			(SELECT `id` from `projects` where `dept_id` = 1)) 
+				as x GROUP BY `project_id`*/
+		$query_result = $db_connection->query("SELECT emp_id, project_id, SUM(hours) suma, SUM(extra_hours) suma_extra, SUM(hours) + SUM(extra_hours) suma_total 
+							FROM (SELECT * from timesheet where project_id in (SELECT id from projects where dept_id = '" . $_SESSION['dept_id'] . "')) as x where date BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY project_id;");
+
+
+		$_SESSION['c_start_date'] = $_POST['start_date'];
+		$_SESSION['c_end_date'] = $_POST['end_date'];
+		
+		$r = '';
         $r .= ' <table id="raportTable" border="2">';
         $r .= '    <tr style="background-color:#ccc;">';
 		$r .= '         <td width="100" align="center">Nume Proiect</td>';
@@ -58,14 +76,10 @@ function showRaport() {
 		//echo $inter;
 		$counttoken = count($inter);
 		$k=count($inter[0]);
-		for($i=0; $i<$counttoken;$i++)
-		{
-			for($j=0; $j<$k; $j++)
-				echo $inter[$i][$j];
-		}
 		
         $r .= ' <tr></tr></table>';
         echo $r;
+		
         //$project_result->close();
         $query_result->close();
         if( count($project_names) )
