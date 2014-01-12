@@ -22,7 +22,6 @@ parola la root și directory protection.
 
 
 TODO:
-- notificare prin email (de facut submit) ------ taken by ROXANA
 - audit (loguri cu nivele) ------ taken by ROXANA
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
@@ -46,3 +45,4 @@ DONE:
 - baza de date cu activitati uzuale (userul isi alege o activitate dintr-o coloana noua drop down list)
 - popularea bazei de date (de trimis login.sql)
 - functionalitate buton "Verifica rapoarte" ( director + sef div + sef dept )
+- notificare prin email (de facut submit)
