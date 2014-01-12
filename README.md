@@ -27,7 +27,7 @@ TODO:
 - pct c : sortare asc/desc ale rezultatelor in functie de ore ------ taken by ROXANA
 - documentul + prezentare in pptx ------ taken by RARES
 - CSS / design / frontend ------ taken by ROXANA
-- la rapoartele a,b de modificat numele angajatilor din angajat1, angajat2 in numele lor efectiv 
+- la rapoartele a,b,e de modificat numele angajatilor din angajat1, angajat2 in numele lor efectiv 
 
 DONE:
 - pct a, b, d, e : ""
