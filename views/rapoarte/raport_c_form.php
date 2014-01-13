@@ -7,6 +7,8 @@ echo displayForm();
 function displayForm(){
 	$r = '';
 
+	$r .= '<h2>Numar total de ore lucrate la fiecare proiect</h2>';
+	
 	$r .= '<form method = "post" action = "raport_c.php" name="raport_c">';
 
     $r .= '<label>Incepand cu </label>';

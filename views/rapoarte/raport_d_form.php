@@ -7,6 +7,8 @@ echo displayForm();
 function displayForm(){
 	$r = '';
 
+	$r .= '<h2>Afiseaza proiectele</h2>';
+	
 	$r .= '<form method = "post" action = "raport_d.php" name="raport_d">';
     
     $r .= '<label>Incepind cu </label>';
