@@ -1,4 +1,21 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<head>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css">
+	<link href="../../css/style.css"     rel="stylesheet" type="text/css">
+	
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Raviro</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/buttons/default.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/buttons/component.css" />
+	<script src="../../javascript/modernizr.custom.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../../css/tables/normalizeTable.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/tables/demoTable.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/tables/componentTable.css" />
+</head>
 <?php
 require_once("../../config/db.php");
 session_start();
@@ -12,15 +29,18 @@ function showRaport() {
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     $timpTotalProiecte = 0;
     $r = '';
-	$r = '<h2>Afiseaza clientii din perioada introdusa</h2>';
+	$r = '<h2 style="text-align:center">Afiseaza clientii din perioada introdusa</h2>';
 	
-    $r .= ' <table id="raportTable" border="2">';
+    $r .= '<div class="component">';
+    $r .= ' <table id="raportTable">';
+	$r .= '<thead>';
     $r .= '    <tr style="background-color:#ccc;">';
-    $r .= '         <td width="100" align="center">Client</td>';
-    $r .= '         <td width="100" align="center">Nume Proiect</td>';
-    $r .= '         <td width="100" align="center">Ore Lucrate</td>';
-    $r .= '         <td width="100" align="center">% din total</td>';
+    $r .= '         <th style="text-align:center" width="75	 align="center">Client</th>';
+    $r .= '         <th style="text-align:center" width="75	 align="center">Nume Proiect</th>';
+    $r .= '         <th style="text-align:center" width="75	 align="center">Ore Lucrate</th>';
+    $r .= '         <th style="text-align:center" width="75	 align="center">% din total</th>';
     $r .= '    </tr>';
+	$r .= '</thead>';
     
     $query = $db_connection->query("SELECT client from projects;");
 
@@ -55,10 +75,10 @@ function showRaport() {
         array_push($prj_names, $obj2->prj_name);
         array_push($prj_hours, $obj2->suma_total);
         $r .= ' <tr>';
-        $r .= '     <td align="center">'. $obj2->client_name .'</td>';
-        $r .= '     <td align="center">'. $obj2->prj_name .'</td>';
-        $r .= '     <td align="center">'. $obj2->suma_total .'</td>';
-		$r .= '     <td align="center">'. number_format((float)$obj2->suma_total / $timpTotalProiecte * 100 , 2, '.', '') .'</td>';
+        $r .= '     <td style="text-align:center" align="center">'. $obj2->client_name .'</td>';
+        $r .= '     <td style="text-align:center" align="center">'. $obj2->prj_name .'</td>';
+        $r .= '     <td style="text-align:center" align="center">'. $obj2->suma_total .'</td>';
+		$r .= '     <td style="text-align:center" align="center">'. number_format((float)$obj2->suma_total / $timpTotalProiecte * 100 , 2, '.', '') .'</td>';
 		$r .= ' </tr>';
 		
 		$file = 'pdf/data/f.txt';
@@ -89,14 +109,10 @@ function showRaport() {
             </td>
         </tr>
         <tr>
-            <td align="right">
-                <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
+            <td id="footer" align="right" style="text-align:center; background:green;">
+                <input class="btn2 btn-1 btn-1a" type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
+				<input class="btn2 btn-1 btn-1a" type="button" name="PDF" value="PDF" onclick="location.href='pdf/pdf_f.php'">
             </td>
-        </tr>
-		<tr>
-			<td align="right">
-				<p>[<a href="pdf/pdf_f.php" title="PDF [new window]" target="_blank">PDF</a>]<p>
-			</td>
 		</tr>
     </table>
 </form>

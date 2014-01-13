@@ -14,42 +14,56 @@ function displayRaport(){
     $query_result = $db_connection->query("SELECT * FROM timesheet where emp_id = '" . $_SESSION['user_id']. "' and date between '".$first."' and '".$second."';");
         
     $r = '';
-    $r .= ' <table id="testTable" border="2">';
-    $r .= '    <tr style="background-color:#ccc;">';
-    $r .= '         <td width="100" align="center">Data</td>';
-    $r .= '         <td width="75" align="center">Ore lucrate</td>';
-    $r .= '         <td width="75" align="center">Extra Ore</td>';
-    $r .= '         <td width="100" align="center">Nume proiect</td>';
-    $r .= '         <td width="350" align="center">Descrierea lucrului</td>';
-    $r .= '    </tr>';
+	//$r .= ' <table id="testTable" border="2">';
+	$r .= '<section class="color-8">';
+	$r .= '<div class="component">';
+	$r .= '  <table id="testTable" style="table-layout: fixed;">';
+	$r .= '   <thead>';
+    //$r .= '     <tr style="background-color:#ccc;">';
+	$r .= '     <tr>';
+    //$r .= '         <td width="100" align="center">Data</td>';
+    //$r .= '         <td width="75" align="center">Ore lucrate</td>';
+    //$r .= '         <td width="75" align="center">Extra Ore</td>';
+    //$r .= '         <td width="100" align="center">Nume proiect</td>';
+    //$r .= '         <td width="350" align="center">Descrierea lucrului</td>';
+    $r .= '         <th width="100" style="text-align: center;">Data</th>';
+    $r .= '         <th width="75">Ore lucrate</th>';
+    $r .= '         <th width="75">Extra ore</th>';
+    $r .= '         <th width="100">Nume proiect</th>';
+    $r .= '         <th width="200">Descrierea lucrului</th>';
+    $r .= '     </tr>';
+	$r .= '   </thead>';
     while( $query_result && $timesheet = $query_result->fetch_object() )
     {
         $project_result = $db_connection->query("SELECT name FROM projects where id = '" . $timesheet->project_id . "';");
         $project_name = $project_result->fetch_object();
         $r .= ' <tr>';
-        $r .= '     <td align="center">'. $timesheet->date .'</td>';
-        $r .= '     <td align="center">'. $timesheet->hours .'</td>';
-        $r .= '     <td align="center">'. $timesheet->extra_hours .'</td>';
-        $r .= '     <td align="center">'. $project_name->name .'</td>';
-        $r .= '     <td align="center">'. $timesheet->description .'</td>';
+        //$r .= '     <td align="center">'. $timesheet->date .'</td>';
+        $r .= '     <td class="user-name" style="text-align: center;">'. $timesheet->date .'</td>';
+        $r .= '     <td class="user-name">'. $timesheet->hours .'</td>';
+        $r .= '     <td class="user-name">'. $timesheet->extra_hours .'</td>';
+        $r .= '     <td class="user-name">'. $project_name->name .'</td>';
+        $r .= '     <td class="user-name">'. $timesheet->description .'</td>';
         $r .= ' </tr>';
     }
     if( $tm_info->state == "OPEN" || $tm_info->state == "REJECT" )
     {
-        $r .= '     <tr>';
-        $r .= '         <td><input type="date" name="fill_date"></td>';
-        $r .= '         <td><input type="number" name="fill_interval"></td>';
-        $r .= '         <td><input type="number" name="fill_extra_interval"></td>';
-        $r .= '         <td>';
-        $r .=               projectSelectField();
-        $r .= '         </td>';
-        $r .= '         <td>';
-        $r .=               selectActivity();
-        $r .= '             <textarea rows="2" cols="50" name = "fill_description"></textarea>';
-        $r .= '         </td>';
-        $r .= '     </tr>';
-    }
+	    $r .= '     <tr>';
+	    $r .= '         <td><input type="date" name="fill_date"></td>';
+	    $r .= '         <td><input type="number" style="width: 100%; height: 50%;" name="fill_interval"></td>';
+	    $r .= '         <td><input type="number" style="width: 100%; height: 50%;" name="fill_extra_interval"></td>';
+	    $r .= '         <td>';
+	    $r .=               projectSelectField();
+	    $r .= '         </td>';
+	    $r .= '         <td>';
+	    $r .=               selectActivity();
+	    $r .= '             <textarea rows="2" cols="50" name = "fill_description" style="width: 100%; height: 50%; border:1px solid;"></textarea>';
+	    $r .= '         </td>';
+	    $r .= '     </tr>';
+	}
     $r .= ' </table>';
+	$r .= '</div>';
+	$r .= '</section>';
     return $r;
 }
 
@@ -79,7 +93,7 @@ function projectSelectField() {
     }
 	
     $r = '';
-	$r .= '<select name="fill_project">';
+	$r .= '<select name="fill_project" style="width: 100%; height: 50%;>';
 	for($i = 0; $i < count($projects_id); $i++) {
         $r .= '<option value="' . $projects_id[$i] . '">' . $projects_name[$i] . '</option>';
 	}
@@ -88,6 +102,7 @@ function projectSelectField() {
 }
 
 function renderPage() {
+	
     $current_m = date("n");
     $current_y = date("Y");
     $db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -156,18 +171,35 @@ function buttons() {
     if(  ( $bIntrat && $obj->state == "REJECT") || ( $bIntrat == false && ($obj->state == "REJECT" || $obj->state == "OPEN") ) )
     {
         $r = '';
-        $r .= '<td align="right">';
-        $r .= '    <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel(\'testTable\')">';
-        $r .= '    <input type="submit" name="add_line_btn" value="Adauga linia">';
-        $r .= '    <input type="submit" name="del_line_btn" value="Sterge linia">';
-        $r .= '    <input type="submit" name="submit_btn" value="Trimite spre verificare">';
+        $r .= '<td id="footer" align="right" style="text-align:center; background:green;">';
+        $r .= '    <input type="button" class="btn2 btn-1 btn-1a" name="export_btn" value="Exporta" onclick="tableToExcel(\'testTable\')">';
+        $r .= '    <input type="submit" class="btn2 btn-1 btn-1a" name="add_line_btn" value="Adauga linia">';
+        $r .= '    <input type="submit" class="btn2 btn-1 btn-1a" name="del_line_btn" value="Sterge linia">';
+        $r .= '    <input type="submit" class="btn2 btn-1 btn-1a" name="submit_btn" value="Trimite spre verificare">';
         $r .= '</td>';
+        
         return $r;
     }
 }
 ?>
 
+<!--sticky footer-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script type="text/javascript" src="../javascript/jquery-scrolltofixed-min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+        $('#header').scrollToFixed();
+$('#sidebar2').scrollToFixed( { marginTop: $('#header').outerHeight() + 5,limit: $('#sidebar2').offset().bottom } );
+$('#footer').scrollToFixed( { bottom:0,limit: $('#footer').offset().bottom } );
+
+  });
+    </script>
+
 <script src="../javascript/raport_export.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+<script src="../javascript/jquery.stickyheader.js"></script>-->
 
 <form method="post" action="../classes/timesheet_management.php" name="raportform">
     <table>

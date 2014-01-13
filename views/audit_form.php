@@ -1,3 +1,20 @@
+<head>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css">
+	<link href="../../css/style.css"     rel="stylesheet" type="text/css">
+	
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Raviro</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/buttons/default.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/buttons/component.css" />
+	<script src="../../javascript/modernizr.custom.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../../css/tables/normalizeTable.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/tables/demoTable.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/tables/componentTable.css" />
+</head>
 <?php
 session_start();
 include("common.php");
@@ -18,9 +35,10 @@ getValues(1);
 
 <form method = "post" action = "../classes/set_audit.php" name="auditform">
     <table>
-        <tr>
-            Nivelulu de logare poate fi 1, 2, 3. La 1 se inregistreaza totul
-        </tr>
+        <thead>
+            <!--<th> Nivelul de logare poate fi 1, 2, 3. La 1 se inregistreaza totul. </th>	-->
+			<strong>Nivelul de logare poate fi 1, 2, 3. La 1 se inregistreaza totul.</strong>
+        </thead>
         <tr style="background-color:#ccc;">
             <td>
                 Functia :
@@ -63,7 +81,7 @@ getValues(1);
         </tr>
         <tr> 
             <td>
-                <input type="submit" name="set" value"Seteaza">
+                <input class="btn3 btn-2 btn-2a" type="submit" name="set" value"Seteaza">
             </td>
         </tr>
     </table>

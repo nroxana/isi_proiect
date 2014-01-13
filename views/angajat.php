@@ -1,4 +1,7 @@
-<!-- here include just buttons for this kind of user -->
-<input type="button" onclick="location.href = 'http://localhost/views/my_raport.php';" value="Raport">
-<input type="button" onclick="location.href = 'http://localhost/index.php?logout';" value="Logout">
+<section id ="header" class="color-7">
+	<div id="header" style="text-align:center; padding: 15px;">
+		<button class="btn btn-1 btn-1a" onclick="location.href = 'http://localhost/views/my_raport.php';">Raport</button>
+		<button class="btn btn-1 btn-1a" onclick="location.href = 'http://localhost/index.php?logout';">Logout</button>
+	</div>	
+</section>
 

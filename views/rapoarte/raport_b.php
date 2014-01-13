@@ -1,4 +1,21 @@
 <link rel="stylesheet" type="text/css" href="../../css/style.css" />
+<head>
+    <link href="../../css/global.css" rel="stylesheet" type="text/css">
+	<link href="../../css/style.css"     rel="stylesheet" type="text/css">
+	
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Raviro</title>
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/buttons/default.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/buttons/component.css" />
+	<script src="../../javascript/modernizr.custom.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../../css/tables/normalizeTable.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/tables/demoTable.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/tables/componentTable.css" />
+</head>
 <?php
 require_once("../../config/db.php");
 session_start();
@@ -15,13 +32,16 @@ function showRaport() {
         $project_id = $obj->id;
         $query_result = $db_connection->query("SELECT emp_id, SUM(hours) suma, SUM(extra_hours) suma_extra, SUM(hours) + SUM(extra_hours) suma_total FROM timesheet where project_id='". $project_id ."' AND date BETWEEN '". $_POST['start_date'] ."' AND '". $_POST['end_date'] ."' GROUP BY emp_id;");
         $r = '';
-        $r .= ' <table id="raportTable" border="2">';
+		$r .= '<div class="component">';
+        $r .= ' <table id="raportTable">';
+		$r .= '<thead>';
         $r .= '    <tr style="background-color:#ccc;">';
-        $r .= '         <td width="100" align="center">Nume Angajat</td>';
-        $r .= '         <td width="100" align="center">Ore Lucrate</td>';
-        $r .= '         <td width="100" align="center">Ore Lucrate Extra</td>';
-        $r .= '         <td width="100" align="center">Ore Lucrate Total</td>';
+        $r .= '         <th style="text-align:center" width="100" align="center">Nume Angajat</th>';
+        $r .= '         <th style="text-align:center" width="100" align="center">Ore Lucrate</th>';
+        $r .= '         <th style="text-align:center" width="100" align="center">Ore Lucrate Extra</th>';
+        $r .= '         <th style="text-align:center" width="100" align="center">Ore Lucrate Total</th>';
         $r .= '    </tr>';
+		$r .= '</thead>';
         
         $emp_names = array();
         $prj_hours = array();
@@ -32,10 +52,10 @@ function showRaport() {
             array_push($emp_names, $emp_name);
             array_push($prj_hours, $timesheet->suma);
             $r .= ' <tr>';
-            $r .= '     <td align="center">'. $emp_name .'</td>';
-            $r .= '     <td align="center">'. $timesheet->suma .'</td>';
-            $r .= '     <td align="center">'. $timesheet->suma_extra .'</td>';
-            $r .= '     <td align="center">'. $timesheet->suma_total .'</td>';
+            $r .= '     <td style="text-align:center" align="center">'. $emp_name .'</td>';
+            $r .= '     <td style="text-align:center" align="center">'. $timesheet->suma .'</td>';
+            $r .= '     <td style="text-align:center" align="center">'. $timesheet->suma_extra .'</td>';
+            $r .= '     <td style="text-align:center" align="center">'. $timesheet->suma_total .'</td>';
             $r .= ' </tr>';
             $emp_result->close();
 			
@@ -76,14 +96,10 @@ function showRaport() {
             </td>
         </tr>
         <tr>
-            <td align="right">
-                <input type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
-            </td>
-        </tr>
-		<tr>
-			<td align="right">
-				<p>[<a href="pdf/pdf_b.php" title="PDF [new window]" target="_blank">PDF</a>]<p>
-			</td>
+            <td id="footer" align="right" style="text-align:center; background:green;">
+                <input class="btn2 btn-1 btn-1a" type="button" name="export_btn" value="Exporta" onclick="tableToExcel('raportTable')">
+				<input class="btn2 btn-1 btn-1a" type="button" name="PDF" value="PDF" onclick="location.href='pdf/pdf_b.php'">
 		</tr>
     </table>
+	</div>
 </form>
