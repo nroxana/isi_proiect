@@ -3,28 +3,23 @@ isi_proiect
 
 isiproject
 
-Pentru instalare: http://www.apachefriends.org/en/xampp-windows.html
+This is a web based timesheet manager, a project for school, where the employees can write their monthly timesheet, which means that in every working day he has to write his daily sheet by adding his tasks in the application.
 
-(link de download: http://www.apachefriends.org/download.php?xampp-win32-1.8.2-2-VC9-installer.exe)
+There is a database for 5 types of users:
+* employee
+* department manager
+* division manager
+* director
+* admin
 
-* Instalezi asta
-* intri http://localhost/xampp/ -> Security -> si urmați linkul http://localhost/security/xamppsecurity.php și pui 
-parola la root și directory protection.
-* pentru a accesa utilizatorii din baza de date : http://localhost/phpmyadmin/
+We used XAMPP, which is an Apache distribution containing MySQL and PHP. This github branch (folder) represents the htdocs folder added at install of XAMPP. 
+
+install: http://www.apachefriends.org/en/xampp-windows.html
+
+(link to download: http://www.apachefriends.org/download.php?xampp-win32-1.8.2-2-VC9-installer.exe)
+
+* install XAMPP
 * toate fișierele sursă se pun în folderul XAMPP\htdocs
-* pentru acces: localhost/fisier_sursa.php
-* pornesti xampp_start
-
-* https://asana.com/
-
-
-* pentru adăugat baza de date : D:\Programe\XAMPP\mysql\data\login
-
-
-TODO:
-- audit (loguri cu nivele) ------ taken by ROXANA
-- CSS / design / frontend ------ taken by ROXANA
-- la rapoartele a,b,e de modificat numele angajatilor din angajat1, angajat2 in numele lor efectiv 
 
 DONE:
 - pct a, b, d, e : ""
@@ -46,3 +41,8 @@ DONE:
 - notificare prin email (de facut submit)
 - pct c : sortare asc/desc ale rezultatelor in functie de ore
 - documentul + prezentare in pptx 
+- audit (loguri cu nivele)
+- CSS / design / frontend
+- la rapoartele a,b,e de modificat numele angajatilor din angajat1, angajat2 in numele lor efectiv
+
+* https://asana.com/
