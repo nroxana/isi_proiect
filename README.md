@@ -11,9 +11,3 @@ There is a database for 5 types of users:
 * division manager
 * director
 * admin
-
-We used XAMPP, which is an Apache distribution containing MySQL and PHP. This github branch (folder) represents the htdocs folder added at install of XAMPP. 
-
-install: http://www.apachefriends.org/en/xampp-windows.html
-
-(link to download: http://www.apachefriends.org/download.php?xampp-win32-1.8.2-2-VC9-installer.exe)
